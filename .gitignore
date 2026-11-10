@@ -1,0 +1,19 @@
+# Archivos comprimidos
+lapriest-theme.zip
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Temporales
+*.tmp
+*.bak
+~$*
+
