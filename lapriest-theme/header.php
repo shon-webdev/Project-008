@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Cabecera para el tema LAPRIEST
  * Arquitectura Brutalista Oscura, Editorial y de Alto Contraste
@@ -28,7 +28,7 @@
   <div class="header-topbar">
     <div class="topbar-left">
       <span class="live-pulse"></span>
-      <span id="paris-time">ATELIER PARÍS: 00:00:00 CET</span>
+      <span id="paris-time">ATELIER MÉXICO: 00:00:00 CST</span>
     </div>
     <div class="topbar-center">
       <span>PROTOCOLO: SOLO ADQUISICIÓN DIRECTA // SIN CARRITOS DE COMPRA</span>
@@ -42,7 +42,7 @@
   <div class="header-navbar container">
     <!-- Logotipo Monolítico -->
     <a href="<?php echo esc_url(home_url('/')); ?>" class="brand-mark" rel="home">
-      LAPRIEST<span>PARÍS</span>
+      LAPRIEST<span>MÉXICO</span>
     </a>
 
     <!-- Menú de Navegación Editorial -->

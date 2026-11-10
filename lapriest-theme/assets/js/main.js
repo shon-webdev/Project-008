@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. HORARIOS EN VIVO DE ATELIERS (PARÍS Y TOKIO)
+   1. HORARIOS EN VIVO DE ATELIERS (MÉXICO Y TOKIO)
    ========================================================================== */
 function initLiveTimecodes() {
   const parisTimeEl = document.getElementById('paris-time');
@@ -24,16 +24,16 @@ function initLiveTimecodes() {
   function updateClocks() {
     const now = new Date();
     
-    // Hora de París (Europe/Paris)
+    // Hora de México (America/Mexico_City)
     if (parisTimeEl) {
-      const parisStr = now.toLocaleTimeString('es-ES', {
-        timeZone: 'Europe/Paris',
+      const mexicoStr = now.toLocaleTimeString('es-ES', {
+        timeZone: 'America/Mexico_City',
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
         hour12: false
       });
-      parisTimeEl.textContent = `ATELIER PARÍS: ${parisStr} CET`;
+      parisTimeEl.textContent = `ATELIER MÉXICO: ${mexicoStr} CST`;
     }
 
     // Hora de Tokio (Asia/Tokyo)
@@ -351,19 +351,53 @@ function initMobileNav() {
   const toggle = document.querySelector('.mobile-nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
 
-  if (toggle && navMenu) {
-    toggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-      toggle.textContent = navMenu.classList.contains('open') ? '[ CERRAR ]' : '[ MENÚ ]';
-    });
+  if (!toggle || !navMenu) return;
 
-    navMenu.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        toggle.textContent = '[ MENÚ ]';
-      });
-    });
+  function openMenu() {
+    navMenu.classList.add('open');
+    toggle.classList.add('is-active');
+    toggle.textContent = '[ CERRAR ]';
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('mobile-nav-open');
   }
+
+  function closeMenu() {
+    navMenu.classList.remove('open');
+    toggle.classList.remove('is-active');
+    toggle.textContent = '[ MENÚ ]';
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('mobile-nav-open');
+  }
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (navMenu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Cerrar al hacer clic en un enlace de navegación
+  navMenu.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  // Cerrar al pulsar Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+
+  // Cerrar al redimensionar si vuelve a desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 992 && navMenu.classList.contains('open')) {
+      closeMenu();
+    }
+  });
 }
 
 /* ==========================================================================

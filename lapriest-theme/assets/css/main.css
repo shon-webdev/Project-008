@@ -359,39 +359,140 @@ img, video {
 /* Mobile Nav Toggle */
 .mobile-nav-toggle {
   display: none;
-  background: none;
-  border: none;
-  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid var(--border-medium);
+  color: var(--accent-white);
   cursor: pointer;
-  padding: 8px;
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  padding: 0.45rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  line-height: 1;
+  border-radius: 0;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.mobile-nav-toggle:hover,
+.mobile-nav-toggle:focus {
+  border-color: var(--accent-white);
+  background-color: #181818;
+  color: #ffffff;
+}
+
+.mobile-nav-toggle.is-active {
+  background-color: var(--accent-white);
+  color: #000000;
+  border-color: var(--accent-white);
+}
+
+body.mobile-nav-open {
+  overflow: hidden !important;
 }
 
 @media (max-width: 992px) {
+  /* Ocultar botón de atmósfera en móvil y tablet para que el círculo no rompa el header */
+  .header-navbar .btn-atmosphere {
+    display: none !important;
+  }
+
+  .header-navbar {
+    padding: 0.75rem 1.25rem;
+    height: 64px;
+  }
+
+  .brand-mark {
+    font-size: clamp(1.15rem, 4.5vw, 1.45rem);
+    letter-spacing: 0.18em;
+  }
+
+  .brand-mark span {
+    font-size: 0.5625rem;
+    letter-spacing: 0.14em;
+    margin-left: 0.35rem;
+  }
+
+  .nav-actions {
+    gap: 0;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-topbar {
+    display: none;
+  }
+
+  /* Cajón de Menú Móvil / Tablet Brutalista */
   .nav-menu {
     display: none;
     position: fixed;
-    top: 72px;
+    top: 64px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 72px);
-    background-color: var(--bg-primary);
+    height: calc(100vh - 64px);
+    background-color: rgba(12, 12, 12, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     flex-direction: column;
-    padding: 3rem 2rem;
-    gap: 2rem;
+    justify-content: flex-start;
+    padding: 2.5rem 1.5rem 3rem;
+    gap: 1.25rem;
     border-top: 1px solid var(--border-subtle);
+    z-index: 99999;
+    overflow-y: auto;
   }
+
   .nav-menu.open {
     display: flex;
+    animation: mobileNavFade 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .mobile-nav-toggle {
-    display: block;
+
+  .nav-menu li {
+    width: 100%;
+    border-bottom: 1px solid #1c1c1c;
+    padding-bottom: 1rem;
   }
-  .header-topbar {
-    display: none;
+
+  .nav-menu .nav-link {
+    font-family: var(--font-title);
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: var(--accent-white);
+    padding: 0.25rem 0;
+  }
+
+  .nav-menu .nav-link .nav-counter {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+
+  .nav-menu .nav-link:hover,
+  .nav-menu .nav-link.active {
+    color: #ffffff;
+  }
+}
+
+@keyframes mobileNavFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
