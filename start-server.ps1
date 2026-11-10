@@ -1,4 +1,4 @@
-﻿# Servidor Web Local para Prototipos LAPRIEST (Puerto 3000)
+# Servidor Web Local para Prototipos LAPRIEST (Puerto 3000)
 param(
     [switch]$NoBrowser = $false
 )
