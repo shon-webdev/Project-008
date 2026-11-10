@@ -1,4 +1,4 @@
-# Servidor Web Local para Prototipos LAPRIEST (Puerto 3000)
+﻿# Servidor Web Local para Prototipos LAPRIEST (Puerto 3000)
 param(
     [switch]$NoBrowser = $false
 )
@@ -42,12 +42,13 @@ try {
     Write-Host "  DIRECCIÓN:   http://localhost:$port/" -ForegroundColor Cyan
     Write-Host "--------------------------------------------------------------------" -ForegroundColor DarkGray
     Write-Host "  RUTAS DIRECTAS DISPONIBLES:" -ForegroundColor White
-    Write-Host "  * Dossier Central (Hub):    http://localhost:$port/" -ForegroundColor Gray
-    Write-Host "  * Portada Editorial (V1):   http://localhost:$port/v1/index.html" -ForegroundColor Gray
-    Write-Host "  * Catálogo de Piezas:       http://localhost:$port/v1/catalog.html" -ForegroundColor Gray
-    Write-Host "  * Quién Soy (Manifiesto):   http://localhost:$port/v1/quien-soy.html" -ForegroundColor Gray
-    Write-Host "  * Previsualización Base:    http://localhost:$port/preview/index.html" -ForegroundColor Gray
-    Write-Host "  * Comparador 5 Fuentes:     http://localhost:$port/prueba-tipografias.html" -ForegroundColor Gray
+    Write-Host "  * Portada Cliente (V1):     http://localhost:$port/" -ForegroundColor Cyan
+    Write-Host "  * Catálogo de Piezas:       http://localhost:$port/catalog.html" -ForegroundColor Gray
+    Write-Host "  * Quién Soy (Manifiesto):   http://localhost:$port/quien-soy.html" -ForegroundColor Gray
+    Write-Host "  * Versión 2 (Alternativa):  http://localhost:$port/v2/index.html" -ForegroundColor Gray
+    Write-Host "  * Versión 3 (Alternativa):  http://localhost:$port/v3/index.html" -ForegroundColor Gray
+    Write-Host "  * Hub Interno Curaduría:    http://localhost:$port/curaduria-interna.html" -ForegroundColor DarkGray
+    Write-Host "  * Test 5 Tipografías:       http://localhost:$port/prueba-tipografias.html" -ForegroundColor DarkGray
     Write-Host "--------------------------------------------------------------------" -ForegroundColor DarkGray
     Write-Host "  * Para APAGAR el servidor, ejecuta DETENER-SITIO.bat o presiona Ctrl+C" -ForegroundColor DarkYellow
     Write-Host "====================================================================" -ForegroundColor DarkGray

@@ -1,0 +1,557 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-version="v1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Razonado &bull; LAPRIEST Alta Costura Brutalista</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.cdnfonts.com">
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="lapriest-theme/assets/css/main.css">
+</head>
+<body class="typo-v1">
+  <!-- BotÃ³n Flotante para Restaurar Barra si se OcultÃ³ para Capturas -->
+  <button type="button" class="restore-switcher-pill" aria-label="Restaurar barra de selecciÃ³n">
+    &bull; MOSTRAR SELECTOR TIPOGRÃFICO
+  </button>
+
+  <!-- Barra Curatorial: Selector de VersiÃ³n TipogrÃ¡fica -->
+  <aside class="typography-switcher-bar" aria-label="Selector de VersiÃ³n TipogrÃ¡fica">
+    <div class="switcher-inner">
+      <div class="switcher-label">
+        <span class="switcher-dot"></span>
+        <span>CURADURÃA TIPOGRÃFICA // LAPRIEST</span>
+      </div>
+      <div class="switcher-options">
+        <a href="catalog.html" class="switcher-btn active">
+          <span class="v-tag">VERSIÃ“N 1 (PRINCIPAL)</span>
+          <span class="v-fonts">SF PRO DISPLAY + INTER</span>
+        </a>
+        <a href="v2/catalog.html" class="switcher-btn">
+          <span class="v-tag">VERSIÃ“N 2 (ALTERNATIVA A)</span>
+          <span class="v-fonts">SF PRO DISPLAY + SPACE GROTESK</span>
+        </a>
+        <a href="v3/catalog.html" class="switcher-btn">
+          <span class="v-tag">VERSIÃ“N 3 (ALTERNATIVA B)</span>
+          <span class="v-fonts">SF PRO DISPLAY + DM SANS</span>
+        </a>
+        <button type="button" class="switcher-toggle-clean" data-toggle-clean title="Oculta esta barra para capturas de pantalla limpias (o presiona tecla C)">
+          [ MODO CAPTURA LIMPIA ]
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Cabecera del Sitio -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-topbar">
+      <div class="topbar-left">
+        <span class="live-pulse"></span>
+        <span id="paris-time">ATELIER PARÍS: 00:00:00 CET</span>
+      </div>
+      <div class="topbar-center">
+        <span>PROTOCOLO: SOLO ADQUISICIÓN DIRECTA // SIN CARRITOS DE COMPRA</span>
+      </div>
+      <div class="topbar-right">
+        <span id="tokyo-time">ARCHIVO TOKIO: 00:00:00 JST</span>
+      </div>
+    </div>
+
+    <div class="header-navbar container">
+      <a href="index.html" class="brand-mark">
+        LAPRIEST<span>PARÍS</span>
+      </a>
+
+      <nav class="primary-navigation" aria-label="Navegación Principal">
+        <ul class="nav-menu" id="primaryNav">
+          <li><a href="index.html" class="nav-link">EDITORIAL <span class="nav-counter">01</span></a></li>
+          <li><a href="catalog.html" class="nav-link active">CATÁLOGO <span class="nav-counter">02</span></a></li>
+          <li><a href="quien-soy.html" class="nav-link">QUIÉN SOY <span class="nav-counter">03</span></a></li>
+          <li>
+            <a href="#offerModalOverlay" class="nav-link" data-action="make-offer" data-piece-title="CONSULTA GENERAL AL ATELIER" data-piece-code="LP-GEN" data-piece-price="A CONSULTAR">
+              OFERTA DIRECTA <span class="nav-counter">&nearr;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-atmosphere" id="ambientToggle" aria-label="Alternar atmósfera sonora">
+          <span class="live-pulse"></span>
+          <span class="audio-status">ATMÓSFERA: DESACTIVADA</span>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Alternar Menú">
+          [ MENÚ ]
+        </button>
+      </div>
+    </div>
+
+    <div class="brutalist-ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-item">
+          <span>SIN CARRITOS DE COMPRA // SOLO PROPUESTAS DIRECTAS AL ATELIER</span>
+          <span class="divider">&bull;</span>
+          <span>EDICIONES RESTRINGIDAS DE 06 A 18 PIEZAS A NIVEL MUNDIAL</span>
+          <span class="divider">&bull;</span>
+          <span>ARCHIVO OTOÑO / INVIERNO 2026</span>
+          <span class="divider">&bull;</span>
+          <span>ADQUISICIONES DIRECTAS DE ALTA COSTURA</span>
+          <span class="divider">&bull;</span>
+        </div>
+        <div class="ticker-item">
+          <span>SIN CARRITOS DE COMPRA // SOLO PROPUESTAS DIRECTAS AL ATELIER</span>
+          <span class="divider">&bull;</span>
+          <span>EDICIONES RESTRINGIDAS DE 06 A 18 PIEZAS A NIVEL MUNDIAL</span>
+          <span class="divider">&bull;</span>
+          <span>ARCHIVO OTOÑO / INVIERNO 2026</span>
+          <span class="divider">&bull;</span>
+          <span>ADQUISICIONES DIRECTAS DE ALTA COSTURA</span>
+          <span class="divider">&bull;</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main id="primary" class="site-main">
+
+    <!-- Encabezado del Catálogo -->
+    <header class="catalog-header-area">
+      <div class="container">
+        <div class="catalog-intro-grid">
+          <div>
+            <span class="mono-meta" style="color:var(--text-muted); display:block; margin-bottom:0.75rem;">// CATÁLOGO RAZONADO // SERIE 01</span>
+            <h1 class="catalog-main-heading">
+              PIEZAS DE<br>
+              ARCHIVO.
+            </h1>
+          </div>
+          <div class="catalog-intro-manifesto">
+            <p>
+              LAPRIEST produce prendas en microediciones estrictamente limitadas y numeradas de 6 a 18 piezas en todo el mundo. Rechazamos el carrito de compras estandarizado. Cada adquisición se gestiona como un diálogo privado con el cliente mediante nuestro sistema de oferta directa.
+            </p>
+            <div class="mono-meta" style="margin-top: 1rem; color: #fff;">
+              SELECCIONE UNA PIEZA Y PROPONGA UN VALOR DE ADQUISICIÓN A CONTINUACIÓN.
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="container" style="padding-top: 2rem;">
+      
+      <!-- Filtros de Categoría -->
+      <div class="catalog-toolbar">
+        <div class="filter-pills" role="tablist">
+          <button type="button" class="filter-btn active" data-filter="all" role="tab">TODAS LAS PIEZAS [06]</button>
+          <button type="button" class="filter-btn" data-filter="abrigos" role="tab">ABRIGOS Y CAPAS</button>
+          <button type="button" class="filter-btn" data-filter="sastreria" role="tab">SASTRERÍA Y TÚNICAS</button>
+          <button type="button" class="filter-btn" data-filter="cuero" role="tab">CUERO Y PRENDAS PESADAS</button>
+          <button type="button" class="filter-btn" data-filter="calzado" role="tab">CALZADO</button>
+        </div>
+        <div class="catalog-count-meta" id="catalogFilterCount">
+          MOSTRANDO 6 DE 6 PIEZAS DE ARCHIVO
+        </div>
+      </div>
+
+      <!-- Cuadrícula de 6 Piezas Estilo Rick Owens -->
+      <div class="pieces-grid" id="catalogPiecesGrid">
+        
+        <!-- Pieza 01 -->
+        <article class="piece-card" data-category="abrigos" id="piece-LP-FW26-001">
+          <div class="piece-visual-frame">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85" alt="Caftán Drapeado Obsidiana" class="piece-img-primary" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=85" alt="Caftán Drapeado Obsidiana Reverso" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-FW26-001</div>
+            <div class="piece-badge-status">DISPONIBLE PARA OFERTA</div>
+          </div>
+          <div class="piece-info-box">
+            <div>
+              <div class="piece-category-meta">Abrigos y Capas // SERIE 01</div>
+              <h3 class="piece-title-text">PIEZA 01: CAFTÁN DRAPEADO OBSIDIANA</h3>
+              <div class="piece-materials-text">100% Lana Cruda Hervida Japonesa de Alta Densidad, Arnés Interno en Cupro, Cierre de Acero Oxidado al Frío.</div>
+            </div>
+            <div class="piece-action-row">
+              <div class="piece-price-wrap">
+                <span class="price-meta-label">VALOR BASE</span>
+                <span class="price-value">$1,850 USD</span>
+              </div>
+              <button type="button" 
+                      class="btn-make-offer"
+                      data-action="make-offer"
+                      data-piece-title="PIEZA 01: CAFTÁN DRAPEADO OBSIDIANA"
+                      data-piece-code="LP-FW26-001"
+                      data-piece-price="$1,850 USD">
+                <span>HACER UNA OFERTA / CONSULTAR</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pieza 02 -->
+        <article class="piece-card" data-category="cuero" id="piece-LP-FW26-002">
+          <div class="piece-visual-frame">
+            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1200&q=85" alt="Caparazón de Cuero Brutalista" class="piece-img-primary" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1200&q=85" alt="Caparazón de Cuero Brutalista Reverso" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-FW26-002</div>
+            <div class="piece-badge-status">EDICIÓN DE 06</div>
+          </div>
+          <div class="piece-info-box">
+            <div>
+              <div class="piece-category-meta">Cuero y Prendas Pesadas // SERIE 01</div>
+              <h3 class="piece-title-text">PIEZA 02: CAPARAZÓN DE CUERO BRUTALISTA</h3>
+              <div class="piece-materials-text">Cuero de Caballo Crudo al Vegetal (1.8mm), Pátina Carbón Desgastada, Cortes Geométricos con Bordes Vivos.</div>
+            </div>
+            <div class="piece-action-row">
+              <div class="piece-price-wrap">
+                <span class="price-meta-label">VALOR BASE</span>
+                <span class="price-value">$2,650 USD</span>
+              </div>
+              <button type="button" 
+                      class="btn-make-offer"
+                      data-action="make-offer"
+                      data-piece-title="PIEZA 02: CAPARAZÓN DE CUERO BRUTALISTA"
+                      data-piece-code="LP-FW26-002"
+                      data-piece-price="$2,650 USD">
+                <span>HACER UNA OFERTA / CONSULTAR</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pieza 03 -->
+        <article class="piece-card" data-category="abrigos" id="piece-LP-FW26-003">
+          <div class="piece-visual-frame">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85" alt="Trench Asimétrico Monolítico" class="piece-img-primary" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85" alt="Trench Asimétrico Monolítico Reverso" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-FW26-003</div>
+            <div class="piece-badge-status">DISPONIBLE PARA OFERTA</div>
+          </div>
+          <div class="piece-info-box">
+            <div>
+              <div class="piece-category-meta">Abrigos y Capas // SERIE 01</div>
+              <h3 class="piece-title-text">PIEZA 03: TRENCH ASIMÉTRICO MONOLÍTICO</h3>
+              <div class="piece-materials-text">Sarga Cruda Japonesa Encerada, Fornituras Industriales en Zinc, Solapas con Interior en Lana.</div>
+            </div>
+            <div class="piece-action-row">
+              <div class="piece-price-wrap">
+                <span class="price-meta-label">VALOR BASE</span>
+                <span class="price-value">$1,420 USD</span>
+              </div>
+              <button type="button" 
+                      class="btn-make-offer"
+                      data-action="make-offer"
+                      data-piece-title="PIEZA 03: TRENCH ASIMÉTRICO MONOLÍTICO"
+                      data-piece-code="LP-FW26-003"
+                      data-piece-price="$1,420 USD">
+                <span>HACER UNA OFERTA / CONSULTAR</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pieza 04 -->
+        <article class="piece-card" data-category="sastreria" id="piece-LP-SS26-004">
+          <div class="piece-visual-frame">
+            <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1200&q=85" alt="Túnica Ceremonial Plisada" class="piece-img-primary" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1200&q=85" alt="Túnica Ceremonial Plisada Reverso" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-SS26-004</div>
+            <div class="piece-badge-status">EDICIÓN DE 18</div>
+          </div>
+          <div class="piece-info-box">
+            <div>
+              <div class="piece-category-meta">Sastrería y Túnicas // SERIE 01</div>
+              <h3 class="piece-title-text">PIEZA 04: TÚNICA CEREMONIAL PLISADA</h3>
+              <div class="piece-materials-text">Mezcla de Seda y Lana Crepé (450gsm), Tinte Negro Carbón Mate, Dobladillo Deshilachado en Diagonal.</div>
+            </div>
+            <div class="piece-action-row">
+              <div class="piece-price-wrap">
+                <span class="price-meta-label">VALOR BASE</span>
+                <span class="price-value">$890 USD</span>
+              </div>
+              <button type="button" 
+                      class="btn-make-offer"
+                      data-action="make-offer"
+                      data-piece-title="PIEZA 04: TÚNICA CEREMONIAL PLISADA"
+                      data-piece-code="LP-SS26-004"
+                      data-piece-price="$890 USD">
+                <span>HACER UNA OFERTA / CONSULTAR</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pieza 05 -->
+        <article class="piece-card" data-category="sastreria" id="piece-LP-SS26-005">
+          <div class="piece-visual-frame">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=85" alt="Pantalón Esculpido Geométrico" class="piece-img-primary" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1200&q=85" alt="Pantalón Esculpido Geométrico Reverso" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-SS26-005</div>
+            <div class="piece-badge-status">DISPONIBLE PARA OFERTA</div>
+          </div>
+          <div class="piece-info-box">
+            <div>
+              <div class="piece-category-meta">Sastrería y Túnicas // SERIE 01</div>
+              <h3 class="piece-title-text">PIEZA 05: PANTALÓN ESCULPIDO GEOMÉTRICO</h3>
+              <div class="piece-materials-text">Franela Pesada de Lana Virgen, Fuelles Invertidos Profundos, Doble Ajuste con Aros de Plata.</div>
+            </div>
+            <div class="piece-action-row">
+              <div class="piece-price-wrap">
+                <span class="price-meta-label">VALOR BASE</span>
+                <span class="price-value">$780 USD</span>
+              </div>
+              <button type="button" 
+                      class="btn-make-offer"
+                      data-action="make-offer"
+                      data-piece-title="PIEZA 05: PANTALÓN ESCULPIDO GEOMÉTRICO"
+                      data-piece-code="LP-SS26-005"
+                      data-piece-price="$780 USD">
+                <span>HACER UNA OFERTA / CONSULTAR</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pieza 06 -->
+        <article class="piece-card" data-category="calzado" id="piece-LP-FW26-006">
+          <div class="piece-visual-frame">
+            <img src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=1200&q=85" alt="Bota Militar de Archivo de Atelier" class="piece-img-primary" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1200&q=85" alt="Bota Militar de Archivo de Atelier Reverso" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-FW26-006</div>
+            <div class="piece-badge-status">EDICIÓN DE 12 PARES</div>
+          </div>
+          <div class="piece-info-box">
+            <div>
+              <div class="piece-category-meta">Calzado y Accesorios // SERIE 01</div>
+              <h3 class="piece-title-text">PIEZA 06: BOTA MILITAR DE ARCHIVO DE ATELIER</h3>
+              <div class="piece-materials-text">Cuero Vacuno Flor Entera, Suela Vibram Commando con Vira Goodyear, Cremallera Interna en Titanio.</div>
+            </div>
+            <div class="piece-action-row">
+              <div class="piece-price-wrap">
+                <span class="price-meta-label">VALOR BASE</span>
+                <span class="price-value">$1,150 USD</span>
+              </div>
+              <button type="button" 
+                      class="btn-make-offer"
+                      data-action="make-offer"
+                      data-piece-title="PIEZA 06: BOTA MILITAR DE ARCHIVO DE ATELIER"
+                      data-piece-code="LP-FW26-006"
+                      data-piece-price="$1,150 USD">
+                <span>HACER UNA OFERTA / CONSULTAR</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Sección de Encargos a Medida -->
+      <div style="border-top: 1px solid var(--border-subtle); padding: 4rem 0 6rem; text-align: center;">
+        <span class="mono-meta" style="color:#666;">// ENCARGOS A MEDIDA</span>
+        <h3 style="font-family:var(--font-title); font-size:2rem; margin:0.75rem 0 1rem; font-weight:var(--font-title-weight); letter-spacing:var(--font-title-spacing); text-transform:uppercase;">
+          ¿BUSCA UN ENCARGO DE ARCHIVO O MEDIDAS PERSONALIZADAS?
+        </h3>
+        <p style="font-size:0.875rem; color:#888; max-width:600px; margin:0 auto 2rem; line-height:1.7;">
+          Los encargos privados se confeccionan a la medida de la morfología del cliente utilizando fibras crudas japonesas de stock muerto y cierres forjados a mano.
+        </p>
+        <button type="button" 
+                class="btn-make-offer"
+                data-action="make-offer"
+                data-piece-title="ENCARGO A MEDIDA EN EL ATELIER"
+                data-piece-code="LP-MEDIDA"
+                data-piece-price="BAJO CONSULTA"
+                style="padding: 1rem 2.5rem;">
+          <span>SOLICITAR PIEZA A MEDIDA &rarr;</span>
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Pie de Página Monolítico -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="footer-brand-monolith">LAPRIEST</div>
+          <p class="footer-brand-bio">
+            Un laboratorio arquitectónico de alta costura que opera bajo principios de monasticismo material, geometría extrema en la silueta y protocolos de adquisición no comerciales.
+          </p>
+          <div class="mono-meta" style="margin-top: 1.5rem;">
+            48.864716&deg; N, 2.349014&deg; E &bull; ATELIER PARÍS<br>
+            35.658581&deg; N, 139.745438&deg; E &bull; ARCHIVO TOKIO
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">ARCHIVOS // DOSSIERS</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html">01 Portal Editorial</a></li>
+            <li><a href="catalog.html">02 Catálogo de Piezas</a></li>
+            <li><a href="quien-soy.html">03 Quién Soy (Manifiesto)</a></li>
+            <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="DOSSIER CONFIDENCIAL DEL ATELIER" data-piece-code="LP-DOSSIER" data-piece-price="A CONSULTAR">04 Proponer Adquisición</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">CANALES DIRECTOS</div>
+          <ul class="footer-links-list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram (@lapriest_studio)</a></li>
+            <li><a href="mailto:atelier@lapriest.com">atelier@lapriest.com</a></li>
+            <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="CITA PRIVADA EN EL ATELIER" data-piece-code="LP-CITA" data-piece-price="PRIVADO">Citas Privadas</a></li>
+            <li><a href="quien-soy.html#pilares">Los 4 Pilares</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">DESPACHO CONFIDENCIAL</div>
+          <p style="font-size: 0.75rem; color: #888; line-height: 1.6;">
+            Suscríbase para recibir lookbooks privados, coordenadas de exposiciones y lanzamientos de ediciones limitadas antes de su anuncio público.
+          </p>
+          <form class="footer-dispatch-form" onsubmit="event.preventDefault(); alert('Su dirección ha sido registrada en el libro privado de despachos de LAPRIEST.'); this.reset();">
+            <input type="email" class="footer-dispatch-input" placeholder="cliente@dominio.com" required aria-label="Correo para Despacho">
+            <button type="submit" class="footer-dispatch-btn">REGISTRARME</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 LAPRIEST HAUTE BRUTALISME. TODOS LOS DERECHOS RESERVADOS.</div>
+        <div>ARQUITECTURA SIN CARRITO DE COMPRA &bull; SOLO ADQUISICIONES DIRECTAS</div>
+      </div>
+
+      <!-- Crédito de Autoría / Friendly Dev by Shon -->
+      <div class="footer-credit-bar">
+        <div class="friendly-dev-credit">
+          <span class="friendly-dev-dot" aria-hidden="true"></span>
+          <span class="friendly-dev-text">Friendly Dev by Shon</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Oferta Directa -->
+  <div class="offer-modal-overlay" id="offerModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="offer-modal-window">
+      
+      <div class="modal-header-bar">
+        <div class="modal-header-title" id="modalTitle">// PROPONER ADQUISICIÓN / CONSULTAR</div>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Cerrar Ventana">&times;</button>
+      </div>
+
+      <div class="modal-piece-dossier">
+        <div>
+          <div class="dossier-piece-name" id="dossierPieceName">PIEZA 01: CAFTÁN DRAPEADO OBSIDIANA</div>
+          <div class="dossier-meta-code" id="dossierPieceCode">LP-FW26-001 // A MEDIDA</div>
+        </div>
+        <div class="dossier-baseline">
+          <div style="font-size:0.5625rem; letter-spacing:0.18em; text-transform:uppercase; color:#777;">VALOR BASE</div>
+          <div class="dossier-baseline-val" id="dossierPiecePrice">$1,850 USD</div>
+        </div>
+      </div>
+
+      <div class="offer-form-container" id="offerFormPane">
+        <form id="lapriestOfferForm" class="offer-form" novalidate>
+          <input type="hidden" name="piece_title" id="fieldPieceTitle" value="">
+          <input type="hidden" name="piece_code" id="fieldPieceCode" value="">
+          <input type="hidden" name="piece_baseline" id="fieldPiecePrice" value="">
+          <input type="hidden" name="piece_id" id="fieldPieceId" value="">
+
+          <div class="form-grid-2">
+            <div class="form-field-group">
+              <label class="form-label" for="clientFullName">Nombre Completo <span class="req">*</span></label>
+              <input type="text" id="clientFullName" name="full_name" class="form-input" placeholder="Ej: Julián Vane" required>
+            </div>
+            <div class="form-field-group">
+              <label class="form-label" for="clientEmail">Correo Electrónico <span class="req">*</span></label>
+              <input type="email" id="clientEmail" name="email" class="form-input" placeholder="julian@archivo.com" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field-group">
+              <label class="form-label" for="clientInstagram">Cuenta de Instagram <span style="color:#666;">(OPCIONAL)</span></label>
+              <input type="text" id="clientInstagram" name="instagram" class="form-input" placeholder="@tuusuario">
+            </div>
+            <div class="form-field-group">
+              <label class="form-label" for="clientOfferAmount">Oferta Propuesta ($ USD) <span class="req">*</span></label>
+              <div class="offer-amount-wrapper">
+                <span class="offer-amount-prefix">$</span>
+                <input type="number" id="clientOfferAmount" name="proposed_offer" class="form-input form-input-offer" placeholder="1850" min="1" step="1" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label">Canal de Respuesta Preferido</label>
+            <div class="reply-selector-group">
+              <div class="reply-method-card checked">
+                <input type="radio" id="replyEmail" name="reply_method" value="Correo Electrónico" checked>
+                <label for="replyEmail">Correo Confidencial</label>
+              </div>
+              <div class="reply-method-card">
+                <input type="radio" id="replyInstagram" name="reply_method" value="Instagram DM">
+                <label for="replyInstagram">Mensaje Directo (DM)</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="clientMessage">Medidas o Consultas Especiales <span style="color:#666;">(OPCIONAL)</span></label>
+            <textarea id="clientMessage" name="message" class="form-textarea" rows="3" placeholder="Indique notas sobre medidas personalizadas, solicitud de cita privada o país de entrega..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-offer">
+            <span>ENVIAR PROPUESTA AL ATELIER &rarr;</span>
+          </button>
+
+          <p class="modal-legal-note">
+            LAPRIEST opera sin carritos de compra convencionales. Cada propuesta es evaluada de manera personalizada por la dirección del atelier. No se procesa ningún cobro en esta etapa.
+          </p>
+        </form>
+      </div>
+
+      <div class="modal-feedback-pane" id="offerFeedbackPane">
+        <div class="feedback-status-badge">// TRANSMISIÓN CONFIRMADA</div>
+        <h2 class="feedback-title">OFERTA REGISTRADA</h2>
+        <p style="font-size:0.875rem; color:#888; max-width:440px; margin:0 auto 1.5rem; line-height:1.6;">
+          Su propuesta ha sido ingresada en el registro privado de adquisiciones del atelier LAPRIEST. Recibirá una respuesta privada en un plazo máximo de 24 horas.
+        </p>
+
+        <div class="feedback-receipt-box">
+          <div class="receipt-row">
+            <span style="color:#777;">REF. DE DOSSIER DE ADQUISICIÓN:</span>
+            <strong id="receiptReferenceId" style="color:#fff; font-family:monospace; letter-spacing:1px;">LP-ACQ-00000</strong>
+          </div>
+          <div class="receipt-row">
+            <span style="color:#777;">PRENDA OBJETIVO:</span>
+            <span id="receiptPiece" style="color:#ddd;">—</span>
+          </div>
+          <div class="receipt-row">
+            <span style="color:#777;">OFERTA PROPUESTA:</span>
+            <strong id="receiptOffer" style="color:#fff;">$0 USD</strong>
+          </div>
+          <div class="receipt-row">
+            <span style="color:#777;">CANAL DE CONTACTO:</span>
+            <span id="receiptClient" style="color:#ddd;">—</span>
+          </div>
+        </div>
+
+        <button type="button" class="btn-submit-offer" data-close-modal style="background:transparent; border-color:#444; color:#fff;">
+          <span>VOLVER AL CATÁLOGO</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="lapriest-theme/assets/js/main.js"></script>
+</body>
+</html>
