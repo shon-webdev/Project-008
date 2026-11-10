@@ -1,0 +1,86 @@
+[
+  {
+    "key": "group_lapriest_piece_specifications",
+    "title": "LAPRIEST Piece Specifications & Inquiries",
+    "fields": [
+      {
+        "key": "field_piece_code",
+        "label": "Garment Code",
+        "name": "_lapriest_piece_code",
+        "type": "text",
+        "instructions": "Unique archive garment identifier (e.g. LP-FW26-001). Automatically passed to acquisition inquiries.",
+        "required": 1,
+        "placeholder": "LP-FW26-001"
+      },
+      {
+        "key": "field_base_price",
+        "label": "Baseline Acquisition Price",
+        "name": "_lapriest_base_price",
+        "type": "text",
+        "instructions": "Target baseline value (e.g. $1,850 USD). Clients submit proposals around this baseline.",
+        "required": 1,
+        "placeholder": "$1,850 USD"
+      },
+      {
+        "key": "field_season_series",
+        "label": "Season / Series",
+        "name": "_lapriest_season",
+        "type": "text",
+        "placeholder": "SERIES 01 // THE ECLIPSE OF ORTHODOXY"
+      },
+      {
+        "key": "field_edition_limit",
+        "label": "Edition Specification",
+        "name": "_lapriest_edition_limit",
+        "type": "text",
+        "placeholder": "12 Pieces Worldwide — Hand Numbered"
+      },
+      {
+        "key": "field_materials",
+        "label": "Material Provenance & Construction",
+        "name": "_lapriest_materials",
+        "type": "textarea",
+        "rows": 3,
+        "placeholder": "100% Japanese High-Density Boiled Wool, Waxed Tuscan Horsehide Accents, Oxidized Silver Closures."
+      },
+      {
+        "key": "field_secondary_image",
+        "label": "Secondary Image (Hover Angle)",
+        "name": "_lapriest_secondary_image",
+        "type": "image",
+        "instructions": "Alternate perspective or detail view revealed on cursor hover in the catalog grid.",
+        "return_format": "url"
+      },
+      {
+        "key": "field_video_loop_url",
+        "label": "Background Video Loop (Optional MP4)",
+        "name": "_lapriest_video_loop_url",
+        "type": "url",
+        "instructions": "Optional MUBI-style runway video loop for single piece showcase."
+      },
+      {
+        "key": "field_inquiry_status",
+        "label": "Acquisition Status",
+        "name": "_lapriest_inquiry_status",
+        "type": "select",
+        "choices": {
+          "available": "Available for Acquisition / Offer",
+          "reserved": "Reserved (Waitlist Inquiries Only)",
+          "archival": "Permanent Atelier Archive (Display Only)"
+        },
+        "default_value": "available"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "catalog_piece"
+        }
+      ]
+    ],
+    "style": "seamless"
+  }
+]
+

@@ -1,0 +1,47 @@
+[
+  {
+    "key": "group_lapriest_editorial_specifications",
+    "title": "LAPRIEST Editorial & Event Details",
+    "fields": [
+      {
+        "key": "field_event_date",
+        "label": "Date / Season Code",
+        "name": "_lapriest_event_date",
+        "type": "text",
+        "placeholder": "OCTOBER 2026 // PARIS FASHION WEEK"
+      },
+      {
+        "key": "field_event_location",
+        "label": "Location / Venue",
+        "name": "_lapriest_event_location",
+        "type": "text",
+        "placeholder": "Sous-Sol Palais de Tokyo, Paris"
+      },
+      {
+        "key": "field_event_video_url",
+        "label": "Cinematic Video Loop URL",
+        "name": "_lapriest_event_video_url",
+        "type": "url",
+        "placeholder": "https://..."
+      },
+      {
+        "key": "field_event_reading_time",
+        "label": "Format / Duration",
+        "name": "_lapriest_reading_time",
+        "type": "text",
+        "placeholder": "6 MIN RECAP // 4K VISUAL"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "editorial_event"
+        }
+      ]
+    ],
+    "style": "seamless"
+  }
+]
+

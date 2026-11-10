@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAPRIEST &bull; Comparador de 5 Tipografías &bull; Hero Section</title>
+
+  <!-- Fuentes Externas CDN y Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- CDNs para SF Pro Display, Neue Haas Grotesk y Akzidenz-Grotesk -->
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro">
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/akzidenz-grotesk-next">
+
+  <!-- Hoja de Estilos Base LAPRIEST -->
+  <link rel="stylesheet" href="lapriest-theme/assets/css/main.css">
+
+  <style>
+    /* Estilos del Comparador */
+    body {
+      background-color: #070707;
+      color: #f5f5f5;
+    }
+
+    /* Barra Fija de Navegación entre las 5 Fuentes */
+    .compare-nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(8, 8, 8, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid #222;
+      z-index: 10000;
+      padding: 0.6rem 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    body.clean-screenshot-mode .compare-nav-bar {
+      transform: translateY(-100%);
+    }
+
+    .compare-nav-inner {
+      max-width: 1680px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .compare-brand {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .compare-brand .dot-live {
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+    }
+
+    .compare-tabs {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .compare-tab-link {
+      padding: 0.4rem 0.85rem;
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      color: #aaa;
+      font-size: 0.6875rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .compare-tab-link:hover,
+    .compare-tab-link.active {
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+      font-weight: 700;
+      opacity: 1;
+    }
+
+    .btn-clean-mode {
+      background: transparent;
+      border: 1px dashed #555;
+      color: #aaa;
+      font-size: 0.625rem;
+      letter-spacing: 0.12em;
+      padding: 0.45rem 0.85rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+    }
+
+    .btn-clean-mode:hover {
+      border-color: #fff;
+      color: #fff;
+      background: #1a1a1a;
+    }
+
+    /* Botón flotante para restaurar barra */
+    .restore-clean-pill {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 10001;
+      background: rgba(0, 0, 0, 0.92);
+      border: 1px solid #444;
+      color: #fff;
+      font-size: 0.625rem;
+      letter-spacing: 0.12em;
+      padding: 0.45rem 0.9rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      display: none;
+    }
+
+    body.clean-screenshot-mode .restore-clean-pill {
+      display: block;
+    }
+
+    /* Bloque Contenedor de Cada Sección Hero */
+    .hero-variant-wrapper {
+      position: relative;
+      border-bottom: 2px solid #222;
+      padding-top: 50px;
+    }
+
+    body.clean-screenshot-mode .hero-variant-wrapper {
+      padding-top: 0;
+    }
+
+    /* Franja Identificadora de la Tipografía */
+    .font-id-banner {
+      background: #0d0d0d;
+      border-bottom: 1px solid #222;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .font-id-info {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .font-number-pill {
+      background: #fff;
+      color: #000;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      padding: 0.35rem 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .font-main-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .font-history-meta {
+      font-size: 0.75rem;
+      color: #888;
+      letter-spacing: 0.08em;
+    }
+
+    /* Muestra de Caracteres */
+    .specimen-strip {
+      background: #090909;
+      border-bottom: 1px solid #1c1c1c;
+      padding: 0.75rem 2rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: #777;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .specimen-chars {
+      color: #bbb;
+    }
+
+    /* Personalización Específica por Tipografía */
+
+    /* 1. AKZIDENZ-GROTESK */
+    .font-akzidenz {
+      --font-current: "Akzidenz-Grotesk Next", "Akzidenz-Grotesk", "Akzidenz Grotesk", "Haas Grot Text R", -apple-system, sans-serif;
+    }
+    .font-akzidenz .hero-title,
+    .font-akzidenz .hero-title em {
+      font-family: var(--font-current) !important;
+      font-weight: 800 !important;
+      letter-spacing: -0.02em !important;
+    }
+    .font-akzidenz .hero-tagline,
+    .font-akzidenz .hero-meta-grid,
+    .font-akzidenz .specimen-strip,
+    .font-akzidenz .font-main-name {
+      font-family: var(--font-current) !important;
+    }
+
+    /* 2. INTER */
+    .font-inter {
+      --font-current: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .font-inter .hero-title,
+    .font-inter .hero-title em {
+      font-family: var(--font-current) !important;
+      font-weight: 800 !important;
+      letter-spacing: -0.035em !important;
+    }
+    .font-inter .hero-tagline,
+    .font-inter .hero-meta-grid,
+    .font-inter .specimen-strip,
+    .font-inter .font-main-name {
+      font-family: var(--font-current) !important;
+    }
+
+    /* 3. SF PRO DISPLAY */
+    .font-sfpro {
+      --font-current: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .font-sfpro .hero-title,
+    .font-sfpro .hero-title em {
+      font-family: var(--font-current) !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.025em !important;
+    }
+    .font-sfpro .hero-tagline,
+    .font-sfpro .hero-meta-grid,
+    .font-sfpro .specimen-strip,
+    .font-sfpro .font-main-name {
+      font-family: var(--font-current) !important;
+    }
+
+    /* 4. NEUE HAAS GROTESK */
+    .font-neuehaas {
+      --font-current: "Neue Haas Grotesk Display Pro", "Neue Haas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .font-neuehaas .hero-title,
+    .font-neuehaas .hero-title em {
+      font-family: var(--font-current) !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.03em !important;
+    }
+    .font-neuehaas .hero-tagline,
+    .font-neuehaas .hero-meta-grid,
+    .font-neuehaas .specimen-strip,
+    .font-neuehaas .font-main-name {
+      font-family: var(--font-current) !important;
+    }
+
+    /* 5. ROBOTO */
+    .font-roboto {
+      --font-current: "Roboto", sans-serif;
+    }
+    .font-roboto .hero-title,
+    .font-roboto .hero-title em {
+      font-family: var(--font-current) !important;
+      font-weight: 900 !important;
+      letter-spacing: -0.015em !important;
+    }
+    .font-roboto .hero-tagline,
+    .font-roboto .hero-meta-grid,
+    .font-roboto .specimen-strip,
+    .font-roboto .font-main-name {
+      font-family: var(--font-current) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Filtro de textura de grano analógico de 35mm -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Botón para restaurar la barra si se ocultó en modo captura limpia -->
+  <button type="button" class="restore-clean-pill" id="restoreBarBtn">
+    &bull; MOSTRAR SELECTOR DE TIPOGRAFÍAS
+  </button>
+
+  <!-- Barra Fija Superior de Navegación -->
+  <nav class="compare-nav-bar" id="compareNavBar">
+    <div class="compare-nav-inner">
+      <div class="compare-brand">
+        <span class="dot-live"></span>
+        <span>LAPRIEST // COMPARADOR DE 5 TIPOGRAFÍAS</span>
+      </div>
+      <div class="compare-tabs">
+        <a href="#v1-akzidenz" class="compare-tab-link active">1. AKZIDENZ-GROTESK</a>
+        <a href="#v2-inter" class="compare-tab-link">2. INTER</a>
+        <a href="#v3-sfpro" class="compare-tab-link">3. SF PRO DISPLAY</a>
+        <a href="#v4-neuehaas" class="compare-tab-link">4. NEUE HAAS GROTESK</a>
+        <a href="#v5-roboto" class="compare-tab-link">5. ROBOTO</a>
+        <button type="button" class="btn-clean-mode" id="cleanModeBtn" title="Oculta esta barra para capturas de pantalla 100% limpias (o presiona la tecla C)">
+          [ MODO CAPTURA LIMPIA ]
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       1. HERO SECTION — TIPOGRAFÍA: AKZIDENZ-GROTESK
+       ========================================================================= -->
+  <section class="hero-variant-wrapper font-akzidenz" id="v1-akzidenz">
+    
+    <!-- Franja Identificadora -->
+    <div class="font-id-banner">
+      <div class="font-id-info">
+        <span class="font-number-pill">OPCIÓN 01 / 05</span>
+        <span class="font-main-name">AKZIDENZ-GROTESK</span>
+        <span class="font-history-meta">// BERTHOLD TYPE FOUNDRY (1898) &bull; LA MATRIARCA DEL BRUTALISMO GRÁFICO</span>
+      </div>
+      <div style="font-size:0.6875rem; letter-spacing:0.15em; color:#777; text-transform:uppercase;">
+        PESO EN TÍTULOS: BOLD / EXTRA BOLD (800)
+      </div>
+    </div>
+
+    <!-- Muestra de Caracteres -->
+    <div class="specimen-strip">
+      <span class="specimen-chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ &bull; abcdefghijklmnopqrstuvwxyz &bull; 0123456789</span>
+      <span>CÓDIGO: LP-FW26-001 &bull; VALOR BASE: $1,850 USD</span>
+    </div>
+
+    <!-- Hero Section Modelo -->
+    <div class="editorial-hero">
+      <div class="hero-media-wrapper">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=2000&q=90" 
+             alt="LAPRIEST Serie 01 Nocturno" 
+             fetchpriority="high">
+      </div>
+      <div class="hero-vignette"></div>
+
+      <div class="container hero-content">
+        <div class="hero-tagline">
+          <span class="code-badge">// SERIE 01: EL ECLIPSE DE LA ORTODOXIA</span>
+          <span class="mono-meta">ARCHIVO OTOÑO / INVIERNO 2026</span>
+        </div>
+
+        <h1 class="hero-title">
+          MONOLÍTICO<br>
+          <em>ARMADURA PARA LA MENTE.</em>
+        </h1>
+
+        <div class="hero-meta-grid">
+          <div class="hero-meta-item">
+            <div class="meta-label">DIRECCIÓN CURATORIAL</div>
+            <div class="meta-val">STUDIO LAPRIEST PARÍS</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">ARQUITECTURA COMERCIAL</div>
+            <div class="meta-val">SIN CARRITO // PROPUESTA DIRECTA</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">ESPECIFICACIÓN DE EDICIÓN</div>
+            <div class="meta-val">LIMITADA A 12 POR SILUETA</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">PASARELA PRINCIPAL</div>
+            <div class="meta-val">PALAIS DE TOKYO, PARÍS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- =========================================================================
+       2. HERO SECTION — TIPOGRAFÍA: INTER
+       ========================================================================= -->
+  <section class="hero-variant-wrapper font-inter" id="v2-inter">
+    
+    <!-- Franja Identificadora -->
+    <div class="font-id-banner">
+      <div class="font-id-info">
+        <span class="font-number-pill">OPCIÓN 02 / 05</span>
+        <span class="font-main-name">INTER</span>
+        <span class="font-history-meta">// RASMUS ANDERSSON (2017) &bull; NEOGROTESCA DE MÁXIMA PRECISIÓN DIGITAL</span>
+      </div>
+      <div style="font-size:0.6875rem; letter-spacing:0.15em; color:#777; text-transform:uppercase;">
+        PESO EN TÍTULOS: EXTRA BOLD (800)
+      </div>
+    </div>
+
+    <!-- Muestra de Caracteres -->
+    <div class="specimen-strip">
+      <span class="specimen-chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ &bull; abcdefghijklmnopqrstuvwxyz &bull; 0123456789</span>
+      <span>CÓDIGO: LP-FW26-001 &bull; VALOR BASE: $1,850 USD</span>
+    </div>
+
+    <!-- Hero Section Modelo -->
+    <div class="editorial-hero">
+      <div class="hero-media-wrapper">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=2000&q=90" 
+             alt="LAPRIEST Serie 01 Nocturno" 
+             loading="lazy">
+      </div>
+      <div class="hero-vignette"></div>
+
+      <div class="container hero-content">
+        <div class="hero-tagline">
+          <span class="code-badge">// SERIE 01: EL ECLIPSE DE LA ORTODOXIA</span>
+          <span class="mono-meta">ARCHIVO OTOÑO / INVIERNO 2026</span>
+        </div>
+
+        <h1 class="hero-title">
+          MONOLÍTICO<br>
+          <em>ARMADURA PARA LA MENTE.</em>
+        </h1>
+
+        <div class="hero-meta-grid">
+          <div class="hero-meta-item">
+            <div class="meta-label">DIRECCIÓN CURATORIAL</div>
+            <div class="meta-val">STUDIO LAPRIEST PARÍS</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">ARQUITECTURA COMERCIAL</div>
+            <div class="meta-val">SIN CARRITO // PROPUESTA DIRECTA</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">ESPECIFICACIÓN DE EDICIÓN</div>
+            <div class="meta-val">LIMITADA A 12 POR SILUETA</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">PASARELA PRINCIPAL</div>
+            <div class="meta-val">PALAIS DE TOKYO, PARÍS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- =========================================================================
+       3. HERO SECTION — TIPOGRAFÍA: SF PRO DISPLAY
+       ========================================================================= -->
+  <section class="hero-variant-wrapper font-sfpro" id="v3-sfpro">
+    
+    <!-- Franja Identificadora -->
+    <div class="font-id-banner">
+      <div class="font-id-info">
+        <span class="font-number-pill">OPCIÓN 03 / 05</span>
+        <span class="font-main-name">SF PRO DISPLAY</span>
+        <span class="font-history-meta">// APPLE DESIGN GROUP (2015) &bull; NEUTRALIDAD GEOMÉTRICA CONTEMPORÁNEA</span>
+      </div>
+      <div style="font-size:0.6875rem; letter-spacing:0.15em; color:#777; text-transform:uppercase;">
+        PESO EN TÍTULOS: BOLD (700)
+      </div>
+    </div>
+
+    <!-- Muestra de Caracteres -->
+    <div class="specimen-strip">
+      <span class="specimen-chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ &bull; abcdefghijklmnopqrstuvwxyz &bull; 0123456789</span>
+      <span>CÓDIGO: LP-FW26-001 &bull; VALOR BASE: $1,850 USD</span>
+    </div>
+
+    <!-- Hero Section Modelo -->
+    <div class="editorial-hero">
+      <div class="hero-media-wrapper">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=2000&q=90" 
+             alt="LAPRIEST Serie 01 Nocturno" 
+             loading="lazy">
+      </div>
+      <div class="hero-vignette"></div>
+
+      <div class="container hero-content">
+        <div class="hero-tagline">
+          <span class="code-badge">// SERIE 01: EL ECLIPSE DE LA ORTODOXIA</span>
+          <span class="mono-meta">ARCHIVO OTOÑO / INVIERNO 2026</span>
+        </div>
+
+        <h1 class="hero-title">
+          MONOLÍTICO<br>
+          <em>ARMADURA PARA LA MENTE.</em>
+        </h1>
+
+        <div class="hero-meta-grid">
+          <div class="hero-meta-item">
+            <div class="meta-label">DIRECCIÓN CURATORIAL</div>
+            <div class="meta-val">STUDIO LAPRIEST PARÍS</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">ARQUITECTURA COMERCIAL</div>
+            <div class="meta-val">SIN CARRITO // PROPUESTA DIRECTA</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">ESPECIFICACIÓN DE EDICIÓN</div>
+            <div class="meta-val">LIMITADA A 12 POR SILUETA</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">PASARELA PRINCIPAL</div>
+            <div class="meta-val">PALAIS DE TOKYO, PARÍS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- =========================================================================
+       4. HERO SECTION — TIPOGRAFÍA: NEUE HAAS GROTESK
+       ========================================================================= -->
+  <section class="hero-variant-wrapper font-neuehaas" id="v4-neuehaas">
+    
+    <!-- Franja Identificadora -->
+    <div class="font-id-banner">
+      <div class="font-id-info">
+        <span class="font-number-pill">OPCIÓN 04 / 05</span>
+        <span class="font-main-name">NEUE HAAS GROTESK</span>
+        <span class="font-history-meta">// MAX MIEDINGER & EDUARD HOFFMANN (1957) &bull; EL DISEÑO ORIGINAL DE HELVETICA</span>
+      </div>
+      <div style="font-size:0.6875rem; letter-spacing:0.15em; color:#777; text-transform:uppercase;">
+        PESO EN TÍTULOS: BOLD (700)
+      </div>
+    </div>
+
+    <!-- Muestra de Caracteres -->
+    <div class="specimen-strip">
+      <span class="specimen-chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ &bull; abcdefghijklmnopqrstuvwxyz &bull; 0123456789</span>
+      <span>CÓDIGO: LP-FW26-001 &bull; VALOR BASE: $1,850 USD</span>
+    </div>
+
+    <!-- Hero Section Modelo -->
+    <div class="editorial-hero">
+      <div class="hero-media-wrapper">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=2000&q=90" 
+             alt="LAPRIEST Serie 01 Nocturno" 
+             loading="lazy">
+      </div>
+      <div class="hero-vignette"></div>
+
+      <div class="container hero-content">
+        <div class="hero-tagline">
+          <span class="code-badge">// SERIE 01: EL ECLIPSE DE LA ORTODOXIA</span>
+          <span class="mono-meta">ARCHIVO OTOÑO / INVIERNO 2026</span>
+        </div>
+
+        <h1 class="hero-title">
+          MONOLÍTICO<br>
+          <em>ARMADURA PARA LA MENTE.</em>
+        </h1>
+
+        <div class="hero-meta-grid">
+          <div class="hero-meta-item">
+            <div class="meta-label">DIRECCIÓN CURATORIAL</div>
+            <div class="meta-val">STUDIO LAPRIEST PARÍS</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">ARQUITECTURA COMERCIAL</div>
+            <div class="meta-val">SIN CARRITO // PROPUESTA DIRECTA</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">ESPECIFICACIÓN DE EDICIÓN</div>
+            <div class="meta-val">LIMITADA A 12 POR SILUETA</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">PASARELA PRINCIPAL</div>
+            <div class="meta-val">PALAIS DE TOKYO, PARÍS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- =========================================================================
+       5. HERO SECTION — TIPOGRAFÍA: ROBOTO
+       ========================================================================= -->
+  <section class="hero-variant-wrapper font-roboto" id="v5-roboto">
+    
+    <!-- Franja Identificadora -->
+    <div class="font-id-banner">
+      <div class="font-id-info">
+        <span class="font-number-pill">OPCIÓN 05 / 05</span>
+        <span class="font-main-name">ROBOTO</span>
+        <span class="font-history-meta">// CHRISTIAN ROBERTSON (2011) &bull; GROTESCA MECÁNICA CON CURVAS CERRADAS</span>
+      </div>
+      <div style="font-size:0.6875rem; letter-spacing:0.15em; color:#777; text-transform:uppercase;">
+        PESO EN TÍTULOS: BLACK (900)
+      </div>
+    </div>
+
+    <!-- Muestra de Caracteres -->
+    <div class="specimen-strip">
+      <span class="specimen-chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ &bull; abcdefghijklmnopqrstuvwxyz &bull; 0123456789</span>
+      <span>CÓDIGO: LP-FW26-001 &bull; VALOR BASE: $1,850 USD</span>
+    </div>
+
+    <!-- Hero Section Modelo -->
+    <div class="editorial-hero">
+      <div class="hero-media-wrapper">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=2000&q=90" 
+             alt="LAPRIEST Serie 01 Nocturno" 
+             loading="lazy">
+      </div>
+      <div class="hero-vignette"></div>
+
+      <div class="container hero-content">
+        <div class="hero-tagline">
+          <span class="code-badge">// SERIE 01: EL ECLIPSE DE LA ORTODOXIA</span>
+          <span class="mono-meta">ARCHIVO OTOÑO / INVIERNO 2026</span>
+        </div>
+
+        <h1 class="hero-title">
+          MONOLÍTICO<br>
+          <em>ARMADURA PARA LA MENTE.</em>
+        </h1>
+
+        <div class="hero-meta-grid">
+          <div class="hero-meta-item">
+            <div class="meta-label">DIRECCIÓN CURATORIAL</div>
+            <div class="meta-val">STUDIO LAPRIEST PARÍS</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">ARQUITECTURA COMERCIAL</div>
+            <div class="meta-val">SIN CARRITO // PROPUESTA DIRECTA</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">ESPECIFICACIÓN DE EDICIÓN</div>
+            <div class="meta-val">LIMITADA A 12 POR SILUETA</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label">PASARELA PRINCIPAL</div>
+            <div class="meta-val">PALAIS DE TOKYO, PARÍS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Pie con Crédito Friendly Dev by Shon -->
+  <footer style="padding: 4rem 2rem 5rem; text-align: center; border-top: 1px solid #1a1a1a; background: #070707;">
+    <div class="footer-credit-bar" style="border-top: none; margin-top: 0; padding-top: 0;">
+      <div class="friendly-dev-credit">
+        <span class="friendly-dev-dot" aria-hidden="true"></span>
+        <span class="friendly-dev-text">Friendly Dev by Shon</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Interactivo para Navegación Suave y Modo Captura -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cleanBtn = document.getElementById('cleanModeBtn');
+      const restoreBtn = document.getElementById('restoreBarBtn');
+      const tabLinks = document.querySelectorAll('.compare-tab-link');
+      const sections = document.querySelectorAll('.hero-variant-wrapper');
+
+      // Alternar modo captura limpia
+      function toggleCleanMode(enable) {
+        if (enable) {
+          document.body.classList.add('clean-screenshot-mode');
+        } else {
+          document.body.classList.remove('clean-screenshot-mode');
+        }
+      }
+
+      if (cleanBtn) {
+        cleanBtn.addEventListener('click', () => toggleCleanMode(true));
+      }
+      if (restoreBtn) {
+        restoreBtn.addEventListener('click', () => toggleCleanMode(false));
+      }
+
+      // Atajo de teclado: tecla 'C' para captura limpia, 'Escape' para salir
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'c' || e.key === 'C') {
+          const isClean = document.body.classList.contains('clean-screenshot-mode');
+          toggleCleanMode(!isClean);
+        }
+        if (e.key === 'Escape') {
+          toggleCleanMode(false);
+        }
+      });
+
+      // Iluminar la pestaña activa según el scroll
+      window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        sections.forEach(sec => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top <= 200 && rect.bottom >= 200) {
+            currentSectionId = sec.getAttribute('id');
+          }
+        });
+
+        if (currentSectionId) {
+          tabLinks.forEach(link => {
+            if (link.getAttribute('href') === '#' + currentSectionId) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

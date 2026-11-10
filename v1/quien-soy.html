@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-version="v1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quién Soy &bull; Manifiesto de Marca &bull; LAPRIEST Alta Costura Brutalista</title>
+  
+    <!-- Fuentes: SF Pro Display (TÃ­tulos) + Familias de PÃ¡rrafos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.cdnfonts.com">
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../lapriest-theme/assets/css/main.css">
+</head>
+<body class="typo-v1">
+  <!-- BotÃ³n Flotante para Restaurar Barra si se OcultÃ³ para Capturas -->
+  <button type="button" class="restore-switcher-pill" aria-label="Restaurar barra de selecciÃ³n">
+    &bull; MOSTRAR SELECTOR TIPOGRÃFICO
+  </button>
+
+  <!-- Barra Curatorial: Selector de VersiÃ³n TipogrÃ¡fica -->
+  <aside class="typography-switcher-bar" aria-label="Selector de VersiÃ³n TipogrÃ¡fica">
+    <div class="switcher-inner">
+      <div class="switcher-label">
+        <span class="switcher-dot"></span>
+        <span>CURADURÃA TIPOGRÃFICA // LAPRIEST</span>
+      </div>
+      <div class="switcher-options">
+        <a href="../v1/quien-soy.html" class="switcher-btn active">
+          <span class="v-tag">VERSIÃ“N 1 (PRINCIPAL)</span>
+          <span class="v-fonts">SF PRO DISPLAY + INTER</span>
+        </a>
+        <a href="../v2/quien-soy.html" class="switcher-btn">
+          <span class="v-tag">VERSIÃ“N 2 (ALTERNATIVA A)</span>
+          <span class="v-fonts">SF PRO DISPLAY + SPACE GROTESK</span>
+        </a>
+        <a href="../v3/quien-soy.html" class="switcher-btn">
+          <span class="v-tag">VERSIÃ“N 3 (ALTERNATIVA B)</span>
+          <span class="v-fonts">SF PRO DISPLAY + DM SANS</span>
+        </a>
+        <button type="button" class="switcher-toggle-clean" data-toggle-clean title="Oculta esta barra para capturas de pantalla limpias (o presiona tecla C)">
+          [ MODO CAPTURA LIMPIA ]
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Cabecera del Sitio -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-topbar">
+      <div class="topbar-left">
+        <span class="live-pulse"></span>
+        <span id="paris-time">ATELIER PARÍS: 00:00:00 CET</span>
+      </div>
+      <div class="topbar-center">
+        <span>PROTOCOLO: SOLO ADQUISICIÓN DIRECTA // SIN CARRITOS DE COMPRA</span>
+      </div>
+      <div class="topbar-right">
+        <span id="tokyo-time">ARCHIVO TOKIO: 00:00:00 JST</span>
+      </div>
+    </div>
+
+    <div class="header-navbar container">
+      <a href="index.html" class="brand-mark">
+        LAPRIEST<span>PARÍS</span>
+      </a>
+
+      <nav class="primary-navigation" aria-label="Navegación Principal">
+        <ul class="nav-menu" id="primaryNav">
+          <li><a href="index.html" class="nav-link">EDITORIAL <span class="nav-counter">01</span></a></li>
+          <li><a href="catalog.html" class="nav-link">CATÁLOGO <span class="nav-counter">02</span></a></li>
+          <li><a href="quien-soy.html" class="nav-link active">QUIÉN SOY <span class="nav-counter">03</span></a></li>
+          <li>
+            <a href="#offerModalOverlay" class="nav-link" data-action="make-offer" data-piece-title="CONSULTA GENERAL AL ATELIER" data-piece-code="LP-GEN" data-piece-price="A CONSULTAR">
+              OFERTA DIRECTA <span class="nav-counter">&nearr;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-atmosphere" id="ambientToggle" aria-label="Alternar atmósfera sonora">
+          <span class="live-pulse"></span>
+          <span class="audio-status">ATMÓSFERA: DESACTIVADA</span>
+        </button>
+        <button type="button" class="mobile-nav-toggle" aria-label="Alternar Menú">
+          [ MENÚ ]
+        </button>
+      </div>
+    </div>
+
+    <div class="brutalist-ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-item">
+          <span>EL ECLIPSE DE LA ORTODOXIA // MANIFIESTO</span>
+          <span class="divider">&bull;</span>
+          <span>MONASTICISMO MATERIAL &bull; SILUETA BRUTALISTA</span>
+          <span class="divider">&bull;</span>
+          <span>EDICIONES RESTRINGIDAS DE 06 A 18 PIEZAS A NIVEL MUNDIAL</span>
+          <span class="divider">&bull;</span>
+          <span>ATELIER 75003 PARÍS // ARCHIVO TOKIO</span>
+          <span class="divider">&bull;</span>
+        </div>
+        <div class="ticker-item">
+          <span>EL ECLIPSE DE LA ORTODOXIA // MANIFIESTO</span>
+          <span class="divider">&bull;</span>
+          <span>MONASTICISMO MATERIAL &bull; SILUETA BRUTALISTA</span>
+          <span class="divider">&bull;</span>
+          <span>EDICIONES RESTRINGIDAS DE 06 A 18 PIEZAS A NIVEL MUNDIAL</span>
+          <span class="divider">&bull;</span>
+          <span>ATELIER 75003 PARÍS // ARCHIVO TOKIO</span>
+          <span class="divider">&bull;</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main id="primary" class="site-main manifesto-page">
+    <div class="container">
+
+      <!-- ENCABEZADO HERO DEL MANIFIESTO -->
+      <header class="manifesto-header">
+        <div class="manifesto-kicker">// FILOSOFÍA DE MARCA Y DECLARACIÓN DEL CREADOR</div>
+        <h1 class="manifesto-hero-quote">
+          &ldquo;LA MODA NO ES CONSUMO; ES UNA ARMADURA ARQUITECTÓNICA PARA LA CONCIENCIA HUMANA.&rdquo;
+        </h1>
+        <div class="mono-meta" style="margin-top:2rem; color:var(--text-secondary);">
+          FUNDADO POR STUDIO LAPRIEST &bull; ESTABLECIDO EN PARÍS Y TOKIO &bull; ALTA COSTURA NO CONFORMISTA
+        </div>
+      </header>
+
+      <!-- DISEÑO EDITORIAL A DOS COLUMNAS -->
+      <div class="manifesto-layout">
+        
+        <!-- Columna Visual Fija: Retrato del Creador y Entorno del Atelier -->
+        <aside class="manifesto-media-col">
+          <div class="manifesto-portrait-frame">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=90" 
+                 alt="Director Creativo en el Atelier de París" 
+                 loading="lazy">
+          </div>
+          <div class="manifesto-caption">
+            <span>RETRATO // DIRECCIÓN CREATIVA</span>
+            <span>ATELIER 75003 PARÍS</span>
+          </div>
+
+          <div style="margin-top:2.5rem; border-top:1px solid var(--border-subtle); padding-top:1.5rem;">
+            <div class="mono-meta" style="margin-bottom:0.75rem; color:#fff;">DOSSIER PRIVADO DE ATELIER</div>
+            <p style="font-size:0.8125rem; color:#777; line-height:1.6; margin-bottom:1.25rem;">
+              Curadores, coleccionistas privados y prensa especializada pueden solicitar la monografía confidencial completa, que incluye muestras físicas de textiles.
+            </p>
+            <button type="button" 
+                    class="btn-make-offer"
+                    data-action="make-offer"
+                    data-piece-title="MONOGRAFÍA CONFIDENCIAL DE ATELIER"
+                    data-piece-code="LP-PRENSA-MONOGRAFIA"
+                    data-piece-price="PRENSA / CURADURÍA">
+              <span>SOLICITAR DOSSIER DE ATELIER &rarr;</span>
+            </button>
+          </div>
+        </aside>
+
+        <!-- Columna de Narrativa: El Manifiesto -->
+        <article class="manifesto-text-col">
+          
+          <div class="manifesto-lead-statement">
+            Existimos fuera de la velocidad frenética del comercio minorista convencional. No fabricamos prendas desechables de temporada; esculpimos objetos arquitectónicos permanentes para el cuerpo.
+          </div>
+
+          <div class="manifesto-body-text">
+            <p>
+              LAPRIEST nació como una respuesta a la homogeneización del lujo contemporáneo. Cuando la moda se convirtió en un algoritmo diseñado para llenar carritos de compra con prendas sintéticas idénticas, el lujo murió. El verdadero lujo nunca ha tenido que ver con el pago digital instantáneo: reside en la escasez, la tensión física y una dedicación intransigente a la pureza del material.
+            </p>
+
+            <p>
+              Nuestras siluetas se inspiran en la arquitectura brutalista, los hábitos monásticos medievales y el diseño industrial. Tratamos la lana cruda japonesa hervida, el cuero de caballo curtido al vegetal y las sargas sin procesar no como textiles desechables, sino como escudos protectores que absorben la vida, el tiempo y la pátina junto a quien los porta.
+            </p>
+
+            <p>
+              Al prescindir deliberadamente de carritos de compra y compras automáticas, LAPRIEST recupera el vínculo histórico entre el creador y el coleccionista. Toda adquisición comienza con una propuesta, una conversación y un intercambio humano directo.
+            </p>
+          </div>
+
+          <!-- Los 4 Pilares de la Marca -->
+          <div class="pillars-section" id="pilares">
+            <div class="pillars-title">// LOS 4 PILARES DE LAPRIEST</div>
+
+            <div class="pillar-item">
+              <div class="pillar-index">[ 01 ]</div>
+              <div>
+                <h3 class="pillar-heading">MONASTICISMO MATERIAL</h3>
+                <p class="pillar-desc">
+                  Trabajamos exclusivamente con fibras naturales crudas y de alto gramaje: lana hervida japonesa de alta densidad, cuero de caballo toscano curado en frío y alpaca peruana sin refinar. Sin rellenos sintéticos. Sin concesiones.
+                </p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-index">[ 02 ]</div>
+              <div>
+                <h3 class="pillar-heading">PROPORCIÓN BRUTALISTA</h3>
+                <p class="pillar-desc">
+                  Hombros estructurados de proporciones imponentes, caftanes monásticos que rozan el suelo y cortes asimétricos diseñados para conferir presencia física y aplomo psicológico a quien los viste.
+                </p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-index">[ 03 ]</div>
+              <div>
+                <h3 class="pillar-heading">PROTOCOLO ANTICONSUMISTA</h3>
+                <p class="pillar-desc">
+                  Sin rebajas de temporada. Sin códigos de descuento. Sin intermediarios de distribución masiva. Las piezas permanecen en el catálogo hasta agotar sus series limitadas numeradas hacia archivos privados.
+                </p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-index">[ 04 ]</div>
+              <div>
+                <h3 class="pillar-heading">MICROEDICIONES LIMITADAS</h3>
+                <p class="pillar-desc">
+                  Cada prenda es cortada, ensamblada y terminada a mano en tiradas estrictamente limitadas de entre 6 y 18 piezas a nivel mundial. Cada ejemplar lleva grabado su número de registro de archivo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+
+      <!-- SUITE DE ATELIER Y REGISTRO VISUAL DE CONFECCIÓN -->
+      <section style="margin-top: 6rem;">
+        <div class="section-headline-bar">
+          <div>
+            <span class="mono-meta" style="color:var(--text-muted); display:block; margin-bottom:0.5rem;">// ESPACIO DE ATELIER</span>
+            <h2 class="section-title">DETRÁS DEL MONOLITO</h2>
+          </div>
+          <div class="section-index">[ PROCESO Y CONFECCIÓN ]</div>
+        </div>
+
+        <div class="atelier-gallery-strip">
+          <div class="atelier-gallery-item">
+            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=800&q=85" alt="Curado en aceites de chaqueta de cuero" loading="lazy">
+          </div>
+          <div class="atelier-gallery-item">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=85" alt="Corte de patrones de lana cruda" loading="lazy">
+          </div>
+          <div class="atelier-gallery-item">
+            <img src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=800&q=85" alt="Montaje de fornituras de plata forjadas a mano" loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <!-- DIRECTORIO DE CONTACTO OFICIAL Y ADQUISICIONES -->
+      <section class="atelier-contact-box">
+        <div class="contact-box-grid">
+          <div class="contact-meta-group">
+            <div class="c-label">ATELIER PARÍS (CON CITA PREVIA)</div>
+            <div class="c-val">Rue de Turenne, 75003 París, Francia</div>
+            <div class="mono-meta" style="margin-top:0.5rem;">Coordenadas: 48.8647° N, 2.3490° E</div>
+          </div>
+          <div class="contact-meta-group">
+            <div class="c-label">COMUNICACIÓN DIGITAL DIRECTA</div>
+            <div class="c-val"><a href="mailto:atelier@lapriest.com" style="color:#fff;">atelier@lapriest.com</a></div>
+            <div class="mono-meta" style="margin-top:0.5rem;">Instagram: @lapriest_studio</div>
+          </div>
+          <div class="contact-meta-group">
+            <div class="c-label">CONSULTAS CURATORIALES Y PRENSA</div>
+            <div class="c-val">press@lapriest.com</div>
+            <div class="mono-meta" style="margin-top:0.5rem;">Llave de Cifrado: PGP 0x7F41A9</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Pie de Página Monolítico -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="footer-brand-monolith">LAPRIEST</div>
+          <p class="footer-brand-bio">
+            Un laboratorio arquitectónico de alta costura que opera bajo principios de monasticismo material, geometría extrema en la silueta y protocolos de adquisición no comerciales.
+          </p>
+          <div class="mono-meta" style="margin-top: 1.5rem;">
+            48.864716&deg; N, 2.349014&deg; E &bull; ATELIER PARÍS<br>
+            35.658581&deg; N, 139.745438&deg; E &bull; ARCHIVO TOKIO
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">ARCHIVOS // DOSSIERS</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html">01 Portal Editorial</a></li>
+            <li><a href="catalog.html">02 Catálogo de Piezas</a></li>
+            <li><a href="quien-soy.html">03 Quién Soy (Manifiesto)</a></li>
+            <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="DOSSIER CONFIDENCIAL DEL ATELIER" data-piece-code="LP-DOSSIER" data-piece-price="A CONSULTAR">04 Proponer Adquisición</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">CANALES DIRECTOS</div>
+          <ul class="footer-links-list">
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram (@lapriest_studio)</a></li>
+            <li><a href="mailto:atelier@lapriest.com">atelier@lapriest.com</a></li>
+            <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="CITA PRIVADA EN EL ATELIER" data-piece-code="LP-CITA" data-piece-price="PRIVADO">Citas Privadas</a></li>
+            <li><a href="quien-soy.html#pilares">Los 4 Pilares</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">DESPACHO CONFIDENCIAL</div>
+          <p style="font-size: 0.75rem; color: #888; line-height: 1.6;">
+            Suscríbase para recibir lookbooks privados, coordenadas de exposiciones y lanzamientos de ediciones limitadas antes de su anuncio público.
+          </p>
+          <form class="footer-dispatch-form" onsubmit="event.preventDefault(); alert('Su dirección ha sido registrada en el libro privado de despachos de LAPRIEST.'); this.reset();">
+            <input type="email" class="footer-dispatch-input" placeholder="cliente@dominio.com" required aria-label="Correo para Despacho">
+            <button type="submit" class="footer-dispatch-btn">REGISTRARME</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 LAPRIEST HAUTE BRUTALISME. TODOS LOS DERECHOS RESERVADOS.</div>
+        <div>ARQUITECTURA SIN CARRITO DE COMPRA &bull; SOLO ADQUISICIONES DIRECTAS</div>
+      </div>
+
+      <!-- Crédito de Autoría / Friendly Dev by Shon -->
+      <div class="footer-credit-bar">
+        <div class="friendly-dev-credit">
+          <span class="friendly-dev-dot" aria-hidden="true"></span>
+          <span class="friendly-dev-text">Friendly Dev by Shon</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Oferta Directa -->
+  <div class="offer-modal-overlay" id="offerModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="offer-modal-window">
+      
+      <div class="modal-header-bar">
+        <div class="modal-header-title" id="modalTitle">// PROPONER ADQUISICIÓN / CONSULTAR</div>
+        <button type="button" class="modal-close-btn" data-close-modal aria-label="Cerrar Ventana">&times;</button>
+      </div>
+
+      <div class="modal-piece-dossier">
+        <div>
+          <div class="dossier-piece-name" id="dossierPieceName">DOSSIER CONFIDENCIAL DEL ATELIER</div>
+          <div class="dossier-meta-code" id="dossierPieceCode">LP-DOSSIER // A MEDIDA</div>
+        </div>
+        <div class="dossier-baseline">
+          <div style="font-size:0.5625rem; letter-spacing:0.18em; text-transform:uppercase; color:#777;">VALOR BASE</div>
+          <div class="dossier-baseline-val" id="dossierPiecePrice">A CONSULTAR</div>
+        </div>
+      </div>
+
+      <div class="offer-form-container" id="offerFormPane">
+        <form id="lapriestOfferForm" class="offer-form" novalidate>
+          <input type="hidden" name="piece_title" id="fieldPieceTitle" value="">
+          <input type="hidden" name="piece_code" id="fieldPieceCode" value="">
+          <input type="hidden" name="piece_baseline" id="fieldPiecePrice" value="">
+          <input type="hidden" name="piece_id" id="fieldPieceId" value="">
+
+          <div class="form-grid-2">
+            <div class="form-field-group">
+              <label class="form-label" for="clientFullName">Nombre Completo <span class="req">*</span></label>
+              <input type="text" id="clientFullName" name="full_name" class="form-input" placeholder="Ej: Julián Vane" required>
+            </div>
+            <div class="form-field-group">
+              <label class="form-label" for="clientEmail">Correo Electrónico <span class="req">*</span></label>
+              <input type="email" id="clientEmail" name="email" class="form-input" placeholder="julian@archivo.com" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field-group">
+              <label class="form-label" for="clientInstagram">Cuenta de Instagram <span style="color:#666;">(OPCIONAL)</span></label>
+              <input type="text" id="clientInstagram" name="instagram" class="form-input" placeholder="@tuusuario">
+            </div>
+            <div class="form-field-group">
+              <label class="form-label" for="clientOfferAmount">Oferta Propuesta / Presupuesto ($ USD) <span class="req">*</span></label>
+              <div class="offer-amount-wrapper">
+                <span class="offer-amount-prefix">$</span>
+                <input type="number" id="clientOfferAmount" name="proposed_offer" class="form-input form-input-offer" placeholder="1850" min="1" step="1" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label">Canal de Respuesta Preferido</label>
+            <div class="reply-selector-group">
+              <div class="reply-method-card checked">
+                <input type="radio" id="replyEmail" name="reply_method" value="Correo Electrónico" checked>
+                <label for="replyEmail">Correo Confidencial</label>
+              </div>
+              <div class="reply-method-card">
+                <input type="radio" id="replyInstagram" name="reply_method" value="Instagram DM">
+                <label for="replyInstagram">Mensaje Directo (DM)</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label" for="clientMessage">Medidas o Consultas Especiales <span style="color:#666;">(OPCIONAL)</span></label>
+            <textarea id="clientMessage" name="message" class="form-textarea" rows="3" placeholder="Indique notas sobre medidas personalizadas, solicitud de cita privada o país de entrega..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-offer">
+            <span>ENVIAR PROPUESTA AL ATELIER &rarr;</span>
+          </button>
+
+          <p class="modal-legal-note">
+            LAPRIEST opera sin carritos de compra convencionales. Cada propuesta es evaluada de manera personalizada por la dirección del atelier. No se procesa ningún cobro en esta etapa.
+          </p>
+        </form>
+      </div>
+
+      <div class="modal-feedback-pane" id="offerFeedbackPane">
+        <div class="feedback-status-badge">// TRANSMISIÓN CONFIRMADA</div>
+        <h2 class="feedback-title">OFERTA REGISTRADA</h2>
+        <p style="font-size:0.875rem; color:#888; max-width:440px; margin:0 auto 1.5rem; line-height:1.6;">
+          Su propuesta ha sido ingresada en el registro privado de adquisiciones del atelier LAPRIEST. Recibirá una respuesta privada en un plazo máximo de 24 horas.
+        </p>
+
+        <div class="feedback-receipt-box">
+          <div class="receipt-row">
+            <span style="color:#777;">REF. DE DOSSIER DE ADQUISICIÓN:</span>
+            <strong id="receiptReferenceId" style="color:#fff; font-family:monospace; letter-spacing:1px;">LP-ACQ-00000</strong>
+          </div>
+          <div class="receipt-row">
+            <span style="color:#777;">PRENDA OBJETIVO:</span>
+            <span id="receiptPiece" style="color:#ddd;">—</span>
+          </div>
+          <div class="receipt-row">
+            <span style="color:#777;">OFERTA PROPUESTA:</span>
+            <strong id="receiptOffer" style="color:#fff;">$0 USD</strong>
+          </div>
+          <div class="receipt-row">
+            <span style="color:#777;">CANAL DE CONTACTO:</span>
+            <span id="receiptClient" style="color:#ddd;">—</span>
+          </div>
+        </div>
+
+        <button type="button" class="btn-submit-offer" data-close-modal style="background:transparent; border-color:#444; color:#fff;">
+          <span>VOLVER AL MANIFIESTO</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../lapriest-theme/assets/js/main.js"></script>
+</body>
+</html>
