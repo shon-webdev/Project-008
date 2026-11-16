@@ -15,12 +15,12 @@ get_header(); ?>
          ENCABEZADO HERO DEL MANIFIESTO
          ========================================================================= -->
     <header class="manifesto-header">
-      <div class="manifesto-kicker">// FILOSOFÍA DE MARCA Y DECLARACIÓN DEL CREADOR</div>
+      <div class="manifesto-kicker">// MANIFIESTO LAPRIEST</div>
       <h1 class="manifesto-hero-quote">
-        &ldquo;LA MODA NO ES CONSUMO; ES UNA ARMADURA ARQUITECTÓNICA PARA LA CONCIENCIA HUMANA.&rdquo;
+        &ldquo;ESTO NO ES CONSUMO, ES PURA VIDA.&rdquo;
       </h1>
       <div class="mono-meta" style="margin-top:2rem; color:var(--text-secondary);">
-        FUNDADO POR EMMANUEL LIRA &bull; ATELIER CIUDAD DE MÉXICO &bull; PIEZA ÚNICA &amp; ALTA COSTURA INDEPENDIENTE
+        LAPRIEST &bull; ATELIER MÉXICO &bull; EMMANUEL LIRA
       </div>
     </header>
 
@@ -61,21 +61,64 @@ get_header(); ?>
       <article class="manifesto-text-col">
         
         <div class="manifesto-lead-statement">
-          <?php esc_html_e('Existimos fuera de la velocidad frenética del comercio minorista convencional. No fabricamos prendas desechables de temporada; esculpimos objetos arquitectónicos permanentes para el cuerpo.', 'lapriest'); ?>
+          LAPRIEST<br>
+          <?php esc_html_e('Una idea. ¿Un movimiento? ¿Cuál es el instrumento?', 'lapriest'); ?>
         </div>
 
-        <div class="manifesto-body-text">
-          <p>
-            <?php esc_html_e('LAPRIEST, dirigido por Emmanuel Lira desde Ciudad de México, nació frente a la homogeneización de la moda industrial. Frente a las prendas desechables producidas en serie, cada creación busca la tensión física, el carácter irrepetible y el trabajo honesto sobre el material.', 'lapriest'); ?>
-          </p>
+        <div class="manifesto-poem">
+          <div class="manifesto-stanza">
+            <p>
+              Una marca que poco abarca.<br>
+              Un mensaje, aprendizaje.<br>
+              Contracorriente, ¿dónde está tu mente?
+            </p>
+          </div>
 
-          <p>
-            <?php esc_html_e('Nuestras siluetas dialogan con la arquitectura brutalista, la indumentaria utilitaria y el desgaste orgánico del denim trabajado a mano. Intervenimos mezclilla pesada, sargas técnicas y algodones de alto gramaje para construir escudos visuales que evolucionan junto a quien los viste.', 'lapriest'); ?>
-          </p>
+          <div class="manifesto-stanza">
+            <p>
+              ¿De qué va tu vida? ¿Qué te inspira? ¿Motiva?<br>
+              Esto no es consumo, es pura vida.<br>
+              Sentimientos complejos añejos,<br>
+              no necesito consejos.
+            </p>
+          </div>
 
-          <p>
-            <?php esc_html_e('Por ello trabajamos mediante Oferta Directa: en lugar de transacciones impersonales, cada pieza se asigna en diálogo directo entre el atelier y quien la adquiere, garantizando autenticidad, ajuste y permanencia.', 'lapriest'); ?>
-          </p>
+          <div class="manifesto-stanza">
+            <p>
+              Cada material, ideal, mortal, no banal.<br>
+              Nada aspiracional.<br>
+              Esto es solo para el que comprenda, entienda.<br>
+              Que nada lo detenga.
+            </p>
+          </div>
+
+          <div class="manifesto-stanza">
+            <p>
+              Pronto habrá pelea, caos, destrucción.<br>
+              ¿Te quedarás en tu prisión?<br>
+              ¿O buscarás cómo hacer tu revolución?
+            </p>
+          </div>
+
+          <div class="manifesto-stanza">
+            <p>
+              Romper el ciclo<br>
+              de todo lo que estaba escrito.<br>
+              Pelear por un mejor mañana,<br>
+              que ya se quite esta migraña.
+            </p>
+          </div>
+
+          <div class="manifesto-stanza">
+            <p>
+              Pelear por las ideas.<br>
+              Libertad, bondad, rescatar la humanidad.
+            </p>
+          </div>
+
+          <div class="manifesto-signature">
+            Esto es LAPRIEST.
+          </div>
         </div>
 
         <!-- Los 4 Pilares de la Marca -->
