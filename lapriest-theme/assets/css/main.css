@@ -2151,27 +2151,21 @@ body.mobile-nav-open {
 .friendly-dev-credit {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
   font-family: var(--font-meta);
   font-size: 0.6875rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-weight: 600;
-  padding: 0.55rem 1.45rem;
-  border-radius: 999px;
-  background: #090909;
+  padding: 0;
+  border: none;
+  background: transparent;
   text-decoration: none;
   cursor: default;
-  transition: all 0.6s ease;
-  animation: friendly-dev-badge 8s ease-in-out infinite;
 }
 
 .friendly-dev-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  display: inline-block;
-  animation: friendly-dev-dot 8s ease-in-out infinite;
+  display: none;
 }
 
 .friendly-dev-text {
@@ -2200,54 +2194,6 @@ body.mobile-nav-open {
     color: #9333ea;
     text-shadow: 0 0 12px rgba(147, 51, 234, 0.9), 0 0 25px rgba(168, 85, 247, 0.65);
     opacity: 0.92;
-  }
-}
-
-@keyframes friendly-dev-badge {
-  0%, 100% {
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.12), 0 0 35px rgba(147, 51, 234, 0.2);
-    background: #0d0d0d;
-  }
-  25% {
-    border: 1px solid rgba(192, 132, 252, 0.65);
-    box-shadow: 0 0 25px rgba(168, 85, 247, 0.4), 0 0 50px rgba(147, 51, 234, 0.25);
-    background: #11091a;
-  }
-  50% {
-    border: 1px solid rgba(35, 20, 50, 0.35);
-    box-shadow: none;
-    background: #050505;
-  }
-  75% {
-    border: 1px solid rgba(147, 51, 234, 0.55);
-    box-shadow: 0 0 20px rgba(147, 51, 234, 0.35);
-    background: #0f0717;
-  }
-}
-
-@keyframes friendly-dev-dot {
-  0%, 100% {
-    background-color: #ffffff;
-    box-shadow: 0 0 10px #ffffff, 0 0 18px rgba(192, 132, 252, 0.85);
-    transform: scale(1.15);
-  }
-  25% {
-    background-color: #c084fc;
-    box-shadow: 0 0 12px #c084fc, 0 0 22px #9333ea;
-    transform: scale(1.25);
-  }
-  50% {
-    background-color: #1a0f26;
-    box-shadow: none;
-    transform: scale(0.8);
-    opacity: 0.3;
-  }
-  75% {
-    background-color: #9333ea;
-    box-shadow: 0 0 10px #9333ea, 0 0 18px rgba(168, 85, 247, 0.7);
-    transform: scale(1.1);
-    opacity: 1;
   }
 }
 
