@@ -19,8 +19,8 @@
           <?php esc_html_e('Un laboratorio arquitectónico de alta costura que opera bajo principios de monasticismo material, geometría extrema en la silueta y protocolos de adquisición no comerciales.', 'lapriest'); ?>
         </p>
         <div class="mono-meta" style="margin-top: 1.5rem;">
-          48.864716&deg; N, 2.349014&deg; E &bull; ATELIER PARÍS<br>
-          35.658581&deg; N, 139.745438&deg; E &bull; ARCHIVO TOKIO
+          19.432608&deg; N, 99.133209&deg; O &bull; ATELIER CIUDAD DE MÉXICO<br>
+          EMMANUEL LIRA &bull; PIEZA ÚNICA &amp; ARCHIVO
         </div>
       </div>
 
@@ -66,7 +66,7 @@
         &copy; <?php echo date('Y'); ?> LAPRIEST HAUTE BRUTALISME. <?php esc_html_e('TODOS LOS DERECHOS RESERVADOS.', 'lapriest'); ?>
       </div>
       <div>
-        <?php esc_html_e('ARQUITECTURA SIN CARRITO DE COMPRA &bull; SOLO ADQUISICIONES DIRECTAS', 'lapriest'); ?>
+        <?php esc_html_e('SISTEMA DE ADQUISICIÓN DIRECTA &bull; ATELIER MÉXICO', 'lapriest'); ?>
       </div>
     </div>
 

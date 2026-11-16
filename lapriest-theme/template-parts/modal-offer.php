@@ -93,7 +93,7 @@
         </button>
 
         <p class="modal-legal-note">
-          <?php esc_html_e('LAPRIEST opera sin carritos de compra convencionales. Cada propuesta es evaluada de manera personalizada por la dirección del atelier. No se procesa ningún cobro en esta etapa.', 'lapriest'); ?>
+          <?php esc_html_e('Cada propuesta se envía de forma directa al atelier de Emmanuel Lira para confirmar talla, disponibilidad única o personalización a medida. No se realiza ningún cobro automático en esta etapa.', 'lapriest'); ?>
         </p>
       </form>
     </div>

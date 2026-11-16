@@ -24,10 +24,10 @@ $cat_name = ($terms && !is_wp_error($terms)) ? $terms[0]->name : 'Pieza de Colec
 
 $primary_img = get_the_post_thumbnail_url($piece_id, 'lapriest-piece-portrait');
 if (!$primary_img) {
-    $primary_img = 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85';
+    $primary_img = LAPRIEST_URI . '/assets/media/web/vic8384.jpg';
 }
 if (!$secondary_img) {
-    $secondary_img = 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=85';
+    $secondary_img = LAPRIEST_URI . '/assets/media/web/vic8382.jpg';
 }
 ?>
 

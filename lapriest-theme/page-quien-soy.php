@@ -20,25 +20,25 @@ get_header(); ?>
         &ldquo;LA MODA NO ES CONSUMO; ES UNA ARMADURA ARQUITECTÓNICA PARA LA CONCIENCIA HUMANA.&rdquo;
       </h1>
       <div class="mono-meta" style="margin-top:2rem; color:var(--text-secondary);">
-        FUNDADO POR STUDIO LAPRIEST &bull; ESTABLECIDO EN PARÍS Y TOKIO &bull; ALTA COSTURA NO CONFORMISTA
+        FUNDADO POR EMMANUEL LIRA &bull; ATELIER CIUDAD DE MÉXICO &bull; PIEZA ÚNICA &amp; ALTA COSTURA INDEPENDIENTE
       </div>
     </header>
 
     <!-- =========================================================================
-         DISEÑO EDITORIAL A DOS COLUMNAS (RETRATO + ENSAYO)
+         DISEÑO EDITORIAL A DOS COLUMNAS (VIDEO + ENSAYO)
          ========================================================================= -->
     <div class="manifesto-layout">
       
-      <!-- Columna Visual Fija: Retrato del Creador y Entorno del Atelier -->
+      <!-- Columna Visual Fija: Video Manifiesto "Quién Soy" -->
       <aside class="manifesto-media-col">
         <div class="manifesto-portrait-frame">
-          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=90" 
-               alt="Director Creativo en el Atelier de París" 
-               loading="lazy">
+          <video autoplay muted loop playsinline controls preload="metadata" poster="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/vic8134.jpg'); ?>">
+            <source src="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/quien-soy.mp4'); ?>" type="video/mp4">
+          </video>
         </div>
         <div class="manifesto-caption">
-          <span>RETRATO // DIRECCIÓN CREATIVA</span>
-          <span>ATELIER 75003 PARÍS</span>
+          <span>MANIFIESTO // EMMANUEL LIRA</span>
+          <span>ATELIER MÉXICO</span>
         </div>
 
         <div style="margin-top:2.5rem; border-top:1px solid var(--border-subtle); padding-top:1.5rem;">
@@ -66,15 +66,15 @@ get_header(); ?>
 
         <div class="manifesto-body-text">
           <p>
-            <?php esc_html_e('LAPRIEST nació como una respuesta a la homogeneización del lujo contemporáneo. Cuando la moda se convirtió en un algoritmo diseñado para llenar carritos de compra con prendas sintéticas idénticas, el lujo murió. El verdadero lujo nunca ha tenido que ver con el pago digital instantáneo: reside en la escasez, la tensión física y una dedicación intransigente a la pureza del material.', 'lapriest'); ?>
+            <?php esc_html_e('LAPRIEST, dirigido por Emmanuel Lira desde Ciudad de México, nació frente a la homogeneización de la moda industrial. Frente a las prendas desechables producidas en serie, cada creación busca la tensión física, el carácter irrepetible y el trabajo honesto sobre el material.', 'lapriest'); ?>
           </p>
 
           <p>
-            <?php esc_html_e('Nuestras siluetas se inspiran en la arquitectura brutalista, los hábitos monásticos medievales y el diseño industrial. Tratamos la lana cruda japonesa hervida, el cuero de caballo curtido al vegetal y las sargas sin procesar no como textiles desechables, sino como escudos protectores que absorben la vida, el tiempo y la pátina junto a quien los porta.', 'lapriest'); ?>
+            <?php esc_html_e('Nuestras siluetas dialogan con la arquitectura brutalista, la indumentaria utilitaria y el desgaste orgánico del denim trabajado a mano. Intervenimos mezclilla pesada, sargas técnicas y algodones de alto gramaje para construir escudos visuales que evolucionan junto a quien los viste.', 'lapriest'); ?>
           </p>
 
           <p>
-            <?php esc_html_e('Al prescindir deliberadamente de carritos de compra y compras automáticas, LAPRIEST recupera el vínculo histórico entre el creador y el coleccionista. Toda adquisición comienza con una propuesta, una conversación y un intercambio humano directo.', 'lapriest'); ?>
+            <?php esc_html_e('Por ello trabajamos mediante Oferta Directa: en lugar de transacciones impersonales, cada pieza se asigna en diálogo directo entre el atelier y quien la adquiere, garantizando autenticidad, ajuste y permanencia.', 'lapriest'); ?>
           </p>
         </div>
 
@@ -141,13 +141,13 @@ get_header(); ?>
 
       <div class="atelier-gallery-strip">
         <div class="atelier-gallery-item">
-          <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=800&q=85" alt="Curado en aceites de chaqueta de cuero" loading="lazy">
+          <img src="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/dsc04804.jpg'); ?>" alt="Intervención manual con aerosol sobre mezclilla en taller LAPRIEST" loading="lazy">
         </div>
         <div class="atelier-gallery-item">
-          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=85" alt="Corte de patrones de lana cruda" loading="lazy">
+          <img src="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/img-3304.jpg'); ?>" alt="Archivo de piezas gráficas intervenidas a mano" loading="lazy">
         </div>
         <div class="atelier-gallery-item">
-          <img src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=800&q=85" alt="Montaje de fornituras de plata forjadas a mano" loading="lazy">
+          <img src="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/dsc05091.jpg'); ?>" alt="Retrato exterior de colección LAPRIEST en Ciudad de México" loading="lazy">
         </div>
       </div>
     </section>
@@ -158,9 +158,9 @@ get_header(); ?>
     <section class="atelier-contact-box">
       <div class="contact-box-grid">
         <div class="contact-meta-group">
-          <div class="c-label"><?php esc_html_e('ATELIER PARÍS (CON CITA PREVIA)', 'lapriest'); ?></div>
-          <div class="c-val">Rue de Turenne, 75003 París, Francia</div>
-          <div class="mono-meta" style="margin-top:0.5rem;">Coordenadas: 48.8647° N, 2.3490° E</div>
+          <div class="c-label"><?php esc_html_e('ATELIER MÉXICO (CON CITA PREVIA)', 'lapriest'); ?></div>
+          <div class="c-val">Ciudad de México, México</div>
+          <div class="mono-meta" style="margin-top:0.5rem;">Dirección Creativa: Emmanuel Lira</div>
         </div>
         <div class="contact-meta-group">
           <div class="c-label"><?php esc_html_e('COMUNICACIÓN DIGITAL DIRECTA', 'lapriest'); ?></div>

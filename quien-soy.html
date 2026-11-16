@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" data-version="v1">
 <head>
   <meta charset="UTF-8">
@@ -20,19 +20,6 @@
 
   <!-- Cabecera del Sitio -->
   <header class="site-header" id="siteHeader">
-    <div class="header-topbar">
-      <div class="topbar-left">
-        <span class="live-pulse"></span>
-        <span id="paris-time">ATELIER MÉXICO: 00:00:00 CST</span>
-      </div>
-      <div class="topbar-center">
-        <span>PROTOCOLO: SOLO ADQUISICIÓN DIRECTA // SIN CARRITOS DE COMPRA</span>
-      </div>
-      <div class="topbar-right">
-        <span id="tokyo-time">ARCHIVO TOKIO: 00:00:00 JST</span>
-      </div>
-    </div>
-
     <div class="header-navbar container">
       <a href="index.html" class="brand-mark">
         LAPRIEST<span>MÉXICO</span>
@@ -40,12 +27,12 @@
 
       <nav class="primary-navigation" aria-label="Navegación Principal">
         <ul class="nav-menu" id="primaryNav">
-          <li><a href="index.html" class="nav-link">EDITORIAL <span class="nav-counter">01</span></a></li>
-          <li><a href="catalog.html" class="nav-link">CATÁLOGO <span class="nav-counter">02</span></a></li>
-          <li><a href="quien-soy.html" class="nav-link active">QUIÉN SOY <span class="nav-counter">03</span></a></li>
+          <li><a href="quien-soy.html" class="nav-link active">QUIÉN SOY</a></li>
+          <li><a href="index.html" class="nav-link">EDITORIAL</a></li>
+          <li><a href="catalog.html" class="nav-link">CATÁLOGO</a></li>
           <li>
             <a href="#offerModalOverlay" class="nav-link" data-action="make-offer" data-piece-title="CONSULTA GENERAL AL ATELIER" data-piece-code="LP-GEN" data-piece-price="A CONSULTAR">
-              OFERTA DIRECTA <span class="nav-counter">&nearr;</span>
+              OFERTA DIRECTA
             </a>
           </li>
         </ul>
@@ -53,37 +40,11 @@
 
       <div class="nav-actions">
         <button type="button" class="btn-atmosphere" id="ambientToggle" aria-label="Alternar atmósfera sonora">
-          <span class="live-pulse"></span>
-          <span class="audio-status">ATMÓSFERA: DESACTIVADA</span>
+          <span class="audio-status">AUDIO: OFF</span>
         </button>
         <button type="button" class="mobile-nav-toggle" aria-label="Alternar Menú">
           [ MENÚ ]
         </button>
-      </div>
-    </div>
-
-    <div class="brutalist-ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <div class="ticker-item">
-          <span>EL ECLIPSE DE LA ORTODOXIA // MANIFIESTO</span>
-          <span class="divider">&bull;</span>
-          <span>MONASTICISMO MATERIAL &bull; SILUETA BRUTALISTA</span>
-          <span class="divider">&bull;</span>
-          <span>EDICIONES RESTRINGIDAS DE 06 A 18 PIEZAS A NIVEL MUNDIAL</span>
-          <span class="divider">&bull;</span>
-          <span>ATELIER 75003 PARÍS // ARCHIVO TOKIO</span>
-          <span class="divider">&bull;</span>
-        </div>
-        <div class="ticker-item">
-          <span>EL ECLIPSE DE LA ORTODOXIA // MANIFIESTO</span>
-          <span class="divider">&bull;</span>
-          <span>MONASTICISMO MATERIAL &bull; SILUETA BRUTALISTA</span>
-          <span class="divider">&bull;</span>
-          <span>EDICIONES RESTRINGIDAS DE 06 A 18 PIEZAS A NIVEL MUNDIAL</span>
-          <span class="divider">&bull;</span>
-          <span>ATELIER 75003 PARÍS // ARCHIVO TOKIO</span>
-          <span class="divider">&bull;</span>
-        </div>
       </div>
     </div>
   </header>
@@ -99,23 +60,23 @@
           &ldquo;LA MODA NO ES CONSUMO; ES UNA ARMADURA ARQUITECTÓNICA PARA LA CONCIENCIA HUMANA.&rdquo;
         </h1>
         <div class="mono-meta" style="margin-top:2rem; color:var(--text-secondary);">
-          FUNDADO POR STUDIO LAPRIEST &bull; ESTABLECIDO EN PARÍS Y TOKIO &bull; ALTA COSTURA NO CONFORMISTA
+          FUNDADO POR EMMANUEL LIRA &bull; ATELIER CIUDAD DE MÉXICO &bull; PIEZA ÚNICA &amp; ALTA COSTURA INDEPENDIENTE
         </div>
       </header>
 
       <!-- DISEÑO EDITORIAL A DOS COLUMNAS -->
       <div class="manifesto-layout">
         
-        <!-- Columna Visual Fija: Retrato del Creador y Entorno del Atelier -->
+        <!-- Columna Visual Fija: Video Manifiesto "Quién Soy" del Creador -->
         <aside class="manifesto-media-col">
           <div class="manifesto-portrait-frame">
-            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=90" 
-                 alt="Director Creativo en el Atelier de París" 
-                 loading="lazy">
+            <video autoplay muted loop playsinline controls preload="metadata" poster="lapriest-theme/assets/media/web/vic8134.jpg">
+              <source src="lapriest-theme/assets/media/web/quien-soy.mp4" type="video/mp4">
+            </video>
           </div>
           <div class="manifesto-caption">
-            <span>RETRATO // DIRECCIÓN CREATIVA</span>
-            <span>ATELIER 75003 PARÍS</span>
+            <span>MANIFIESTO // EMMANUEL LIRA</span>
+            <span>ATELIER MÉXICO</span>
           </div>
 
           <div style="margin-top:2.5rem; border-top:1px solid var(--border-subtle); padding-top:1.5rem;">
@@ -143,15 +104,15 @@
 
           <div class="manifesto-body-text">
             <p>
-              LAPRIEST nació como una respuesta a la homogeneización del lujo contemporáneo. Cuando la moda se convirtió en un algoritmo diseñado para llenar carritos de compra con prendas sintéticas idénticas, el lujo murió. El verdadero lujo nunca ha tenido que ver con el pago digital instantáneo: reside en la escasez, la tensión física y una dedicación intransigente a la pureza del material.
+              LAPRIEST, dirigido por Emmanuel Lira desde Ciudad de México, nació frente a la homogeneización de la moda industrial. Frente a las prendas desechables producidas en serie, cada creación busca la tensión física, el carácter irrepetible y el trabajo honesto sobre el material.
             </p>
 
             <p>
-              Nuestras siluetas se inspiran en la arquitectura brutalista, los hábitos monásticos medievales y el diseño industrial. Tratamos la lana cruda japonesa hervida, el cuero de caballo curtido al vegetal y las sargas sin procesar no como textiles desechables, sino como escudos protectores que absorben la vida, el tiempo y la pátina junto a quien los porta.
+              Nuestras siluetas dialogan con la arquitectura brutalista, la indumentaria utilitaria y el desgaste orgánico del denim trabajado a mano. Intervenimos mezclilla pesada, sargas técnicas y algodones de alto gramaje para construir escudos visuales que evolucionan junto a quien los viste.
             </p>
 
             <p>
-              Al prescindir deliberadamente de carritos de compra y compras automáticas, LAPRIEST recupera el vínculo histórico entre el creador y el coleccionista. Toda adquisición comienza con una propuesta, una conversación y un intercambio humano directo.
+              Por ello trabajamos mediante Oferta Directa: en lugar de transacciones impersonales, cada pieza se asigna en diálogo directo entre el atelier y quien la adquiere, garantizando autenticidad, ajuste y permanencia.
             </p>
           </div>
 
@@ -216,13 +177,13 @@
 
         <div class="atelier-gallery-strip">
           <div class="atelier-gallery-item">
-            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=800&q=85" alt="Curado en aceites de chaqueta de cuero" loading="lazy">
+            <img src="lapriest-theme/assets/media/web/dsc04804.jpg" alt="Intervención manual con aerosol sobre mezclilla en taller LAPRIEST" loading="lazy">
           </div>
           <div class="atelier-gallery-item">
-            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=85" alt="Corte de patrones de lana cruda" loading="lazy">
+            <img src="lapriest-theme/assets/media/web/img-3304.jpg" alt="Archivo de piezas gráficas intervenidas a mano" loading="lazy">
           </div>
           <div class="atelier-gallery-item">
-            <img src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=800&q=85" alt="Montaje de fornituras de plata forjadas a mano" loading="lazy">
+            <img src="lapriest-theme/assets/media/web/dsc05091.jpg" alt="Retrato exterior de colección LAPRIEST en Ciudad de México" loading="lazy">
           </div>
         </div>
       </section>
@@ -231,9 +192,9 @@
       <section class="atelier-contact-box">
         <div class="contact-box-grid">
           <div class="contact-meta-group">
-            <div class="c-label">ATELIER PARÍS (CON CITA PREVIA)</div>
-            <div class="c-val">Rue de Turenne, 75003 París, Francia</div>
-            <div class="mono-meta" style="margin-top:0.5rem;">Coordenadas: 48.8647° N, 2.3490° E</div>
+            <div class="c-label">ATELIER MÉXICO (CON CITA PREVIA)</div>
+            <div class="c-val">Ciudad de México, México</div>
+            <div class="mono-meta" style="margin-top:0.5rem;">Dirección Creativa: Emmanuel Lira</div>
           </div>
           <div class="contact-meta-group">
             <div class="c-label">COMUNICACIÓN DIGITAL DIRECTA</div>
@@ -261,8 +222,8 @@
             Un laboratorio arquitectónico de alta costura que opera bajo principios de monasticismo material, geometría extrema en la silueta y protocolos de adquisición no comerciales.
           </p>
           <div class="mono-meta" style="margin-top: 1.5rem;">
-            48.864716&deg; N, 2.349014&deg; E &bull; ATELIER PARÍS<br>
-            35.658581&deg; N, 139.745438&deg; E &bull; ARCHIVO TOKIO
+            19.432608&deg; N, 99.133209&deg; O &bull; ATELIER CIUDAD DE MÉXICO<br>
+            EMMANUEL LIRA &bull; PIEZA ÚNICA &amp; ARCHIVO
           </div>
         </div>
 
@@ -300,7 +261,7 @@
 
       <div class="footer-bottom-bar">
         <div>&copy; 2026 LAPRIEST HAUTE BRUTALISME. TODOS LOS DERECHOS RESERVADOS.</div>
-        <div>ARQUITECTURA SIN CARRITO DE COMPRA &bull; SOLO ADQUISICIONES DIRECTAS</div>
+        <div>SISTEMA DE ADQUISICIÓN DIRECTA &bull; ATELIER MÉXICO</div>
       </div>
 
       <!-- Crédito de Autoría / Friendly Dev by Shon -->
@@ -389,7 +350,7 @@
           </button>
 
           <p class="modal-legal-note">
-            LAPRIEST opera sin carritos de compra convencionales. Cada propuesta es evaluada de manera personalizada por la dirección del atelier. No se procesa ningún cobro en esta etapa.
+            Cada propuesta se envía de forma directa al atelier de Emmanuel Lira para confirmar talla, disponibilidad única o personalización a medida. No se realiza ningún cobro automático en esta etapa.
           </p>
         </form>
       </div>

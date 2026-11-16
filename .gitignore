@@ -12,6 +12,10 @@ node_modules/
 # Logs
 *.log
 
+# Medios originales pesados (solo se versiona web/)
+lapriest-theme/assets/media/*
+!lapriest-theme/assets/media/web/
+
 # Temporales
 *.tmp
 *.bak

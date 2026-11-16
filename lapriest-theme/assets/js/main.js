@@ -317,7 +317,7 @@ function initAmbientSoundscape() {
 
     toggleBtn.classList.add('active');
     const label = toggleBtn.querySelector('.audio-status');
-    if (label) label.textContent = 'ATMÓSFERA: 55Hz NOCTURNO';
+    if (label) label.textContent = 'AUDIO: ON';
   }
 
   function stopAtmosphere() {
@@ -330,7 +330,7 @@ function initAmbientSoundscape() {
         isPlaying = false;
         toggleBtn.classList.remove('active');
         const label = toggleBtn.querySelector('.audio-status');
-        if (label) label.textContent = 'ATMÓSFERA: DESACTIVADA';
+        if (label) label.textContent = 'AUDIO: OFF';
       }, 1500);
     }
   }

@@ -14,7 +14,7 @@ while (have_posts()) : the_post();
     $base_price = get_post_meta($piece_id, '_lapriest_base_price', true) ?: '$1,850 USD';
     $season = get_post_meta($piece_id, '_lapriest_season', true) ?: 'SERIE 01 // EL ECLIPSE DE LA ORTODOXIA';
     $materials = get_post_meta($piece_id, '_lapriest_materials', true) ?: '100% Lana Cruda Hervida Japonesa de Alta Densidad, Arnés Interno en Cupro, Cierres de Plata con Pátina Fría.';
-    $edition_limit = get_post_meta($piece_id, '_lapriest_edition_limit', true) ?: 'Edición Estricta de 09 Piezas a Nivel Mundial — Confeccionada a Mano en París';
+    $edition_limit = get_post_meta($piece_id, '_lapriest_edition_limit', true) ?: 'Pieza Única — Confeccionada en Atelier Emmanuel Lira, México';
     $secondary_img = get_post_meta($piece_id, '_lapriest_secondary_image', true);
     $status = get_post_meta($piece_id, '_lapriest_inquiry_status', true) ?: 'available';
 
@@ -27,14 +27,14 @@ while (have_posts()) : the_post();
 
     $primary_img = get_the_post_thumbnail_url($piece_id, 'full');
     if (!$primary_img) {
-        $primary_img = 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1400&q=90';
+        $primary_img = LAPRIEST_URI . '/assets/media/web/vic8384.jpg';
     }
     if (!$secondary_img) {
-        $secondary_img = 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1400&q=90';
+        $secondary_img = LAPRIEST_URI . '/assets/media/web/vic8382.jpg';
     }
 ?>
 
-<main id="primary" class="site-main" style="padding-top: clamp(180px, 15vh, 220px); padding-bottom: 8rem;">
+<main id="primary" class="site-main" style="padding-top: clamp(112px, 12vh, 148px); padding-bottom: 8rem;">
   <div class="container">
     
     <!-- Barra de Navegación y Estado -->

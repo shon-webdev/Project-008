@@ -11,43 +11,68 @@ get_header(); ?>
 <main id="primary" class="site-main">
 
   <!-- =========================================================================
-       SECCIÓN HERO: ENFOQUE CINEMATOGRÁFICO ESTILO MUBI CON GRANO ANALÓGICO
+       PORTADA LIMPIA DE MARCA (FONDO CLARO DE ESTUDIO)
        ========================================================================= -->
-  <section class="editorial-hero">
+  <section class="editorial-hero" aria-label="Portada LAPRIEST">
     <div class="hero-media-wrapper">
-      <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=2000&q=90" 
-           alt="LAPRIEST Serie 01 Nocturno" 
+      <img src="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/vic8079.jpg'); ?>" 
+           alt="LAPRIEST — Archivo Fotográfico de Estudio en México" 
            fetchpriority="high">
     </div>
-    <div class="hero-vignette"></div>
 
-    <div class="container hero-content">
-      <div class="hero-tagline">
-        <span class="code-badge">// SERIE 01: EL ECLIPSE DE LA ORTODOXIA</span>
-        <span class="mono-meta"><?php esc_html_e('ARCHIVO OTOÑO / INVIERNO 2026', 'lapriest'); ?></span>
+    <div class="container hero-scroll-bar">
+      <a href="#film-principal" class="hero-scroll-cue"><?php esc_html_e('EXPLORAR ARCHIVO', 'lapriest'); ?> &darr;</a>
+    </div>
+  </section>
+
+  <!-- FILM PRINCIPAL Y MANIFIESTO AL DESCENDER -->
+  <section class="hero-manifesto-band" id="film-principal">
+    <div class="container brand-film-grid">
+      <div class="brand-film-frame">
+        <video autoplay muted loop playsinline controls preload="metadata" poster="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/vic8092.jpg'); ?>">
+          <source src="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/hero-principal.mp4'); ?>" type="video/mp4">
+        </video>
       </div>
 
-      <h1 class="hero-title">
-        MONOLÍTICO<br>
-        <em>ARMADURA PARA LA MENTE.</em>
-      </h1>
+      <div class="brand-film-copy">
+        <div class="hero-tagline">
+          <span class="code-badge">PIEZA ÚNICA // EMMANUEL LIRA</span>
+          <span class="mono-meta"><?php esc_html_e('CIUDAD DE MÉXICO', 'lapriest'); ?></span>
+        </div>
 
-      <div class="hero-meta-grid">
-        <div class="hero-meta-item">
-          <div class="meta-label"><?php esc_html_e('DIRECCIÓN CURATORIAL', 'lapriest'); ?></div>
-          <div class="meta-val">STUDIO LAPRIEST PARÍS</div>
+        <h1 class="hero-title">
+          MONOLÍTICO<br>
+          <em>ARMADURA PARA LA MENTE.</em>
+        </h1>
+
+        <p class="brand-film-lead">
+          <?php esc_html_e('Desde nuestro taller independiente en México, LAPRIEST desarrolla piezas únicas de patronaje experimental, denim intervenido a mano e indumentaria concebida fuera de los ciclos comerciales tradicionales.', 'lapriest'); ?>
+        </p>
+
+        <div class="brand-film-actions">
+          <a href="<?php echo esc_url(home_url('/catalogo/')); ?>" class="btn-flat-solid"><?php esc_html_e('VER CATÁLOGO', 'lapriest'); ?></a>
+          <button type="button" class="btn-flat-muted" data-action="make-offer" data-piece-title="CONSULTA GENERAL AL ATELIER" data-piece-code="LP-GEN" data-piece-price="BAJO CONSULTA">
+            <?php esc_html_e('SOLICITAR OFERTA DIRECTA', 'lapriest'); ?>
+          </button>
         </div>
-        <div class="hero-meta-item">
-          <div class="meta-label"><?php esc_html_e('ARQUITECTURA COMERCIAL', 'lapriest'); ?></div>
-          <div class="meta-val"><?php esc_html_e('SIN CARRITO // PROPUESTA DIRECTA', 'lapriest'); ?></div>
-        </div>
-        <div class="hero-meta-item">
-          <div class="meta-label"><?php esc_html_e('ESPECIFICACIÓN DE EDICIÓN', 'lapriest'); ?></div>
-          <div class="meta-val"><?php esc_html_e('LIMITADA A 12 POR SILUETA', 'lapriest'); ?></div>
-        </div>
-        <div class="hero-meta-item">
-          <div class="meta-label"><?php esc_html_e('PASARELA PRINCIPAL', 'lapriest'); ?></div>
-          <div class="meta-val">PALAIS DE TOKYO, PARÍS</div>
+
+        <div class="hero-meta-grid">
+          <div class="hero-meta-item">
+            <div class="meta-label"><?php esc_html_e('DIRECCIÓN CREATIVA', 'lapriest'); ?></div>
+            <div class="meta-val">EMMANUEL LIRA</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label"><?php esc_html_e('ADQUISICIÓN', 'lapriest'); ?></div>
+            <div class="meta-val"><?php esc_html_e('PROPUESTA DIRECTA', 'lapriest'); ?></div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label"><?php esc_html_e('FORMATO', 'lapriest'); ?></div>
+            <div class="meta-val"><?php esc_html_e('PIEZA ÚNICA DE ATELIER', 'lapriest'); ?></div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="meta-label"><?php esc_html_e('SEDE', 'lapriest'); ?></div>
+            <div class="meta-val">CIUDAD DE MÉXICO</div>
+          </div>
         </div>
       </div>
     </div>
@@ -134,22 +159,24 @@ get_header(); ?>
        ========================================================================= -->
   <section class="runway-banner">
     <div class="runway-banner-bg">
-      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1800&q=85" alt="Visual de Pasarela" loading="lazy">
+      <video autoplay muted loop playsinline preload="metadata" poster="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/vic8257.jpg'); ?>">
+        <source src="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/pasarelas.mp4'); ?>" type="video/mp4">
+      </video>
     </div>
     <div class="container runway-banner-inner">
-      <span class="mono-meta" style="color:#aaa; display:block; margin-bottom:1rem;">// DOCUMENTO AUDIOVISUAL</span>
+      <span class="mono-meta" style="color:#ccc; display:block; margin-bottom:1rem;">// DOCUMENTO EN PASARELA</span>
       <h2 class="runway-banner-title">
-        NOCTURNO EN PALAIS DE TOKYO
+        PASARELA LAPRIEST
       </h2>
       <p class="runway-banner-desc">
-        <?php esc_html_e('Grabado en vivo durante la instalación subterránea en la Semana de la Moda de París. Una toma continua acompañada de nuestra atmósfera de frecuencias modulares a 55Hz.', 'lapriest'); ?>
+        <?php esc_html_e('Movimiento, caída y presencia en vivo de las piezas desarrolladas en estudio. Cada silueta se asigna mediante consulta u oferta directa con el atelier.', 'lapriest'); ?>
       </p>
-      <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
-        <a href="<?php echo esc_url(home_url('/catalogo/')); ?>" class="btn-make-offer" style="padding:1rem 2rem;">
-          <span><?php esc_html_e('EXPLORAR EL LOOKBOOK', 'lapriest'); ?> &rarr;</span>
+      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+        <a href="<?php echo esc_url(home_url('/catalogo/')); ?>" class="btn-flat-solid">
+          <?php esc_html_e('EXPLORAR CATÁLOGO', 'lapriest'); ?> &rarr;
         </a>
-        <button type="button" class="btn-make-offer" id="heroDroneTrigger" onclick="document.getElementById('ambientToggle').click();" style="padding:1rem 2rem;">
-          <span><?php esc_html_e('ACTIVAR ATMÓSFERA 55Hz', 'lapriest'); ?></span>
+        <button type="button" class="btn-flat-muted" data-action="make-offer" data-piece-title="CONSULTA DE PASARELA LAPRIEST" data-piece-code="LP-RUNWAY" data-piece-price="BAJO CONSULTA">
+          <?php esc_html_e('SOLICITAR OFERTA DIRECTA', 'lapriest'); ?>
         </button>
       </div>
     </div>

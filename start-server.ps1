@@ -61,6 +61,7 @@ try {
 
     while ($listener.IsListening) {
         $context = $listener.GetContext()
+        try {
         $request = $context.Request
         $response = $context.Response
 
@@ -91,6 +92,8 @@ try {
                 ".png"   { $mime = "image/png" }
                 ".jpg"   { $mime = "image/jpeg" }
                 ".jpeg"  { $mime = "image/jpeg" }
+                ".mp4"   { $mime = "video/mp4" }
+                ".webm"  { $mime = "video/webm" }
                 ".svg"   { $mime = "image/svg+xml" }
                 ".ico"   { $mime = "image/x-icon" }
                 ".woff2" { $mime = "font/woff2" }
@@ -99,9 +102,26 @@ try {
             }
 
             $response.ContentType = $mime
-            $response.ContentLength64 = $bytes.Length
+            $response.AddHeader("Accept-Ranges", "bytes")
             $response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate")
-            $response.OutputStream.Write($bytes, 0, $bytes.Length)
+            $rangeHeader = $request.Headers["Range"]
+            if ($request.HttpMethod -ne "HEAD") {
+                if ($rangeHeader -and $rangeHeader -match "bytes=(\d+)-(\d*)") {
+                    $start = [int64]$matches[1]
+                    $end = if ($matches[2]) { [int64]$matches[2] } else { $bytes.Length - 1 }
+                    if ($end -ge $bytes.Length) { $end = $bytes.Length - 1 }
+                    $len = $end - $start + 1
+                    $response.StatusCode = 206
+                    $response.AddHeader("Content-Range", "bytes $start-$end/$($bytes.Length)")
+                    $response.ContentLength64 = $len
+                    $response.OutputStream.Write($bytes, [int]$start, [int]$len)
+                } else {
+                    $response.ContentLength64 = $bytes.Length
+                    $response.OutputStream.Write($bytes, 0, $bytes.Length)
+                }
+            } else {
+                $response.ContentLength64 = $bytes.Length
+            }
             
             $time = Get-Date -Format "HH:mm:ss"
             Write-Host "[$time] 200 OK  $rawUrl" -ForegroundColor DarkGray
@@ -109,13 +129,19 @@ try {
             $response.StatusCode = 404
             $errBytes = [System.Text.Encoding]::UTF8.GetBytes("404 Not Found: $rawUrl")
             $response.ContentLength64 = $errBytes.Length
-            $response.OutputStream.Write($errBytes, 0, $errBytes.Length)
+            if ($request.HttpMethod -ne "HEAD") {
+                $response.OutputStream.Write($errBytes, 0, $errBytes.Length)
+            }
             
             $time = Get-Date -Format "HH:mm:ss"
             Write-Host "[$time] 404 NOT FOUND $rawUrl" -ForegroundColor Red
         }
 
-        $response.OutputStream.Close()
+        } catch {
+            # Ignorar cierres abruptos de stream en Chrome (range video)
+        } finally {
+            try { $response.OutputStream.Close() } catch {}
+        }
     }
 } catch {
     Write-Host "Error en el servidor: $_" -ForegroundColor Red

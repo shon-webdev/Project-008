@@ -25,10 +25,10 @@ get_header(); ?>
         </div>
         <div class="catalog-intro-manifesto">
           <p>
-            <?php esc_html_e('LAPRIEST produce prendas en microediciones estrictamente limitadas y numeradas de 6 a 18 piezas en todo el mundo. Rechazamos el carrito de compras estandarizado. Cada adquisición se gestiona como un diálogo privado con el cliente mediante nuestro sistema de oferta directa.', 'lapriest'); ?>
+            <?php esc_html_e('LAPRIEST trabaja piezas únicas e irrepetibles concebidas en Ciudad de México. Con el sistema de Oferta Directa, en lugar de comprar en serie, eliges tu prenda, propones un monto o solicitas cotización para acordar talla, detalles a medida y entrega directa con el estudio.', 'lapriest'); ?>
           </p>
           <div class="mono-meta" style="margin-top: 1rem; color: #fff;">
-            <?php esc_html_e('SELECCIONE UNA PIEZA Y PROPONGA UN VALOR DE ADQUISICIÓN A CONTINUACIÓN.', 'lapriest'); ?>
+            <?php esc_html_e('SELECCIONA UNA PIEZA DEL ARCHIVO PARA ENVIAR TU PROPUESTA DIRECTA.', 'lapriest'); ?>
           </div>
         </div>
       </div>
@@ -39,15 +39,33 @@ get_header(); ?>
        BARRA DE FILTROS Y CUADRÍCULA DE PIEZAS
        ========================================================================= -->
   <section class="container" style="padding-top: 2rem;">
+
+    <div class="offer-guide-strip" aria-label="<?php esc_attr_e('Cómo funciona la Oferta Directa', 'lapriest'); ?>">
+      <div class="offer-guide-step">
+        <div class="step-kicker">01 // EXPLORA LA PIEZA</div>
+        <h2 class="step-title">ARCHIVO Y MATERIALIDAD</h2>
+        <p><?php esc_html_e('Revisa los cortes, textiles y acabados intervenidos a mano de cada prenda única o tiraje corto.', 'lapriest'); ?></p>
+      </div>
+      <div class="offer-guide-step">
+        <div class="step-kicker">02 // OFERTA DIRECTA</div>
+        <h2 class="step-title">PROPÓN O CONSULTA</h2>
+        <p><?php esc_html_e('Presiona «Hacer Oferta» para indicar tu propuesta económica, solicitar precio base o pedir ajuste a medida.', 'lapriest'); ?></p>
+      </div>
+      <div class="offer-guide-step">
+        <div class="step-kicker">03 // RESPUESTA DEL ATELIER</div>
+        <h2 class="step-title">TRATO PERSONALIZADO</h2>
+        <p><?php esc_html_e('El equipo de Emmanuel Lira responde por correo o WhatsApp sin cargos automáticos ni intermediarios.', 'lapriest'); ?></p>
+      </div>
+    </div>
     
     <!-- Filtros de categoría -->
     <div class="catalog-toolbar">
       <div class="filter-pills" role="tablist">
         <button type="button" class="filter-btn active" data-filter="all" role="tab"><?php esc_html_e('TODAS LAS PIEZAS [06]', 'lapriest'); ?></button>
-        <button type="button" class="filter-btn" data-filter="abrigos" role="tab"><?php esc_html_e('ABRIGOS Y CAPAS', 'lapriest'); ?></button>
-        <button type="button" class="filter-btn" data-filter="sastreria" role="tab"><?php esc_html_e('SASTRERÍA Y TÚNICAS', 'lapriest'); ?></button>
-        <button type="button" class="filter-btn" data-filter="cuero" role="tab"><?php esc_html_e('CUERO Y PRENDAS PESADAS', 'lapriest'); ?></button>
-        <button type="button" class="filter-btn" data-filter="calzado" role="tab"><?php esc_html_e('CALZADO', 'lapriest'); ?></button>
+        <button type="button" class="filter-btn" data-filter="abrigos" role="tab"><?php esc_html_e('CAZADORAS Y ABRIGOS', 'lapriest'); ?></button>
+        <button type="button" class="filter-btn" data-filter="sastreria" role="tab"><?php esc_html_e('CONJUNTOS', 'lapriest'); ?></button>
+        <button type="button" class="filter-btn" data-filter="denim" role="tab"><?php esc_html_e('DENIM INTERVENIDO', 'lapriest'); ?></button>
+        <button type="button" class="filter-btn" data-filter="accesorios" role="tab"><?php esc_html_e('ESTUDIO', 'lapriest'); ?></button>
       </div>
       <div class="catalog-count-meta" id="catalogFilterCount">
         <?php esc_html_e('MOSTRANDO 6 DE 6 PIEZAS DE ARCHIVO', 'lapriest'); ?>
@@ -75,9 +93,9 @@ get_header(); ?>
           $sample_pieces = lapriest_get_sample_pieces();
           foreach ($sample_pieces as $piece) :
               $cat_key = 'abrigos';
-              if (stripos($piece['category'], 'cuero') !== false) $cat_key = 'cuero';
-              elseif (stripos($piece['category'], 'sastrer') !== false) $cat_key = 'sastreria';
-              elseif (stripos($piece['category'], 'calzado') !== false) $cat_key = 'calzado';
+              if (stripos($piece['category'], 'denim') !== false) $cat_key = 'denim';
+              elseif (stripos($piece['category'], 'conjunt') !== false) $cat_key = 'sastreria';
+              elseif (stripos($piece['category'], 'estudio') !== false) $cat_key = 'accesorios';
       ?>
             <article class="piece-card" data-category="<?php echo esc_attr($cat_key); ?>" id="piece-<?php echo esc_attr($piece['code']); ?>">
               <div class="piece-visual-frame">

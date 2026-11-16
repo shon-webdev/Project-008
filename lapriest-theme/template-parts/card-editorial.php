@@ -8,15 +8,15 @@
 
 $event_id = get_the_ID();
 $event_date = get_post_meta($event_id, '_lapriest_event_date', true) ?: 'TEMPORADA 2026';
-$event_location = get_post_meta($event_id, '_lapriest_event_location', true) ?: 'Palais de Tokyo, París';
-$read_time = get_post_meta($event_id, '_lapriest_reading_time', true) ?: '5 MIN DE LECTURA';
+$event_location = get_post_meta($event_id, '_lapriest_event_location', true) ?: 'Atelier México';
+$read_time = get_post_meta($event_id, '_lapriest_reading_time', true) ?: 'SERIE FOTOGRÁFICA';
 
 $types = get_the_terms($event_id, 'editorial_type');
 $type_name = ($types && !is_wp_error($types)) ? $types[0]->name : 'Editorial';
 
 $img_url = get_the_post_thumbnail_url($event_id, 'lapriest-editorial-card');
 if (!$img_url) {
-    $img_url = 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85';
+    $img_url = LAPRIEST_URI . '/assets/media/web/vic8092.jpg';
 }
 ?>
 

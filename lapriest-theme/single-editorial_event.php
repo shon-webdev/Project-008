@@ -10,21 +10,21 @@ get_header();
 
 while (have_posts()) : the_post();
     $event_id = get_the_ID();
-    $event_date = get_post_meta($event_id, '_lapriest_event_date', true) ?: 'PARÍS // ARCHIVO';
-    $event_location = get_post_meta($event_id, '_lapriest_event_location', true) ?: 'Subterráneo Palais de Tokyo';
+    $event_date = get_post_meta($event_id, '_lapriest_event_date', true) ?: 'MÉXICO // ARCHIVO';
+    $event_location = get_post_meta($event_id, '_lapriest_event_location', true) ?: 'Atelier Ciudad de México';
     $video_url = get_post_meta($event_id, '_lapriest_event_video_url', true);
-    $read_time = get_post_meta($event_id, '_lapriest_reading_time', true) ?: '6 MIN DE LECTURA';
+    $read_time = get_post_meta($event_id, '_lapriest_reading_time', true) ?: 'SERIE FOTOGRÁFICA';
 
     $types = get_the_terms($event_id, 'editorial_type');
     $type_name = ($types && !is_wp_error($types)) ? $types[0]->name : 'Editorial';
 
     $hero_img = get_the_post_thumbnail_url($event_id, 'lapriest-editorial-hero');
     if (!$hero_img) {
-        $hero_img = 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1800&q=85';
+        $hero_img = LAPRIEST_URI . '/assets/media/web/vic8092.jpg';
     }
 ?>
 
-<main id="primary" class="site-main" style="padding-top: clamp(180px, 15vh, 220px); padding-bottom: 8rem;">
+<main id="primary" class="site-main" style="padding-top: clamp(112px, 12vh, 148px); padding-bottom: 8rem;">
   <article class="container">
     
     <!-- Barra Superior Editorial -->

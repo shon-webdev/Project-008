@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" data-version="v1">
 <head>
   <meta charset="UTF-8">
@@ -19,19 +19,6 @@
 
   <!-- Cabecera del Sitio -->
   <header class="site-header" id="siteHeader">
-    <div class="header-topbar">
-      <div class="topbar-left">
-        <span class="live-pulse"></span>
-        <span id="paris-time">ATELIER MÉXICO: 00:00:00 CST</span>
-      </div>
-      <div class="topbar-center">
-        <span>PROTOCOLO: SOLO ADQUISICIÓN DIRECTA // SIN CARRITOS DE COMPRA</span>
-      </div>
-      <div class="topbar-right">
-        <span id="tokyo-time">ARCHIVO TOKIO: 00:00:00 JST</span>
-      </div>
-    </div>
-
     <div class="header-navbar container">
       <a href="index.html" class="brand-mark">
         LAPRIEST<span>MÉXICO</span>
@@ -39,12 +26,12 @@
 
       <nav class="primary-navigation" aria-label="Navegación Principal">
         <ul class="nav-menu" id="primaryNav">
-          <li><a href="index.html" class="nav-link">EDITORIAL <span class="nav-counter">01</span></a></li>
-          <li><a href="catalog.html" class="nav-link active">CATÁLOGO <span class="nav-counter">02</span></a></li>
-          <li><a href="quien-soy.html" class="nav-link">QUIÉN SOY <span class="nav-counter">03</span></a></li>
+          <li><a href="quien-soy.html" class="nav-link">QUIÉN SOY</a></li>
+          <li><a href="index.html" class="nav-link">EDITORIAL</a></li>
+          <li><a href="catalog.html" class="nav-link active">CATÁLOGO</a></li>
           <li>
             <a href="#offerModalOverlay" class="nav-link" data-action="make-offer" data-piece-title="CONSULTA GENERAL AL ATELIER" data-piece-code="LP-GEN" data-piece-price="A CONSULTAR">
-              OFERTA DIRECTA <span class="nav-counter">&nearr;</span>
+              OFERTA DIRECTA
             </a>
           </li>
         </ul>
@@ -52,37 +39,11 @@
 
       <div class="nav-actions">
         <button type="button" class="btn-atmosphere" id="ambientToggle" aria-label="Alternar atmósfera sonora">
-          <span class="live-pulse"></span>
-          <span class="audio-status">ATMÓSFERA: DESACTIVADA</span>
+          <span class="audio-status">AUDIO: OFF</span>
         </button>
         <button type="button" class="mobile-nav-toggle" aria-label="Alternar Menú">
           [ MENÚ ]
         </button>
-      </div>
-    </div>
-
-    <div class="brutalist-ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <div class="ticker-item">
-          <span>SIN CARRITOS DE COMPRA // SOLO PROPUESTAS DIRECTAS AL ATELIER</span>
-          <span class="divider">&bull;</span>
-          <span>EDICIONES RESTRINGIDAS DE 06 A 18 PIEZAS A NIVEL MUNDIAL</span>
-          <span class="divider">&bull;</span>
-          <span>ARCHIVO OTOÑO / INVIERNO 2026</span>
-          <span class="divider">&bull;</span>
-          <span>ADQUISICIONES DIRECTAS DE ALTA COSTURA</span>
-          <span class="divider">&bull;</span>
-        </div>
-        <div class="ticker-item">
-          <span>SIN CARRITOS DE COMPRA // SOLO PROPUESTAS DIRECTAS AL ATELIER</span>
-          <span class="divider">&bull;</span>
-          <span>EDICIONES RESTRINGIDAS DE 06 A 18 PIEZAS A NIVEL MUNDIAL</span>
-          <span class="divider">&bull;</span>
-          <span>ARCHIVO OTOÑO / INVIERNO 2026</span>
-          <span class="divider">&bull;</span>
-          <span>ADQUISICIONES DIRECTAS DE ALTA COSTURA</span>
-          <span class="divider">&bull;</span>
-        </div>
       </div>
     </div>
   </header>
@@ -95,7 +56,7 @@
       <div class="container">
         <div class="catalog-intro-grid">
           <div>
-            <span class="mono-meta" style="color:var(--text-muted); display:block; margin-bottom:0.75rem;">// CATÁLOGO RAZONADO // SERIE 01</span>
+            <span class="mono-meta" style="color:var(--text-muted); display:block; margin-bottom:0.75rem;">// CATÁLOGO DE ARCHIVO // MÉXICO</span>
             <h1 class="catalog-main-heading">
               PIEZAS DE<br>
               ARCHIVO.
@@ -103,10 +64,10 @@
           </div>
           <div class="catalog-intro-manifesto">
             <p>
-              LAPRIEST produce prendas en microediciones estrictamente limitadas y numeradas de 6 a 18 piezas en todo el mundo. Rechazamos el carrito de compras estandarizado. Cada adquisición se gestiona como un diálogo privado con el cliente mediante nuestro sistema de oferta directa.
+              LAPRIEST trabaja piezas únicas e irrepetibles concebidas en Ciudad de México. Con el sistema de <strong>Oferta Directa</strong>, en lugar de comprar en serie, eliges tu prenda, propones un monto o solicitas cotización para acordar talla, detalles a medida y entrega directa con el estudio.
             </p>
             <div class="mono-meta" style="margin-top: 1rem; color: #fff;">
-              SELECCIONE UNA PIEZA Y PROPONGA UN VALOR DE ADQUISICIÓN A CONTINUACIÓN.
+              SELECCIONA UNA PIEZA DEL ARCHIVO PARA ENVIAR TU PROPUESTA DIRECTA.
             </div>
           </div>
         </div>
@@ -114,205 +75,224 @@
     </header>
 
     <section class="container" style="padding-top: 2rem;">
+
+      <!-- Guía breve de Oferta Directa -->
+      <div class="offer-guide-strip" aria-label="Cómo funciona la Oferta Directa">
+        <div class="offer-guide-step">
+          <div class="step-kicker">01 // EXPLORA LA PIEZA</div>
+          <h2 class="step-title">ARCHIVO Y MATERIALIDAD</h2>
+          <p>Revisa los cortes, textiles y acabados intervenidos a mano de cada prenda única o tiraje corto.</p>
+        </div>
+        <div class="offer-guide-step">
+          <div class="step-kicker">02 // OFERTA DIRECTA</div>
+          <h2 class="step-title">PROPÓN O CONSULTA</h2>
+          <p>Presiona «Hacer Oferta» para indicar tu propuesta económica, solicitar precio base o pedir ajuste a medida.</p>
+        </div>
+        <div class="offer-guide-step">
+          <div class="step-kicker">03 // RESPUESTA DEL ATELIER</div>
+          <h2 class="step-title">TRATO PERSONALIZADO</h2>
+          <p>El equipo de Emmanuel Lira responde por correo o WhatsApp sin cargos automáticos ni intermediarios.</p>
+        </div>
+      </div>
       
       <!-- Filtros de Categoría -->
       <div class="catalog-toolbar">
         <div class="filter-pills" role="tablist">
           <button type="button" class="filter-btn active" data-filter="all" role="tab">TODAS LAS PIEZAS [06]</button>
-          <button type="button" class="filter-btn" data-filter="abrigos" role="tab">ABRIGOS Y CAPAS</button>
-          <button type="button" class="filter-btn" data-filter="sastreria" role="tab">SASTRERÍA Y TÚNICAS</button>
-          <button type="button" class="filter-btn" data-filter="cuero" role="tab">CUERO Y PRENDAS PESADAS</button>
-          <button type="button" class="filter-btn" data-filter="calzado" role="tab">CALZADO</button>
+          <button type="button" class="filter-btn" data-filter="abrigos" role="tab">CAZADORAS Y ABRIGOS</button>
+          <button type="button" class="filter-btn" data-filter="sastreria" role="tab">CONJUNTOS</button>
+          <button type="button" class="filter-btn" data-filter="denim" role="tab">DENIM INTERVENIDO</button>
+          <button type="button" class="filter-btn" data-filter="accesorios" role="tab">ESTUDIO</button>
         </div>
         <div class="catalog-count-meta" id="catalogFilterCount">
           MOSTRANDO 6 DE 6 PIEZAS DE ARCHIVO
         </div>
       </div>
 
-      <!-- Cuadrícula de 6 Piezas Estilo Rick Owens -->
+      <!-- Cuadrícula de 6 Piezas -->
       <div class="pieces-grid" id="catalogPiecesGrid">
         
         <!-- Pieza 01 -->
-        <article class="piece-card" data-category="abrigos" id="piece-LP-FW26-001">
+        <article class="piece-card" data-category="abrigos" id="piece-LP-MX-001">
           <div class="piece-visual-frame">
-            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85" alt="Caftán Drapeado Obsidiana" class="piece-img-primary" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=85" alt="Caftán Drapeado Obsidiana Reverso" class="piece-img-hover" loading="lazy">
-            <div class="piece-badge-code">LP-FW26-001</div>
-            <div class="piece-badge-status">DISPONIBLE PARA OFERTA</div>
+            <img src="lapriest-theme/assets/media/web/temp-afterlight.jpg" alt="Bomber Utilitaria Estructurada" class="piece-img-primary" loading="lazy">
+            <img src="lapriest-theme/assets/media/web/dsc05068.jpg" alt="Bomber Utilitaria Estructurada en Exterior" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-MX-001</div>
+            <div class="piece-badge-status">DISPONIBLE</div>
           </div>
           <div class="piece-info-box">
             <div>
-              <div class="piece-category-meta">Abrigos y Capas // SERIE 01</div>
-              <h3 class="piece-title-text">PIEZA 01: CAFTÁN DRAPEADO OBSIDIANA</h3>
-              <div class="piece-materials-text">100% Lana Cruda Hervida Japonesa de Alta Densidad, Arnés Interno en Cupro, Cierre de Acero Oxidado al Frío.</div>
+              <div class="piece-category-meta">Cazadoras y Abrigos // ARCHIVO MÉXICO</div>
+              <h3 class="piece-title-text">PIEZA 01: BOMBER UTILITARIA ESTRUCTURADA</h3>
+              <div class="piece-materials-text">Nylon técnico de alto gramaje, volumen esculpido en mangas, herrajes metálicos y pasamontañas integrado.</div>
             </div>
             <div class="piece-action-row">
               <div class="piece-price-wrap">
                 <span class="price-meta-label">VALOR BASE</span>
-                <span class="price-value">$1,850 USD</span>
+                <span class="price-value">BAJO CONSULTA</span>
               </div>
               <button type="button" 
                       class="btn-make-offer"
                       data-action="make-offer"
-                      data-piece-title="PIEZA 01: CAFTÁN DRAPEADO OBSIDIANA"
-                      data-piece-code="LP-FW26-001"
-                      data-piece-price="$1,850 USD">
-                <span>HACER UNA OFERTA / CONSULTAR</span>
+                      data-piece-title="PIEZA 01: BOMBER UTILITARIA ESTRUCTURADA"
+                      data-piece-code="LP-MX-001"
+                      data-piece-price="BAJO CONSULTA">
+                <span>HACER OFERTA</span>
               </button>
             </div>
           </div>
         </article>
 
         <!-- Pieza 02 -->
-        <article class="piece-card" data-category="cuero" id="piece-LP-FW26-002">
+        <article class="piece-card" data-category="sastreria" id="piece-LP-MX-002">
           <div class="piece-visual-frame">
-            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1200&q=85" alt="Caparazón de Cuero Brutalista" class="piece-img-primary" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1200&q=85" alt="Caparazón de Cuero Brutalista Reverso" class="piece-img-hover" loading="lazy">
-            <div class="piece-badge-code">LP-FW26-002</div>
-            <div class="piece-badge-status">EDICIÓN DE 06</div>
+            <img src="lapriest-theme/assets/media/web/vic8384.jpg" alt="Conjunto Entropía Patchwork" class="piece-img-primary" loading="lazy">
+            <img src="lapriest-theme/assets/media/web/vic8382.jpg" alt="Conjunto Entropía Detalle" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-MX-002</div>
+            <div class="piece-badge-status">PIEZA ÚNICA</div>
           </div>
           <div class="piece-info-box">
             <div>
-              <div class="piece-category-meta">Cuero y Prendas Pesadas // SERIE 01</div>
-              <h3 class="piece-title-text">PIEZA 02: CAPARAZÓN DE CUERO BRUTALISTA</h3>
-              <div class="piece-materials-text">Cuero de Caballo Crudo al Vegetal (1.8mm), Pátina Carbón Desgastada, Cortes Geométricos con Bordes Vivos.</div>
+              <div class="piece-category-meta">Conjuntos // SERIE ENTROPÍA</div>
+              <h3 class="piece-title-text">PIEZA 02: CONJUNTO ENTROPÍA PATCHWORK</h3>
+              <div class="piece-materials-text">Chaqueta cropped con cierre diagonal y bordado ENTROPÍA, mezclilla ancha intervenida 2024 con parches manuales.</div>
             </div>
             <div class="piece-action-row">
               <div class="piece-price-wrap">
                 <span class="price-meta-label">VALOR BASE</span>
-                <span class="price-value">$2,650 USD</span>
+                <span class="price-value">BAJO CONSULTA</span>
               </div>
               <button type="button" 
                       class="btn-make-offer"
                       data-action="make-offer"
-                      data-piece-title="PIEZA 02: CAPARAZÓN DE CUERO BRUTALISTA"
-                      data-piece-code="LP-FW26-002"
-                      data-piece-price="$2,650 USD">
-                <span>HACER UNA OFERTA / CONSULTAR</span>
+                      data-piece-title="PIEZA 02: CONJUNTO ENTROPÍA PATCHWORK"
+                      data-piece-code="LP-MX-002"
+                      data-piece-price="BAJO CONSULTA">
+                <span>HACER OFERTA</span>
               </button>
             </div>
           </div>
         </article>
 
         <!-- Pieza 03 -->
-        <article class="piece-card" data-category="abrigos" id="piece-LP-FW26-003">
+        <article class="piece-card" data-category="denim" id="piece-LP-MX-003">
           <div class="piece-visual-frame">
-            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85" alt="Trench Asimétrico Monolítico" class="piece-img-primary" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85" alt="Trench Asimétrico Monolítico Reverso" class="piece-img-hover" loading="lazy">
-            <div class="piece-badge-code">LP-FW26-003</div>
-            <div class="piece-badge-status">DISPONIBLE PARA OFERTA</div>
+            <img src="lapriest-theme/assets/media/web/vic8257.jpg" alt="Pantalón Flare Buscando" class="piece-img-primary" loading="lazy">
+            <img src="lapriest-theme/assets/media/web/sasha-afterlight.jpg" alt="Pantalón Flare Detalle Exterior" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-MX-003</div>
+            <div class="piece-badge-status">PIEZA ÚNICA</div>
           </div>
           <div class="piece-info-box">
             <div>
-              <div class="piece-category-meta">Abrigos y Capas // SERIE 01</div>
-              <h3 class="piece-title-text">PIEZA 03: TRENCH ASIMÉTRICO MONOLÍTICO</h3>
-              <div class="piece-materials-text">Sarga Cruda Japonesa Encerada, Fornituras Industriales en Zinc, Solapas con Interior en Lana.</div>
+              <div class="piece-category-meta">Denim Intervenido // SERIE CAOS</div>
+              <h3 class="piece-title-text">PIEZA 03: PANTALÓN FLARE &laquo;BUSCANDO&raquo;</h3>
+              <div class="piece-materials-text">Mezclilla pesada con desgaste artesanal, parches cosidos a mano, cadena metálica desmontable y caída amplia.</div>
             </div>
             <div class="piece-action-row">
               <div class="piece-price-wrap">
                 <span class="price-meta-label">VALOR BASE</span>
-                <span class="price-value">$1,420 USD</span>
+                <span class="price-value">BAJO CONSULTA</span>
               </div>
               <button type="button" 
                       class="btn-make-offer"
                       data-action="make-offer"
-                      data-piece-title="PIEZA 03: TRENCH ASIMÉTRICO MONOLÍTICO"
-                      data-piece-code="LP-FW26-003"
-                      data-piece-price="$1,420 USD">
-                <span>HACER UNA OFERTA / CONSULTAR</span>
+                      data-piece-title="PIEZA 03: PANTALÓN FLARE BUSCANDO"
+                      data-piece-code="LP-MX-003"
+                      data-piece-price="BAJO CONSULTA">
+                <span>HACER OFERTA</span>
               </button>
             </div>
           </div>
         </article>
 
         <!-- Pieza 04 -->
-        <article class="piece-card" data-category="sastreria" id="piece-LP-SS26-004">
+        <article class="piece-card" data-category="abrigos" id="piece-LP-MX-004">
           <div class="piece-visual-frame">
-            <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1200&q=85" alt="Túnica Ceremonial Plisada" class="piece-img-primary" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1200&q=85" alt="Túnica Ceremonial Plisada Reverso" class="piece-img-hover" loading="lazy">
-            <div class="piece-badge-code">LP-SS26-004</div>
-            <div class="piece-badge-status">EDICIÓN DE 18</div>
+            <img src="lapriest-theme/assets/media/web/vic8314.jpg" alt="Chaqueta Corta Caos Concepto" class="piece-img-primary" loading="lazy">
+            <img src="lapriest-theme/assets/media/web/dsc05091.jpg" alt="Chaqueta Corta Detalle Calle" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-MX-004</div>
+            <div class="piece-badge-status">EDICIÓN CORTA</div>
           </div>
           <div class="piece-info-box">
             <div>
-              <div class="piece-category-meta">Sastrería y Túnicas // SERIE 01</div>
-              <h3 class="piece-title-text">PIEZA 04: TÚNICA CEREMONIAL PLISADA</h3>
-              <div class="piece-materials-text">Mezcla de Seda y Lana Crepé (450gsm), Tinte Negro Carbón Mate, Dobladillo Deshilachado en Diagonal.</div>
+              <div class="piece-category-meta">Cazadoras y Abrigos // SERIE CAOS</div>
+              <h3 class="piece-title-text">PIEZA 04: CHAQUETA CORTA &laquo;CONCEPTO / CAOS&raquo;</h3>
+              <div class="piece-materials-text">Sarga desgastada y cepillada en estudio, costuras expuestas y gráfico tipográfico integrado en pecho y mangas.</div>
             </div>
             <div class="piece-action-row">
               <div class="piece-price-wrap">
                 <span class="price-meta-label">VALOR BASE</span>
-                <span class="price-value">$890 USD</span>
+                <span class="price-value">BAJO CONSULTA</span>
               </div>
               <button type="button" 
                       class="btn-make-offer"
                       data-action="make-offer"
-                      data-piece-title="PIEZA 04: TÚNICA CEREMONIAL PLISADA"
-                      data-piece-code="LP-SS26-004"
-                      data-piece-price="$890 USD">
-                <span>HACER UNA OFERTA / CONSULTAR</span>
+                      data-piece-title="PIEZA 04: CHAQUETA CORTA CONCEPTO CAOS"
+                      data-piece-code="LP-MX-004"
+                      data-piece-price="BAJO CONSULTA">
+                <span>HACER OFERTA</span>
               </button>
             </div>
           </div>
         </article>
 
         <!-- Pieza 05 -->
-        <article class="piece-card" data-category="sastreria" id="piece-LP-SS26-005">
+        <article class="piece-card" data-category="denim" id="piece-LP-MX-005">
           <div class="piece-visual-frame">
-            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=85" alt="Pantalón Esculpido Geométrico" class="piece-img-primary" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1200&q=85" alt="Pantalón Esculpido Geométrico Reverso" class="piece-img-hover" loading="lazy">
-            <div class="piece-badge-code">LP-SS26-005</div>
-            <div class="piece-badge-status">DISPONIBLE PARA OFERTA</div>
+            <img src="lapriest-theme/assets/media/web/img-3304.jpg" alt="Denim Intervenido Ojos que no Ven" class="piece-img-primary" loading="lazy">
+            <img src="lapriest-theme/assets/media/web/dsc04804.jpg" alt="Proceso de aerosol sobre mezclilla en taller" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-MX-005</div>
+            <div class="piece-badge-status">PIEZA ÚNICA</div>
           </div>
           <div class="piece-info-box">
             <div>
-              <div class="piece-category-meta">Sastrería y Túnicas // SERIE 01</div>
-              <h3 class="piece-title-text">PIEZA 05: PANTALÓN ESCULPIDO GEOMÉTRICO</h3>
-              <div class="piece-materials-text">Franela Pesada de Lana Virgen, Fuelles Invertidos Profundos, Doble Ajuste con Aros de Plata.</div>
+              <div class="piece-category-meta">Denim Intervenido // TALLER CDMX</div>
+              <h3 class="piece-title-text">PIEZA 05: DENIM &laquo;OJOS QUE NO VEN&raquo;</h3>
+              <div class="piece-materials-text">Mezclilla intervenida con pigmento en aerosol en taller, gráficos aplicados y acabado envejecido único.</div>
             </div>
             <div class="piece-action-row">
               <div class="piece-price-wrap">
                 <span class="price-meta-label">VALOR BASE</span>
-                <span class="price-value">$780 USD</span>
+                <span class="price-value">BAJO CONSULTA</span>
               </div>
               <button type="button" 
                       class="btn-make-offer"
                       data-action="make-offer"
-                      data-piece-title="PIEZA 05: PANTALÓN ESCULPIDO GEOMÉTRICO"
-                      data-piece-code="LP-SS26-005"
-                      data-piece-price="$780 USD">
-                <span>HACER UNA OFERTA / CONSULTAR</span>
+                      data-piece-title="PIEZA 05: DENIM OJOS QUE NO VEN"
+                      data-piece-code="LP-MX-005"
+                      data-piece-price="BAJO CONSULTA">
+                <span>HACER OFERTA</span>
               </button>
             </div>
           </div>
         </article>
 
         <!-- Pieza 06 -->
-        <article class="piece-card" data-category="calzado" id="piece-LP-FW26-006">
+        <article class="piece-card" data-category="accesorios" id="piece-LP-MX-006">
           <div class="piece-visual-frame">
-            <img src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=1200&q=85" alt="Bota Militar de Archivo de Atelier" class="piece-img-primary" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1200&q=85" alt="Bota Militar de Archivo de Atelier Reverso" class="piece-img-hover" loading="lazy">
-            <div class="piece-badge-code">LP-FW26-006</div>
-            <div class="piece-badge-status">EDICIÓN DE 12 PARES</div>
+            <img src="lapriest-theme/assets/media/web/vic8161.jpg" alt="Conjunto Estudio Top Metálico y Falda Cargo" class="piece-img-primary" loading="lazy">
+            <img src="lapriest-theme/assets/media/web/vic8134.jpg" alt="Etiqueta tejida Pieza Única Emmanuel Lira" class="piece-img-hover" loading="lazy">
+            <div class="piece-badge-code">LP-MX-006</div>
+            <div class="piece-badge-status">PIEZA ÚNICA</div>
           </div>
           <div class="piece-info-box">
             <div>
-              <div class="piece-category-meta">Calzado y Accesorios // SERIE 01</div>
-              <h3 class="piece-title-text">PIEZA 06: BOTA MILITAR DE ARCHIVO DE ATELIER</h3>
-              <div class="piece-materials-text">Cuero Vacuno Flor Entera, Suela Vibram Commando con Vira Goodyear, Cremallera Interna en Titanio.</div>
+              <div class="piece-category-meta">Estudio // EMMANUEL LIRA</div>
+              <h3 class="piece-title-text">PIEZA 06: SET METÁLICO &amp; FALDA CARGO</h3>
+              <div class="piece-materials-text">Pieza textil foil metálico con espalda descubierta, minifalda negra con herrajes remachados y etiqueta firmada.</div>
             </div>
             <div class="piece-action-row">
               <div class="piece-price-wrap">
                 <span class="price-meta-label">VALOR BASE</span>
-                <span class="price-value">$1,150 USD</span>
+                <span class="price-value">BAJO CONSULTA</span>
               </div>
               <button type="button" 
                       class="btn-make-offer"
                       data-action="make-offer"
-                      data-piece-title="PIEZA 06: BOTA MILITAR DE ARCHIVO DE ATELIER"
-                      data-piece-code="LP-FW26-006"
-                      data-piece-price="$1,150 USD">
-                <span>HACER UNA OFERTA / CONSULTAR</span>
+                      data-piece-title="PIEZA 06: SET METÁLICO Y FALDA CARGO"
+                      data-piece-code="LP-MX-006"
+                      data-piece-price="BAJO CONSULTA">
+                <span>HACER OFERTA</span>
               </button>
             </div>
           </div>
@@ -354,8 +334,8 @@
             Un laboratorio arquitectónico de alta costura que opera bajo principios de monasticismo material, geometría extrema en la silueta y protocolos de adquisición no comerciales.
           </p>
           <div class="mono-meta" style="margin-top: 1.5rem;">
-            48.864716&deg; N, 2.349014&deg; E &bull; ATELIER PARÍS<br>
-            35.658581&deg; N, 139.745438&deg; E &bull; ARCHIVO TOKIO
+            19.432608&deg; N, 99.133209&deg; O &bull; ATELIER CIUDAD DE MÉXICO<br>
+            EMMANUEL LIRA &bull; PIEZA ÚNICA &amp; ARCHIVO
           </div>
         </div>
 
@@ -393,7 +373,7 @@
 
       <div class="footer-bottom-bar">
         <div>&copy; 2026 LAPRIEST HAUTE BRUTALISME. TODOS LOS DERECHOS RESERVADOS.</div>
-        <div>ARQUITECTURA SIN CARRITO DE COMPRA &bull; SOLO ADQUISICIONES DIRECTAS</div>
+        <div>SISTEMA DE ADQUISICIÓN DIRECTA &bull; ATELIER MÉXICO</div>
       </div>
 
       <!-- Crédito de Autoría / Friendly Dev by Shon -->
@@ -482,7 +462,7 @@
           </button>
 
           <p class="modal-legal-note">
-            LAPRIEST opera sin carritos de compra convencionales. Cada propuesta es evaluada de manera personalizada por la dirección del atelier. No se procesa ningún cobro en esta etapa.
+            Cada propuesta se envía de forma directa al atelier de Emmanuel Lira para confirmar talla, disponibilidad única o personalización a medida. No se realiza ningún cobro automático en esta etapa.
           </p>
         </form>
       </div>

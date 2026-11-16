@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" data-version="v1">
 <head>
   <meta charset="UTF-8">
@@ -22,19 +22,6 @@
 
   <!-- Cabecera del Sitio -->
   <header class="site-header" id="siteHeader">
-    <div class="header-topbar">
-      <div class="topbar-left">
-        <span class="live-pulse"></span>
-        <span id="paris-time">ATELIER MÉXICO: 00:00:00 CST</span>
-      </div>
-      <div class="topbar-center">
-        <span>PROTOCOLO: SOLO ADQUISICIÓN DIRECTA // SIN CARRITOS DE COMPRA</span>
-      </div>
-      <div class="topbar-right">
-        <span id="tokyo-time">ARCHIVO TOKIO: 00:00:00 JST</span>
-      </div>
-    </div>
-
     <div class="header-navbar container">
       <a href="index.html" class="brand-mark">
         LAPRIEST<span>MÉXICO</span>
@@ -42,58 +29,25 @@
 
       <nav class="primary-navigation" aria-label="Navegación Principal">
         <ul class="nav-menu" id="primaryNav">
-          <li><a href="index.html" class="nav-link active">EDITORIAL <span class="nav-counter">01</span></a></li>
-          <li><a href="catalog.html" class="nav-link">CATÁLOGO <span class="nav-counter">02</span></a></li>
-          <li><a href="quien-soy.html" class="nav-link">QUIÉN SOY <span class="nav-counter">03</span></a></li>
+          <li><a href="quien-soy.html" class="nav-link">QUIÉN SOY</a></li>
+          <li><a href="index.html" class="nav-link active">EDITORIAL</a></li>
+          <li><a href="catalog.html" class="nav-link">CATÁLOGO</a></li>
           <li>
             <a href="#offerModalOverlay" class="nav-link" data-action="make-offer" data-piece-title="CONSULTA GENERAL AL ATELIER" data-piece-code="LP-GEN" data-piece-price="A CONSULTAR">
-              OFERTA DIRECTA <span class="nav-counter">&nearr;</span>
+              OFERTA DIRECTA
             </a>
           </li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <!-- Generador de atmósfera sonora procedural -->
         <button type="button" class="btn-atmosphere" id="ambientToggle" aria-label="Alternar atmósfera sonora">
-          <span class="live-pulse"></span>
-          <span class="audio-status">ATMÓSFERA: DESACTIVADA</span>
+          <span class="audio-status">AUDIO: OFF</span>
         </button>
 
-        <!-- Menú Móvil -->
         <button type="button" class="mobile-nav-toggle" aria-label="Alternar Menú">
           [ MENÚ ]
         </button>
-      </div>
-    </div>
-
-    <!-- Cinta Ticker Brutalista -->
-    <div class="brutalist-ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <div class="ticker-item">
-          <span>COLECCIÓN DE ARCHIVO 001 // EL ECLIPSE DE LA ORTODOXIA</span>
-          <span class="divider">&bull;</span>
-          <span>SIN CARRITOS DE COMPRA // SOLO PROPUESTAS DIRECTAS AL ATELIER</span>
-          <span class="divider">&bull;</span>
-          <span>EDICIONES LIMITADAS NUMERADAS HECHAS A MANO EN PARÍS Y TOSCANA</span>
-          <span class="divider">&bull;</span>
-          <span>VISITAS PRIVADAS AL ATELIER DISPONIBLES A SOLICITUD</span>
-          <span class="divider">&bull;</span>
-          <span>LANA CRUDA JAPONESA Y CAPARAZONES DE CUERO ESCULPIDO</span>
-          <span class="divider">&bull;</span>
-        </div>
-        <div class="ticker-item">
-          <span>COLECCIÓN DE ARCHIVO 001 // EL ECLIPSE DE LA ORTODOXIA</span>
-          <span class="divider">&bull;</span>
-          <span>SIN CARRITOS DE COMPRA // SOLO PROPUESTAS DIRECTAS AL ATELIER</span>
-          <span class="divider">&bull;</span>
-          <span>EDICIONES LIMITADAS NUMERADAS HECHAS A MANO EN PARÍS Y TOSCANA</span>
-          <span class="divider">&bull;</span>
-          <span>VISITAS PRIVADAS AL ATELIER DISPONIBLES A SOLICITUD</span>
-          <span class="divider">&bull;</span>
-          <span>LANA CRUDA JAPONESA Y CAPARAZONES DE CUERO ESCULPIDO</span>
-          <span class="divider">&bull;</span>
-        </div>
       </div>
     </div>
   </header>
@@ -101,42 +55,67 @@
   <!-- Contenido Principal -->
   <main id="primary" class="site-main">
 
-    <!-- SECCIÓN HERO: ENFOQUE CINEMATOGRÁFICO ESTILO MUBI -->
-    <section class="editorial-hero">
+    <!-- PORTADA LIMPIA DE MARCA (FONDO CLARO DE ESTUDIO) -->
+    <section class="editorial-hero" aria-label="Portada LAPRIEST">
       <div class="hero-media-wrapper">
-        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=2000&q=90" 
-             alt="LAPRIEST Serie 01 Nocturno" 
+        <img src="lapriest-theme/assets/media/web/vic8079.jpg"
+             alt="LAPRIEST — Archivo Fotográfico de Estudio en México"
              fetchpriority="high">
       </div>
-      <div class="hero-vignette"></div>
 
-      <div class="container hero-content">
-        <div class="hero-tagline">
-          <span class="code-badge">// SERIE 01: EL ECLIPSE DE LA ORTODOXIA</span>
-          <span class="mono-meta">ARCHIVO OTOÑO / INVIERNO 2026</span>
+      <div class="container hero-scroll-bar">
+        <a href="#film-principal" class="hero-scroll-cue">EXPLORAR ARCHIVO &darr;</a>
+      </div>
+    </section>
+
+    <!-- FILM PRINCIPAL Y MANIFIESTO AL DESCENDER -->
+    <section class="hero-manifesto-band" id="film-principal">
+      <div class="container brand-film-grid">
+        <div class="brand-film-frame">
+          <video autoplay muted loop playsinline controls preload="metadata" poster="lapriest-theme/assets/media/web/vic8092.jpg">
+            <source src="lapriest-theme/assets/media/web/hero-principal.mp4" type="video/mp4">
+          </video>
         </div>
 
-        <h1 class="hero-title">
-          MONOLÍTICO<br>
-          <em>ARMADURA PARA LA MENTE.</em>
-        </h1>
+        <div class="brand-film-copy">
+          <div class="hero-tagline">
+            <span class="code-badge">PIEZA ÚNICA // EMMANUEL LIRA</span>
+            <span class="mono-meta">CIUDAD DE MÉXICO</span>
+          </div>
 
-        <div class="hero-meta-grid">
-          <div class="hero-meta-item">
-            <div class="meta-label">DIRECCIÓN CURATORIAL</div>
-            <div class="meta-val">STUDIO LAPRIEST PARÍS</div>
+          <h1 class="hero-title">
+            MONOLÍTICO<br>
+            <em>ARMADURA PARA LA MENTE.</em>
+          </h1>
+
+          <p class="brand-film-lead">
+            Desde nuestro taller independiente en México, LAPRIEST desarrolla piezas únicas de patronaje experimental, denim intervenido a mano e indumentaria concebida fuera de los ciclos comerciales tradicionales.
+          </p>
+
+          <div class="brand-film-actions">
+            <a href="catalog.html" class="btn-flat-solid">VER CATÁLOGO</a>
+            <button type="button" class="btn-flat-muted" data-action="make-offer" data-piece-title="CONSULTA GENERAL AL ATELIER" data-piece-code="LP-GEN" data-piece-price="BAJO CONSULTA">
+              SOLICITAR OFERTA DIRECTA
+            </button>
           </div>
-          <div class="hero-meta-item">
-            <div class="meta-label">ARQUITECTURA COMERCIAL</div>
-            <div class="meta-val">SIN CARRITO // PROPUESTA DIRECTA</div>
-          </div>
-          <div class="hero-meta-item">
-            <div class="meta-label">ESPECIFICACIÓN DE EDICIÓN</div>
-            <div class="meta-val">LIMITADA A 12 POR SILUETA</div>
-          </div>
-          <div class="hero-meta-item">
-            <div class="meta-label">PASARELA PRINCIPAL</div>
-            <div class="meta-val">PALAIS DE TOKYO, PARÍS</div>
+
+          <div class="hero-meta-grid">
+            <div class="hero-meta-item">
+              <div class="meta-label">DIRECCIÓN CREATIVA</div>
+              <div class="meta-val">EMMANUEL LIRA</div>
+            </div>
+            <div class="hero-meta-item">
+              <div class="meta-label">ADQUISICIÓN</div>
+              <div class="meta-val">PROPUESTA DIRECTA</div>
+            </div>
+            <div class="hero-meta-item">
+              <div class="meta-label">FORMATO</div>
+              <div class="meta-val">PIEZA ÚNICA DE ATELIER</div>
+            </div>
+            <div class="hero-meta-item">
+              <div class="meta-label">SEDE</div>
+              <div class="meta-val">CIUDAD DE MÉXICO</div>
+            </div>
           </div>
         </div>
       </div>
@@ -158,61 +137,61 @@
 
         <div class="editorial-grid">
           
-          <!-- Editorial 1: Pasarela Destacada -->
+          <!-- Editorial 1: Archivo de Estudio -->
           <article class="editorial-card editorial-card-featured">
             <div class="editorial-img-box">
               <a href="catalog.html">
-                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1600&q=85" alt="Pasarela en Palais de Tokyo">
+                <img src="lapriest-theme/assets/media/web/vic8092.jpg" alt="Serie de Estudio LAPRIEST en México" loading="lazy">
               </a>
-              <div class="editorial-type-badge">Pasarela</div>
-              <div class="editorial-meta-tag">6 MIN DE RECORRIDO // 4K VISUAL</div>
+              <div class="editorial-type-badge">Estudio</div>
+              <div class="editorial-meta-tag">SERIE FOTOGRÁFICA // MÉXICO</div>
             </div>
             <div class="editorial-body">
               <div>
                 <div class="mono-meta" style="margin-bottom: 0.5rem;">
-                  OCTUBRE 2026 // SEMANA DE LA MODA DE PARÍS &bull; Subterráneo Palais de Tokyo
+                  SERIE ENTROPÍA // CIUDAD DE MÉXICO &bull; Archivo de Estudio
                 </div>
                 <h3 class="editorial-title">
-                  <a href="catalog.html">NOCTURNO EN PALAIS DE TOKYO: PASARELA SERIE 01</a>
+                  <a href="catalog.html">CUERPO, DENIM Y CONSTRUCCIÓN EN ESPACIO BLANCO</a>
                 </h3>
                 <p class="editorial-excerpt">
-                  Cámaras subterráneas de hormigón resonando con frecuencias sonoras industriales. Una procesión litúrgica de siluetas de lana cruda en penumbra absoluta.
+                  Siluetas amplias, desgaste artesanal y confrontación directa con el tejido. Una exploración física sobre cómo las prendas intervienen el espacio cotidiano.
                 </p>
               </div>
               <div class="editorial-footer-bar">
-                <span>Palais de Tokyo, París</span>
+                <span>Atelier México</span>
                 <a href="catalog.html" class="read-cta">
-                  <span>INGRESAR AL DOSSIER</span> &rarr;
+                  <span>INGRESAR AL CATÁLOGO</span> &rarr;
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Editorial 2: Ensayo Cultural -->
+          <!-- Editorial 2: Etiqueta Pieza Única -->
           <article class="editorial-card">
             <div class="editorial-img-box">
               <a href="quien-soy.html">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=85" alt="Conversación sobre Brutalismo">
+                <img src="lapriest-theme/assets/media/web/vic8134.jpg" alt="Pieza Única Creada por Emmanuel Lira" loading="lazy">
               </a>
-              <div class="editorial-type-badge">Exposición</div>
-              <div class="editorial-meta-tag">8 MIN DE ENSAYO Y CONVERSACIÓN</div>
+              <div class="editorial-type-badge">Manifiesto</div>
+              <div class="editorial-meta-tag">IDENTIDAD DE ATELIER</div>
             </div>
             <div class="editorial-body">
               <div>
                 <div class="mono-meta" style="margin-bottom: 0.5rem;">
-                  SEPTIEMBRE 2026 // BERLÍN &bull; Galería St. Agnes
+                  EMMANUEL LIRA // LAPRIEST &bull; Pieza Única
                 </div>
                 <h3 class="editorial-title">
-                  <a href="quien-soy.html">SOBRE LA PROPORCIÓN BRUTALISTA: DIÁLOGO CON 032c</a>
+                  <a href="quien-soy.html">PIEZA ÚNICA: SIN PRODUCCIÓN EN MASA</a>
                 </h3>
                 <p class="editorial-excerpt">
-                  Por qué la alta moda debe abandonar la rueda del consumo desechable para concebir cada prenda como una escultura permanente e inmutable.
+                  Cada prenda nace numerada o irrepetible dentro del estudio. Sin temporadas impuestas ni inventarios industriales: solo diálogo directo con quien la porta.
                 </p>
               </div>
               <div class="editorial-footer-bar">
-                <span>Taller 032c, Berlín</span>
+                <span>Dirección Emmanuel Lira</span>
                 <a href="quien-soy.html" class="read-cta">
-                  <span>LEER ENSAYO</span> &rarr;
+                  <span>LEER MANIFIESTO</span> &rarr;
                 </a>
               </div>
             </div>
@@ -226,49 +205,24 @@
           <article class="editorial-card">
             <div class="editorial-img-box">
               <a href="quien-soy.html">
-                <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1200&q=85" alt="Atelier en Toscana">
+                <img src="lapriest-theme/assets/media/web/dsc04804.jpg" alt="Intervención con pigmento en taller LAPRIEST" loading="lazy">
               </a>
-              <div class="editorial-type-badge">Notas del Atelier</div>
-              <div class="editorial-meta-tag">4 MIN DE PROCESO</div>
+              <div class="editorial-type-badge">Proceso</div>
+              <div class="editorial-meta-tag">INTERVENCIÓN MANUAL</div>
             </div>
             <div class="editorial-body">
               <div>
-                <div class="mono-meta" style="margin-bottom: 0.5rem;">AGOSTO 2026 // TOSCANA</div>
+                <div class="mono-meta" style="margin-bottom: 0.5rem;">TALLER LAPRIEST // MÉXICO</div>
                 <h3 class="editorial-title" style="font-size:1.35rem;">
-                  <a href="quien-soy.html">LA SUITE DE FABRICACIÓN: PÁTINAS EN CUERO</a>
+                  <a href="quien-soy.html">DENIM INTERVENIDO: PIGMENTO, CORTE Y DESGASTE</a>
                 </h3>
                 <p class="editorial-excerpt">
-                  Documentamos el ciclo de 45 días necesario para transformar los cueros crudos en la chaqueta Caparazón.
+                  Registro directo del proceso artesanal sobre mezclilla pesada, aerosol y costura expuesta pieza por pieza.
                 </p>
               </div>
               <div class="editorial-footer-bar">
-                <span>Atelier Santa Croce</span>
-                <a href="quien-soy.html" class="read-cta"><span>VER</span> &rarr;</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="editorial-card">
-            <div class="editorial-img-box">
-              <a href="#" onclick="document.getElementById('ambientToggle').click(); return false;">
-                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1200&q=85" alt="Banda Sonora Tokio">
-              </a>
-              <div class="editorial-type-badge">Paisaje Sonoro</div>
-              <div class="editorial-meta-tag">48 MIN DE AUDIO</div>
-            </div>
-            <div class="editorial-body">
-              <div>
-                <div class="mono-meta" style="margin-bottom: 0.5rem;">JULIO 2026 // TOKIO</div>
-                <h3 class="editorial-title" style="font-size:1.35rem;">
-                  <a href="#" onclick="document.getElementById('ambientToggle').click(); return false;">BANDA SONORA 001: RUIDO RITUAL PARA MONOLITOS</a>
-                </h3>
-                <p class="editorial-excerpt">
-                  Edición en vinilo de archivo compuesta exclusivamente para la presentación en pasarela de la Colección 001.
-                </p>
-              </div>
-              <div class="editorial-footer-bar">
-                <span>Subterráneo Daikanyama</span>
-                <span class="read-cta" onclick="document.getElementById('ambientToggle').click();" style="cursor:pointer;"><span>REPRODUCIR</span> &rarr;</span>
+                <span>Atelier CDMX</span>
+                <a href="quien-soy.html" class="read-cta"><span>VER PROCESO</span> &rarr;</a>
               </div>
             </div>
           </article>
@@ -276,23 +230,48 @@
           <article class="editorial-card">
             <div class="editorial-img-box">
               <a href="catalog.html">
-                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85" alt="Monografía de Patrones">
+                <img src="lapriest-theme/assets/media/web/dsc05068.jpg" alt="Lookbook callejero LAPRIEST Ciudad de México" loading="lazy">
               </a>
-              <div class="editorial-type-badge">Monografía de Archivo</div>
-              <div class="editorial-meta-tag">LIBRO FÍSICO</div>
+              <div class="editorial-type-badge">Lookbook Calle</div>
+              <div class="editorial-meta-tag">CIUDAD DE MÉXICO</div>
             </div>
             <div class="editorial-body">
               <div>
-                <div class="mono-meta" style="margin-bottom: 0.5rem;">JUNIO 2026 // PARÍS</div>
+                <div class="mono-meta" style="margin-bottom: 0.5rem;">ARCHIVO EXTERIOR // CDMX</div>
                 <h3 class="editorial-title" style="font-size:1.35rem;">
-                  <a href="catalog.html">MONOGRAFÍA: GEOMETRÍAS DE PATRONAJE ARQUITECTÓNICO</a>
+                  <a href="catalog.html">ARMADURA URBANA: CAZADORA MA-1 Y PASAMONTAÑAS</a>
                 </h3>
                 <p class="editorial-excerpt">
-                  Impreso en 200 copias sobre papel de algodón crudo con estuche de lino artesanal.
+                  Volúmenes protectores y utilitarios fotografiados en entorno real sobre arquitectura urbana mexicana.
                 </p>
               </div>
               <div class="editorial-footer-bar">
-                <span>Studio LAPRIEST</span>
+                <span>Edición Exterior</span>
+                <a href="catalog.html" class="read-cta"><span>VER PIEZAS</span> &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="editorial-card">
+            <div class="editorial-img-box">
+              <a href="catalog.html">
+                <img src="lapriest-theme/assets/media/web/img-3304.jpg" alt="Conjunto de prendas de archivo LAPRIEST" loading="lazy">
+              </a>
+              <div class="editorial-type-badge">Archivo</div>
+              <div class="editorial-meta-tag">PRENDAS ÚNICAS</div>
+            </div>
+            <div class="editorial-body">
+              <div>
+                <div class="mono-meta" style="margin-bottom: 0.5rem;">COLECCIÓN ARCHIVO // LAPRIEST</div>
+                <h3 class="editorial-title" style="font-size:1.35rem;">
+                  <a href="catalog.html">ANATOMÍA DEL CAOS Y GRÁFICA TEXTIL</a>
+                </h3>
+                <p class="editorial-excerpt">
+                  Pantalones intervenidos, parches tipográficos y acabados envejecidos que conservan el rastro manual del taller.
+                </p>
+              </div>
+              <div class="editorial-footer-bar">
+                <span>Archivo Vivo</span>
                 <a href="catalog.html" class="read-cta"><span>DESCUBRIR</span> &rarr;</a>
               </div>
             </div>
@@ -303,23 +282,25 @@
       </div>
     </section>
 
-    <!-- BANNER DE PASARELA CINEMATOGRÁFICA -->
+    <!-- BANNER DE PASARELA EN VIDEO -->
     <section class="runway-banner">
       <div class="runway-banner-bg">
-        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1800&q=85" alt="Visual de Pasarela" loading="lazy">
+        <video autoplay muted loop playsinline preload="metadata" poster="lapriest-theme/assets/media/web/vic8257.jpg">
+          <source src="lapriest-theme/assets/media/web/pasarelas.mp4" type="video/mp4">
+        </video>
       </div>
       <div class="container runway-banner-inner">
-        <span class="mono-meta" style="color:#aaa; display:block; margin-bottom:1rem;">// DOCUMENTO AUDIOVISUAL</span>
-        <h2 class="runway-banner-title">NOCTURNO EN PALAIS DE TOKYO</h2>
+        <span class="mono-meta" style="color:#ccc; display:block; margin-bottom:1rem;">// DOCUMENTO EN PASARELA</span>
+        <h2 class="runway-banner-title">PASARELA LAPRIEST</h2>
         <p class="runway-banner-desc">
-          Grabado en vivo durante la instalación subterránea en la Semana de la Moda de París. Una toma continua acompañada de nuestra atmósfera de frecuencias modulares a 55Hz.
+          Movimiento, caída y presencia en vivo de las piezas desarrolladas en estudio. Cada silueta se asigna mediante consulta u oferta directa con el atelier.
         </p>
-        <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
-          <a href="catalog.html" class="btn-make-offer" style="padding:1rem 2rem;">
-            <span>EXPLORAR EL LOOKBOOK &rarr;</span>
+        <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+          <a href="catalog.html" class="btn-flat-solid">
+            EXPLORAR CATÁLOGO &rarr;
           </a>
-          <button type="button" class="btn-make-offer" onclick="document.getElementById('ambientToggle').click();" style="padding:1rem 2rem;">
-            <span>ACTIVAR ATMÓSFERA 55Hz</span>
+          <button type="button" class="btn-flat-muted" data-action="make-offer" data-piece-title="CONSULTA DE PASARELA LAPRIEST" data-piece-code="LP-RUNWAY" data-piece-price="BAJO CONSULTA">
+            SOLICITAR OFERTA DIRECTA
           </button>
         </div>
       </div>
@@ -331,11 +312,11 @@
         
         <div class="section-headline-bar">
           <div>
-            <span class="mono-meta" style="color:var(--text-muted); display:block; margin-bottom:0.5rem;">// EDICIONES LIMITADAS</span>
+            <span class="mono-meta" style="color:var(--text-muted); display:block; margin-bottom:0.5rem;">// EDICIONES LIMITADAS Y PIEZAS ÚNICAS</span>
             <h2 class="section-title">PIEZAS DE ARCHIVO</h2>
           </div>
           <div>
-            <a href="catalog.html" class="mono-meta" style="color:var(--text-primary); text-decoration:underline;">
+            <a href="catalog.html" class="btn-flat-muted">
               VER CATÁLOGO COMPLETO [06 PIEZAS] &rarr;
             </a>
           </div>
@@ -347,96 +328,96 @@
           <article class="piece-card" data-category="abrigos">
             <div class="piece-visual-frame">
               <a href="catalog.html">
-                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85" alt="Caftán Drapeado Obsidiana" class="piece-img-primary" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=85" alt="Caftán Drapeado Obsidiana Reverso" class="piece-img-hover" loading="lazy">
+                <img src="lapriest-theme/assets/media/web/temp-afterlight.jpg" alt="Cazadora Bomber Utilitaria MA-1" class="piece-img-primary" loading="lazy">
+                <img src="lapriest-theme/assets/media/web/dsc05068.jpg" alt="Cazadora Bomber Utilitaria MA-1 Detalle" class="piece-img-hover" loading="lazy">
               </a>
-              <div class="piece-badge-code">LP-FW26-001</div>
+              <div class="piece-badge-code">LP-MX-001</div>
               <div class="piece-badge-status">DISPONIBLE</div>
             </div>
             <div class="piece-info-box">
               <div>
-                <div class="piece-category-meta">Abrigos y Capas // SERIE 01</div>
-                <h3 class="piece-title-text"><a href="catalog.html">PIEZA 01: CAFTÁN DRAPEADO OBSIDIANA</a></h3>
-                <div class="piece-materials-text">100% Lana Cruda Hervida Japonesa de Alta Densidad, Arnés Interno en Cupro, Cierre de Acero Oxidado al Frío.</div>
+                <div class="piece-category-meta">Abrigos y Cazadoras // ARCHIVO MÉXICO</div>
+                <h3 class="piece-title-text"><a href="catalog.html">PIEZA 01: BOMBER UTILITARIA ESTRUCTURADA</a></h3>
+                <div class="piece-materials-text">Nylon técnico pesado, volumen sobredimensionado en mangas, cierre metálico bidireccional y pasamontañas a juego.</div>
               </div>
               <div class="piece-action-row">
                 <div class="piece-price-wrap">
-                  <span class="price-meta-label">VALOR BASE</span>
-                  <span class="price-value">$1,850 USD</span>
+                  <span class="price-meta-label">REFERENCIA BASE</span>
+                  <span class="price-value">BAJO CONSULTA</span>
                 </div>
                 <button type="button" 
                         class="btn-make-offer"
                         data-action="make-offer"
-                        data-piece-title="PIEZA 01: CAFTÁN DRAPEADO OBSIDIANA"
-                        data-piece-code="LP-FW26-001"
-                        data-piece-price="$1,850 USD">
-                  <span>HACER UNA OFERTA / CONSULTAR</span>
+                        data-piece-title="PIEZA 01: BOMBER UTILITARIA ESTRUCTURADA"
+                        data-piece-code="LP-MX-001"
+                        data-piece-price="BAJO CONSULTA">
+                  <span>HACER OFERTA</span>
                 </button>
               </div>
             </div>
           </article>
 
           <!-- Pieza 2 -->
-          <article class="piece-card" data-category="cuero">
+          <article class="piece-card" data-category="sastreria">
             <div class="piece-visual-frame">
               <a href="catalog.html">
-                <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=1200&q=85" alt="Caparazón de Cuero Brutalista" class="piece-img-primary" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1200&q=85" alt="Caparazón de Cuero Brutalista Reverso" class="piece-img-hover" loading="lazy">
+                <img src="lapriest-theme/assets/media/web/vic8384.jpg" alt="Conjunto Entropía LAPRIEST" class="piece-img-primary" loading="lazy">
+                <img src="lapriest-theme/assets/media/web/vic8382.jpg" alt="Conjunto Entropía Detalle" class="piece-img-hover" loading="lazy">
               </a>
-              <div class="piece-badge-code">LP-FW26-002</div>
-              <div class="piece-badge-status">EDICIÓN DE 06</div>
+              <div class="piece-badge-code">LP-MX-002</div>
+              <div class="piece-badge-status">PIEZA ÚNICA</div>
             </div>
             <div class="piece-info-box">
               <div>
-                <div class="piece-category-meta">Cuero y Prendas Pesadas // SERIE 01</div>
-                <h3 class="piece-title-text"><a href="catalog.html">PIEZA 02: CAPARAZÓN DE CUERO BRUTALISTA</a></h3>
-                <div class="piece-materials-text">Cuero de Caballo Crudo al Vegetal (1.8mm), Pátina Carbón Desgastada, Cortes Geométricos con Bordes Vivos.</div>
+                <div class="piece-category-meta">Conjuntos // SERIE ENTROPÍA</div>
+                <h3 class="piece-title-text"><a href="catalog.html">PIEZA 02: CONJUNTO ENTROPÍA PATCHWORK</a></h3>
+                <div class="piece-materials-text">Chaqueta cropped con cuello camisero e insignia bordada, denim ancho intervenido 2024 con aplicaciones manuales.</div>
               </div>
               <div class="piece-action-row">
                 <div class="piece-price-wrap">
-                  <span class="price-meta-label">VALOR BASE</span>
-                  <span class="price-value">$2,650 USD</span>
+                  <span class="price-meta-label">REFERENCIA BASE</span>
+                  <span class="price-value">BAJO CONSULTA</span>
                 </div>
                 <button type="button" 
                         class="btn-make-offer"
                         data-action="make-offer"
-                        data-piece-title="PIEZA 02: CAPARAZÓN DE CUERO BRUTALISTA"
-                        data-piece-code="LP-FW26-002"
-                        data-piece-price="$2,650 USD">
-                  <span>HACER UNA OFERTA / CONSULTAR</span>
+                        data-piece-title="PIEZA 02: CONJUNTO ENTROPÍA PATCHWORK"
+                        data-piece-code="LP-MX-002"
+                        data-piece-price="BAJO CONSULTA">
+                  <span>HACER OFERTA</span>
                 </button>
               </div>
             </div>
           </article>
 
           <!-- Pieza 3 -->
-          <article class="piece-card" data-category="abrigos">
+          <article class="piece-card" data-category="denim">
             <div class="piece-visual-frame">
               <a href="catalog.html">
-                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85" alt="Trench Asimétrico Monolítico" class="piece-img-primary" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85" alt="Trench Asimétrico Monolítico Reverso" class="piece-img-hover" loading="lazy">
+                <img src="lapriest-theme/assets/media/web/vic8257.jpg" alt="Denim Buscando Intervenido LAPRIEST" class="piece-img-primary" loading="lazy">
+                <img src="lapriest-theme/assets/media/web/sasha-afterlight.jpg" alt="Denim Buscando Detalle" class="piece-img-hover" loading="lazy">
               </a>
-              <div class="piece-badge-code">LP-FW26-003</div>
-              <div class="piece-badge-status">DISPONIBLE</div>
+              <div class="piece-badge-code">LP-MX-003</div>
+              <div class="piece-badge-status">PIEZA ÚNICA</div>
             </div>
             <div class="piece-info-box">
               <div>
-                <div class="piece-category-meta">Abrigos y Capas // SERIE 01</div>
-                <h3 class="piece-title-text"><a href="catalog.html">PIEZA 03: TRENCH ASIMÉTRICO MONOLÍTICO</a></h3>
-                <div class="piece-materials-text">Sarga Cruda Japonesa Encerada, Fornituras Industriales en Zinc, Solapas con Interior en Lana.</div>
+                <div class="piece-category-meta">Denim Intervenido // SERIE CAOS</div>
+                <h3 class="piece-title-text"><a href="catalog.html">PIEZA 03: PANTALÓN FLARE &laquo;BUSCANDO&raquo;</a></h3>
+                <div class="piece-materials-text">Mezclilla lavada e intervenida a mano con parches textiles, cadenas removibles y patronaje ancho acampanado.</div>
               </div>
               <div class="piece-action-row">
                 <div class="piece-price-wrap">
-                  <span class="price-meta-label">VALOR BASE</span>
-                  <span class="price-value">$1,420 USD</span>
+                  <span class="price-meta-label">REFERENCIA BASE</span>
+                  <span class="price-value">BAJO CONSULTA</span>
                 </div>
                 <button type="button" 
                         class="btn-make-offer"
                         data-action="make-offer"
-                        data-piece-title="PIEZA 03: TRENCH ASIMÉTRICO MONOLÍTICO"
-                        data-piece-code="LP-FW26-003"
-                        data-piece-price="$1,420 USD">
-                  <span>HACER UNA OFERTA / CONSULTAR</span>
+                        data-piece-title="PIEZA 03: PANTALÓN FLARE BUSCANDO"
+                        data-piece-code="LP-MX-003"
+                        data-piece-price="BAJO CONSULTA">
+                  <span>HACER OFERTA</span>
                 </button>
               </div>
             </div>
@@ -459,8 +440,8 @@
             Un laboratorio arquitectónico de alta costura que opera bajo principios de monasticismo material, geometría extrema en la silueta y protocolos de adquisición no comerciales.
           </p>
           <div class="mono-meta" style="margin-top: 1.5rem;">
-            48.864716&deg; N, 2.349014&deg; E &bull; ATELIER PARÍS<br>
-            35.658581&deg; N, 139.745438&deg; E &bull; ARCHIVO TOKIO
+            19.432608&deg; N, 99.133209&deg; O &bull; ATELIER CIUDAD DE MÉXICO<br>
+            EMMANUEL LIRA &bull; PIEZA ÚNICA &amp; ARCHIVO
           </div>
         </div>
 
@@ -498,7 +479,7 @@
 
       <div class="footer-bottom-bar">
         <div>&copy; 2026 LAPRIEST HAUTE BRUTALISME. TODOS LOS DERECHOS RESERVADOS.</div>
-        <div>ARQUITECTURA SIN CARRITO DE COMPRA &bull; SOLO ADQUISICIONES DIRECTAS</div>
+        <div>SISTEMA DE ADQUISICIÓN DIRECTA &bull; ATELIER MÉXICO</div>
       </div>
 
       <!-- Crédito de Autoría / Friendly Dev by Shon -->
@@ -587,7 +568,7 @@
           </button>
 
           <p class="modal-legal-note">
-            LAPRIEST opera sin carritos de compra convencionales. Cada propuesta es evaluada de manera personalizada por la dirección del atelier. No se procesa ningún cobro en esta etapa.
+            Cada propuesta se envía de forma directa al atelier de Emmanuel Lira para confirmar talla, disponibilidad única o personalización a medida. No se realiza ningún cobro automático en esta etapa.
           </p>
         </form>
       </div>
