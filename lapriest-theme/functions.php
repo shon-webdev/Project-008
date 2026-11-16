@@ -103,7 +103,7 @@ function lapriest_enqueue_assets() {
             'success_title' => esc_html__('OFERTA REGISTRADA', 'lapriest'),
             'success_desc'  => esc_html__('Su propuesta de adquisición ha sido recibida directamente por el atelier de la marca. Nuestra dirección curatorial evaluará los detalles y responderá en un plazo máximo de 24 horas.', 'lapriest'),
             'error_title'   => esc_html__('ERROR EN LA TRANSMISIÓN', 'lapriest'),
-            'error_desc'    => esc_html__('Por favor verifique los campos obligatorios o comuníquese directamente con el atelier vía Instagram @lapriest_studio.', 'lapriest'),
+            'error_desc'    => esc_html__('Por favor verifique los campos obligatorios o comuníquese directamente con el atelier vía Instagram @__lapriest__.', 'lapriest'),
         )
     ));
 }

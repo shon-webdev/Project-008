@@ -39,7 +39,7 @@
       <div>
         <div class="footer-col-title"><?php esc_html_e('CANALES DIRECTOS', 'lapriest'); ?></div>
         <ul class="footer-links-list">
-          <li><a href="https://www.instagram.com/lapriest_studio/" target="_blank" rel="noopener noreferrer">Instagram (@lapriest_studio)</a></li>
+          <li><a href="https://www.instagram.com/__lapriest__/" target="_blank" rel="noopener noreferrer">Instagram (@__lapriest__)</a></li>
           <li><a href="mailto:atelier@lapriest.com">atelier@lapriest.com</a></li>
           <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="CITA PRIVADA EN EL ATELIER" data-piece-code="LP-CITA" data-piece-price="PRIVADO"><?php esc_html_e('Citas Privadas', 'lapriest'); ?></a></li>
           <li><a href="<?php echo esc_url(home_url('/quien-soy/')); ?>#pilares"><?php esc_html_e('Los 4 Pilares', 'lapriest'); ?></a></li>

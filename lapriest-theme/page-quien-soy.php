@@ -208,7 +208,7 @@ get_header(); ?>
         <div class="contact-meta-group">
           <div class="c-label"><?php esc_html_e('COMUNICACIÓN DIGITAL DIRECTA', 'lapriest'); ?></div>
           <div class="c-val"><a href="mailto:atelier@lapriest.com" style="color:#fff;">atelier@lapriest.com</a></div>
-          <div class="mono-meta" style="margin-top:0.5rem;">Instagram: @lapriest_studio</div>
+          <div class="mono-meta" style="margin-top:0.5rem;">Instagram: <a href="https://www.instagram.com/__lapriest__/" target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:underline;">@__lapriest__</a></div>
         </div>
         <div class="contact-meta-group">
           <div class="c-label"><?php esc_html_e('CONSULTAS CURATORIALES Y PRENSA', 'lapriest'); ?></div>

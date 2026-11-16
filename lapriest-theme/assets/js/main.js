@@ -214,7 +214,7 @@ function initOfferModal() {
           }
         } catch (err) {
           console.error(err);
-          alert('Error de conexión. Puede contactar directamente al atelier vía Instagram @lapriest_studio.');
+          alert('Error de conexión. Puede contactar directamente al atelier vía Instagram @__lapriest__.');
         } finally {
           submitBtn.disabled = false;
           submitText.textContent = originalText;
