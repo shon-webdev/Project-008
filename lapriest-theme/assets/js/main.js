@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initImageHoverPreload();
   initTypographySwitcher();
+  initDispatchForms();
 });
 
 /* ==========================================================================
@@ -124,6 +125,20 @@ function initOfferModal() {
     });
   });
 
+  // Permitir que en Catálogo al tocar la imagen o título de una pieza también se abra su modal
+  document.querySelectorAll('.piece-card').forEach(card => {
+    const offerBtn = card.querySelector('.btn-make-offer');
+    if (!offerBtn) return;
+    const frame = card.querySelector('.piece-visual-frame');
+    const title = card.querySelector('.piece-title-text');
+    [frame, title].forEach(el => {
+      if (el && !el.querySelector('a')) {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', () => offerBtn.click());
+      }
+    });
+  });
+
   closeBtns.forEach(btn => {
     btn.addEventListener('click', closeModal);
   });
@@ -161,10 +176,14 @@ function initOfferModal() {
     });
   });
 
-  // Envío del formulario por AJAX
+  // Envío del formulario por AJAX con validación estricta
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
 
       const submitBtn = form.querySelector('.btn-submit-offer');
       const submitText = submitBtn.querySelector('span') || submitBtn;
@@ -226,8 +245,63 @@ function initOfferModal() {
       if (pieceDisplay) pieceDisplay.textContent = `${formData.get('piece_title')} (${formData.get('piece_code')})`;
       if (offerDisplay) offerDisplay.textContent = `$${formData.get('proposed_offer')} USD`;
       if (emailDisplay) emailDisplay.textContent = formData.get('email');
+
+      try {
+        const saved = JSON.parse(localStorage.getItem('lapriest_offers') || '[]');
+        saved.push({
+          refId,
+          piece: formData.get('piece_title'),
+          code: formData.get('piece_code'),
+          offer: formData.get('proposed_offer'),
+          name: formData.get('full_name'),
+          email: formData.get('email'),
+          instagram: formData.get('instagram'),
+          reply: formData.get('reply_method'),
+          message: formData.get('message'),
+          date: new Date().toISOString()
+        });
+        localStorage.setItem('lapriest_offers', JSON.stringify(saved));
+      } catch (_) {}
     }
   }
+}
+
+/* ==========================================================================
+   2B. FORMULARIO DE DESPACHO CONFIDENCIAL (FOOTER)
+   ========================================================================== */
+function initDispatchForms() {
+  const forms = document.querySelectorAll('.footer-dispatch-form');
+  forms.forEach(f => {
+    f.removeAttribute('onsubmit');
+    f.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!f.checkValidity()) {
+        f.reportValidity();
+        return;
+      }
+      const input = f.querySelector('.footer-dispatch-input');
+      const btn = f.querySelector('.footer-dispatch-btn');
+      const email = input ? input.value.trim() : '';
+      if (!email) return;
+
+      try {
+        const list = JSON.parse(localStorage.getItem('lapriest_dispatch') || '[]');
+        if (!list.includes(email)) list.push(email);
+        localStorage.setItem('lapriest_dispatch', JSON.stringify(list));
+      } catch (_) {}
+
+      if (btn) {
+        const prev = btn.textContent;
+        btn.textContent = 'REGISTRADO ✓';
+        btn.disabled = true;
+        setTimeout(() => {
+          btn.textContent = prev;
+          btn.disabled = false;
+        }, 3500);
+      }
+      f.reset();
+    });
+  });
 }
 
 /* ==========================================================================

@@ -22,18 +22,18 @@
     <!-- Dossier de la Prenda Objetivo (Dinámico) -->
     <div class="modal-piece-dossier">
       <div>
-        <div class="dossier-piece-name" id="dossierPieceName">PIEZA 01: CAFTÁN DRAPEADO OBSIDIANA</div>
-        <div class="dossier-meta-code" id="dossierPieceCode">LP-FW26-001 // A MEDIDA</div>
+        <div class="dossier-piece-name" id="dossierPieceName">PIEZA 01: BOMBER UTILITARIA ESTRUCTURADA</div>
+        <div class="dossier-meta-code" id="dossierPieceCode">LP-MX-001 // ATELIER MÉXICO</div>
       </div>
       <div class="dossier-baseline">
         <div style="font-size:0.5625rem; letter-spacing:0.18em; text-transform:uppercase; color:#777;">VALOR BASE</div>
-        <div class="dossier-baseline-val" id="dossierPiecePrice">$1,850 USD</div>
+        <div class="dossier-baseline-val" id="dossierPiecePrice">BAJO CONSULTA</div>
       </div>
     </div>
 
     <!-- Vista del Formulario Activo -->
     <div class="offer-form-container" id="offerFormPane">
-      <form id="lapriestOfferForm" class="offer-form" novalidate>
+      <form id="lapriestOfferForm" class="offer-form">
         
         <!-- Campos Ocultos Dinámicos -->
         <input type="hidden" name="piece_title" id="fieldPieceTitle" value="">

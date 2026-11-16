@@ -28,10 +28,10 @@
       <div>
         <div class="footer-col-title"><?php esc_html_e('ARCHIVOS // DOSSIERS', 'lapriest'); ?></div>
         <ul class="footer-links-list">
-          <li><a href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('01 Portal Editorial', 'lapriest'); ?></a></li>
-          <li><a href="<?php echo esc_url(home_url('/catalogo/')); ?>"><?php esc_html_e('02 Catálogo de Piezas', 'lapriest'); ?></a></li>
-          <li><a href="<?php echo esc_url(home_url('/quien-soy/')); ?>"><?php esc_html_e('03 Quién Soy (Manifiesto)', 'lapriest'); ?></a></li>
-          <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="DOSSIER CONFIDENCIAL DEL ATELIER" data-piece-code="LP-DOSSIER" data-piece-price="A CONSULTAR"><?php esc_html_e('04 Proponer Adquisición', 'lapriest'); ?></a></li>
+          <li><a href="<?php echo esc_url(home_url('/quien-soy/')); ?>"><?php esc_html_e('Quién Soy (Manifiesto)', 'lapriest'); ?></a></li>
+          <li><a href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('Editorial', 'lapriest'); ?></a></li>
+          <li><a href="<?php echo esc_url(home_url('/catalogo/')); ?>"><?php esc_html_e('Catálogo de Piezas', 'lapriest'); ?></a></li>
+          <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="DOSSIER CONFIDENCIAL DEL ATELIER" data-piece-code="LP-DOSSIER" data-piece-price="A CONSULTAR"><?php esc_html_e('Oferta Directa', 'lapriest'); ?></a></li>
         </ul>
       </div>
 
@@ -39,7 +39,7 @@
       <div>
         <div class="footer-col-title"><?php esc_html_e('CANALES DIRECTOS', 'lapriest'); ?></div>
         <ul class="footer-links-list">
-          <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram (@lapriest_studio)</a></li>
+          <li><a href="https://www.instagram.com/lapriest_studio/" target="_blank" rel="noopener noreferrer">Instagram (@lapriest_studio)</a></li>
           <li><a href="mailto:atelier@lapriest.com">atelier@lapriest.com</a></li>
           <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="CITA PRIVADA EN EL ATELIER" data-piece-code="LP-CITA" data-piece-price="PRIVADO"><?php esc_html_e('Citas Privadas', 'lapriest'); ?></a></li>
           <li><a href="<?php echo esc_url(home_url('/quien-soy/')); ?>#pilares"><?php esc_html_e('Los 4 Pilares', 'lapriest'); ?></a></li>
@@ -52,7 +52,7 @@
         <p style="font-size: 0.75rem; color: #888; line-height: 1.6;">
           <?php esc_html_e('Suscríbase para recibir lookbooks privados, coordenadas de exposiciones y lanzamientos de ediciones limitadas antes de su anuncio público.', 'lapriest'); ?>
         </p>
-        <form class="footer-dispatch-form" onsubmit="event.preventDefault(); alert('Su dirección ha sido registrada en el libro privado de despachos de LAPRIEST.'); this.reset();">
+        <form class="footer-dispatch-form">
           <input type="email" class="footer-dispatch-input" placeholder="cliente@dominio.com" required aria-label="<?php esc_attr_e('Correo electrónico para el despacho', 'lapriest'); ?>">
           <button type="submit" class="footer-dispatch-btn"><?php esc_html_e('REGISTRARME', 'lapriest'); ?></button>
         </form>
