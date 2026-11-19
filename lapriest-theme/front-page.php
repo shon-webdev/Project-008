@@ -35,11 +35,6 @@ get_header(); ?>
       </div>
 
       <div class="brand-film-copy">
-        <div class="hero-tagline">
-          <span class="code-badge">PIEZA ÚNICA // EMMANUEL LIRA</span>
-          <span class="mono-meta"><?php esc_html_e('CIUDAD DE MÉXICO', 'lapriest'); ?></span>
-        </div>
-
         <h1 class="hero-title">
           MONOLÍTICO<br>
           <em>ARMADURA PARA LA MENTE.</em>
@@ -54,25 +49,6 @@ get_header(); ?>
           <button type="button" class="btn-flat-muted" data-action="make-offer" data-piece-title="CONSULTA GENERAL AL ATELIER" data-piece-code="LP-GEN" data-piece-price="BAJO CONSULTA">
             <?php esc_html_e('SOLICITAR OFERTA DIRECTA', 'lapriest'); ?>
           </button>
-        </div>
-
-        <div class="hero-meta-grid">
-          <div class="hero-meta-item">
-            <div class="meta-label"><?php esc_html_e('DIRECCIÓN CREATIVA', 'lapriest'); ?></div>
-            <div class="meta-val">EMMANUEL LIRA</div>
-          </div>
-          <div class="hero-meta-item">
-            <div class="meta-label"><?php esc_html_e('ADQUISICIÓN', 'lapriest'); ?></div>
-            <div class="meta-val"><?php esc_html_e('PROPUESTA DIRECTA', 'lapriest'); ?></div>
-          </div>
-          <div class="hero-meta-item">
-            <div class="meta-label"><?php esc_html_e('FORMATO', 'lapriest'); ?></div>
-            <div class="meta-val"><?php esc_html_e('PIEZA ÚNICA DE ATELIER', 'lapriest'); ?></div>
-          </div>
-          <div class="hero-meta-item">
-            <div class="meta-label"><?php esc_html_e('SEDE', 'lapriest'); ?></div>
-            <div class="meta-val">CIUDAD DE MÉXICO</div>
-          </div>
         </div>
       </div>
     </div>

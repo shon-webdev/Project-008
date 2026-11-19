@@ -27,7 +27,7 @@
   <div class="header-navbar container">
     <!-- Logotipo Monolítico -->
     <a href="<?php echo esc_url(home_url('/')); ?>" class="brand-mark" rel="home">
-      LAPRIEST<span>MÉXICO</span>
+      LAPRIEST
     </a>
 
     <!-- Menú de Navegación Editorial -->
