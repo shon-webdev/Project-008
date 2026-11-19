@@ -1992,10 +1992,19 @@ body.mobile-nav-open {
   margin-bottom: 1.25rem;
 }
 
-/* 4 Pillars of LAPRIEST */
+/* 4 Pillars of LAPRIEST (Photographic Backdrop) */
 .pillars-section {
+  position: relative;
   border-top: none;
-  padding-top: 1.5rem;
+  padding: 2.75rem 2.5rem;
+  margin-top: 0.75rem;
+  background-image:
+    linear-gradient(180deg, rgba(12, 14, 16, 0.56) 0%, rgba(12, 14, 16, 0.72) 55%, rgba(12, 14, 16, 0.84) 100%),
+    url('../media/web/vic8314.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .pillars-title {
@@ -2005,21 +2014,24 @@ body.mobile-nav-open {
   font-weight: var(--font-title-weight);
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
 }
 
 .pillar-item {
   border-bottom: none;
-  padding: 1.15rem 0;
+  padding: 1.05rem 0;
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 72px 1fr;
+  gap: 1.25rem;
 }
 
 .pillar-index {
   font-family: var(--font-meta);
   font-size: 0.8125rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.2em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
 }
 
 .pillar-heading {
@@ -2027,14 +2039,28 @@ body.mobile-nav-open {
   font-size: 1.35rem;
   font-weight: var(--font-title-weight);
   letter-spacing: var(--font-title-spacing);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
   color: var(--accent-white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
 }
 
 .pillar-desc {
   font-size: 0.875rem;
-  color: var(--text-secondary);
+  color: rgba(245, 245, 245, 0.88);
   line-height: 1.6;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.85);
+}
+
+@media (max-width: 768px) {
+  .pillars-section {
+    padding: 2rem 1.35rem;
+    background-position: center 18%;
+  }
+
+  .pillar-item {
+    grid-template-columns: 52px 1fr;
+    gap: 0.75rem;
+  }
 }
 
 /* Atelier Process Gallery */
