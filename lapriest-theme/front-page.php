@@ -66,9 +66,6 @@ get_header(); ?>
           <span class="mono-meta" style="color:var(--text-muted); display:block; margin-bottom:0.5rem;">// COMUNICADOS Y PASARELAS</span>
           <h2 class="section-title"><?php esc_html_e('EDITORIAL Y EVENTOS', 'lapriest'); ?></h2>
         </div>
-        <div class="section-index">
-          [ 01 &mdash; REGISTRO CULTURAL ]
-        </div>
       </div>
 
       <?php

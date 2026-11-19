@@ -14,7 +14,7 @@ while (have_posts()) : the_post();
     $base_price = get_post_meta($piece_id, '_lapriest_base_price', true) ?: '$1,850 USD';
     $season = get_post_meta($piece_id, '_lapriest_season', true) ?: 'SERIE 01 // EL ECLIPSE DE LA ORTODOXIA';
     $materials = get_post_meta($piece_id, '_lapriest_materials', true) ?: '100% Lana Cruda Hervida Japonesa de Alta Densidad, Arnés Interno en Cupro, Cierres de Plata con Pátina Fría.';
-    $edition_limit = get_post_meta($piece_id, '_lapriest_edition_limit', true) ?: 'Pieza Única — Confeccionada en Atelier Emmanuel Lira, México';
+    $edition_limit = get_post_meta($piece_id, '_lapriest_edition_limit', true) ?: 'Pieza Única — Confeccionada en Atelier LAPRIEST, México';
     $secondary_img = get_post_meta($piece_id, '_lapriest_secondary_image', true);
     $status = get_post_meta($piece_id, '_lapriest_inquiry_status', true) ?: 'available';
 

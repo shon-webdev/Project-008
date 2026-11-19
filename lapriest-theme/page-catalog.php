@@ -54,7 +54,7 @@ get_header(); ?>
       <div class="offer-guide-step">
         <div class="step-kicker">03 // RESPUESTA DEL ATELIER</div>
         <h2 class="step-title">TRATO PERSONALIZADO</h2>
-        <p><?php esc_html_e('El equipo de Emmanuel Lira responde por correo o WhatsApp sin cargos automáticos ni intermediarios.', 'lapriest'); ?></p>
+        <p><?php esc_html_e('El equipo del atelier responde por correo o WhatsApp sin cargos automáticos ni intermediarios.', 'lapriest'); ?></p>
       </div>
     </div>
     
@@ -137,7 +137,7 @@ get_header(); ?>
     </div>
 
     <!-- Encargos a medida en el Atelier -->
-    <div style="border-top: 1px solid var(--border-subtle); padding: 3rem 0 6rem; text-align: center;">
+    <div style="padding: 3rem 0 6rem; text-align: center;">
       <span class="mono-meta" style="color:#666;">// ENCARGOS A MEDIDA</span>
       <h3 style="font-family:var(--font-title); font-size:1.75rem; margin:0.75rem 0 1rem; font-weight:var(--font-title-weight); letter-spacing:var(--font-title-spacing); text-transform:uppercase;">
         <?php esc_html_e('¿BUSCA UN ENCARGO DE ARCHIVO O MEDIDAS PERSONALIZADAS?', 'lapriest'); ?>

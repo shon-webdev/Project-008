@@ -20,7 +20,7 @@
         </p>
         <div class="mono-meta" style="margin-top: 1.5rem;">
           19.432608&deg; N, 99.133209&deg; O &bull; ATELIER CIUDAD DE MÉXICO<br>
-          EMMANUEL LIRA &bull; PIEZA ÚNICA &amp; ARCHIVO
+          PIEZA ÚNICA &amp; ARCHIVO
         </div>
       </div>
 

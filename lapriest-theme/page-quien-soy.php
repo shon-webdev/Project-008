@@ -19,8 +19,8 @@ get_header(); ?>
       <h1 class="manifesto-hero-quote">
         &ldquo;ESTO NO ES CONSUMO, ES PURA VIDA.&rdquo;
       </h1>
-      <div class="mono-meta" style="margin-top:2rem; color:var(--text-secondary);">
-        LAPRIEST &bull; ATELIER MÉXICO &bull; EMMANUEL LIRA
+      <div class="mono-meta" style="margin-top:1.25rem; color:var(--text-secondary);">
+        LAPRIEST &bull; ATELIER MÉXICO
       </div>
     </header>
 
@@ -37,11 +37,11 @@ get_header(); ?>
           </video>
         </div>
         <div class="manifesto-caption">
-          <span>MANIFIESTO // EMMANUEL LIRA</span>
+          <span>MANIFIESTO // LAPRIEST</span>
           <span>ATELIER MÉXICO</span>
         </div>
 
-        <div style="margin-top:2.5rem; border-top:1px solid var(--border-subtle); padding-top:1.5rem;">
+        <div style="margin-top:1.75rem; padding-top:0.5rem;">
           <div class="mono-meta" style="margin-bottom:0.75rem; color:#fff;">DOSSIER PRIVADO DE ATELIER</div>
           <p style="font-size:0.8125rem; color:#777; line-height:1.6; margin-bottom:1.25rem;">
             <?php esc_html_e('Curadores, coleccionistas privados y prensa especializada pueden solicitar la monografía confidencial completa, que incluye muestras físicas de textiles.', 'lapriest'); ?>
@@ -173,13 +173,12 @@ get_header(); ?>
     <!-- =========================================================================
          SUITE DE ATELIER Y REGISTRO VISUAL DE CONFECCIÓN
          ========================================================================= -->
-    <section style="margin-top: 6rem;">
+    <section style="margin-top: 5rem;">
       <div class="section-headline-bar">
         <div>
           <span class="mono-meta" style="color:var(--text-muted); display:block; margin-bottom:0.5rem;">// ESPACIO DE ATELIER</span>
           <h2 class="section-title"><?php esc_html_e('DETRÁS DEL MONOLITO', 'lapriest'); ?></h2>
         </div>
-        <div class="section-index">[ PROCESO Y CONFECCIÓN ]</div>
       </div>
 
       <div class="atelier-gallery-strip">
@@ -203,7 +202,7 @@ get_header(); ?>
         <div class="contact-meta-group">
           <div class="c-label"><?php esc_html_e('ATELIER MÉXICO (CON CITA PREVIA)', 'lapriest'); ?></div>
           <div class="c-val">Ciudad de México, México</div>
-          <div class="mono-meta" style="margin-top:0.5rem;">Dirección Creativa: Emmanuel Lira</div>
+          <div class="mono-meta" style="margin-top:0.5rem;">Atención bajo cita privada</div>
         </div>
         <div class="contact-meta-group">
           <div class="c-label"><?php esc_html_e('COMUNICACIÓN DIGITAL DIRECTA', 'lapriest'); ?></div>
