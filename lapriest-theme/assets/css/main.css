@@ -1167,7 +1167,7 @@ body.mobile-nav-open {
   color: var(--text-muted);
 }
 
-/* Product Grid (Rick Owens Monolithic Vertical Presentation) */
+/* Product Grid (2-by-2 Presentation across Desktop, Tablet & Mobile) */
 .pieces-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1175,14 +1175,92 @@ body.mobile-nav-open {
   margin-bottom: 6rem;
 }
 
+#catalogPiecesGrid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 @media (max-width: 1200px) {
   .pieces-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 }
+
 @media (max-width: 650px) {
-  .pieces-grid {
-    grid-template-columns: 1fr;
+  .pieces-grid,
+  #catalogPiecesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .piece-card .piece-badge-code {
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+    padding: 0.18rem 0.4rem;
+  }
+
+  .piece-card .piece-badge-status {
+    top: auto;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: auto;
+    font-size: 0.48rem;
+    letter-spacing: 0.08em;
+    padding: 0.15rem 0.38rem;
+  }
+
+  .piece-card .piece-info-box {
+    padding: 0.75rem;
+  }
+
+  .piece-card .piece-category-meta {
+    font-size: 0.52rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+  }
+
+  .piece-card .piece-title-text {
+    font-size: 0.82rem;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+
+  .piece-card .piece-materials-text {
+    font-size: 0.65rem;
+    line-height: 1.35;
+    margin-bottom: 0.65rem;
+  }
+
+  .piece-card .piece-action-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.45rem;
+    padding-top: 0.25rem;
+  }
+
+  .piece-card .piece-price-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .piece-card .price-meta-label {
+    font-size: 0.48rem;
+    letter-spacing: 0.1em;
+  }
+
+  .piece-card .price-value {
+    font-size: 0.65rem;
+  }
+
+  .piece-card .btn-make-offer {
+    width: 100%;
+    padding: 0.55rem 0.4rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
   }
 }
 
