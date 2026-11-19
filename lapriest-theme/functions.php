@@ -99,11 +99,11 @@ function lapriest_enqueue_assets() {
         'nonce'      => wp_create_nonce('lapriest_offer_nonce'),
         'brand_name' => 'LAPRIEST',
         'i18n'       => array(
-            'sending'       => esc_html__('TRANSMITIENDO OFERTA AL ATELIER...', 'lapriest'),
+            'sending'       => esc_html__('TRANSMITIENDO OFERTA...', 'lapriest'),
             'success_title' => esc_html__('OFERTA REGISTRADA', 'lapriest'),
-            'success_desc'  => esc_html__('Su propuesta de adquisición ha sido recibida directamente por el atelier de la marca. Nuestra dirección curatorial evaluará los detalles y responderá en un plazo máximo de 24 horas.', 'lapriest'),
+            'success_desc'  => esc_html__('Su propuesta de adquisición ha sido recibida directamente por la marca. Nuestra dirección curatorial evaluará los detalles y responderá en un plazo máximo de 24 horas.', 'lapriest'),
             'error_title'   => esc_html__('ERROR EN LA TRANSMISIÓN', 'lapriest'),
-            'error_desc'    => esc_html__('Por favor verifique los campos obligatorios o comuníquese directamente con el atelier vía Instagram @__lapriest__.', 'lapriest'),
+            'error_desc'    => esc_html__('Por favor verifique los campos obligatorios o comuníquese directamente vía Instagram @__lapriest__.', 'lapriest'),
         )
     ));
 }
@@ -315,7 +315,7 @@ function lapriest_render_piece_meta_box($post) {
             <select name="lapriest_inquiry_status" style="width:100%; background:#222; color:#fff; border:1px solid #444; padding:8px;">
                 <option value="available" <?php selected($inquiry_status, 'available'); ?>>DISPONIBLE PARA ADQUISICIÓN / PROPUESTA</option>
                 <option value="reserved" <?php selected($inquiry_status, 'reserved'); ?>>RESERVADA (SOLO LISTA DE ESPERA PRIVADA)</option>
-                <option value="archival" <?php selected($inquiry_status, 'archival'); ?>>ARCHIVO PERMANENTE DEL ATELIER (SOLO EXHIBICIÓN)</option>
+                <option value="archival" <?php selected($inquiry_status, 'archival'); ?>>ARCHIVO PERMANENTE (SOLO EXHIBICIÓN)</option>
             </select>
         </div>
     </div>
@@ -466,7 +466,7 @@ function lapriest_handle_offer_submission() {
     $reference_id = 'LP-ACQ-' . strtoupper(substr(md5(uniqid(rand(), true)), 0, 6));
 
     $admin_email = get_option('admin_email');
-    $subject = sprintf('[ATELIER LAPRIEST] Propuesta de Adquisición Privada: %s (%s)', $piece_code, $reference_id);
+    $subject = sprintf('[LAPRIEST] Propuesta de Adquisición Privada: %s (%s)', $piece_code, $reference_id);
 
     // Correo HTML en español neutral
     $body = '
@@ -532,7 +532,7 @@ function lapriest_handle_offer_submission() {
         </div>
 
         <div class="footer">
-          REGISTRO CONFIDENCIAL DEL ATELIER // TRANSMITIDO MEDIANTE EL SISTEMA DE OFERTA DIRECTA LAPRIEST
+          REGISTRO CONFIDENCIAL // TRANSMITIDO MEDIANTE EL SISTEMA DE OFERTA DIRECTA LAPRIEST
         </div>
       </div>
     </body>
@@ -540,7 +540,7 @@ function lapriest_handle_offer_submission() {
 
     $headers = array(
         'Content-Type: text/html; charset=UTF-8',
-        'From: Atelier LAPRIEST <' . $admin_email . '>',
+        'From: LAPRIEST <' . $admin_email . '>',
         'Reply-To: ' . $full_name . ' <' . $email . '>'
     );
 
@@ -616,10 +616,10 @@ function lapriest_get_sample_pieces() {
             'category'    => 'Abrigos',
             'season'      => 'ARCHIVO MÉXICO',
             'materials'   => 'Nylon técnico de alto gramaje, volumen esculpido en mangas, herrajes metálicos y pasamontañas integrado.',
-            'edition'     => 'Producción limitada — Atelier LAPRIEST, Ciudad de México',
+            'edition'     => 'Producción limitada — LAPRIEST, Ciudad de México',
             'image'       => $media . 'temp-afterlight.jpg',
             'hover_image' => $media . 'dsc05068.jpg',
-            'excerpt'     => 'Volumen protector utilitario confeccionado en atelier independiente.',
+            'excerpt'     => 'Volumen protector utilitario confeccionado en estudio independiente.',
         ),
         array(
             'title'       => 'PIEZA 02: CONJUNTO ENTROPÍA PATCHWORK',
@@ -628,7 +628,7 @@ function lapriest_get_sample_pieces() {
             'category'    => 'Conjuntos',
             'season'      => 'SERIE ENTROPÍA',
             'materials'   => 'Chaqueta cropped con cierre diagonal y bordado ENTROPÍA, mezclilla ancha intervenida 2024 con parches manuales.',
-            'edition'     => 'Pieza Única de Archivo — Atelier LAPRIEST',
+            'edition'     => 'Pieza Única de Archivo — LAPRIEST',
             'image'       => $media . 'vic8384.jpg',
             'hover_image' => $media . 'vic8382.jpg',
             'excerpt'     => 'Conjunto de dos piezas intervenidas manualmente con tipografía textil.',
@@ -640,7 +640,7 @@ function lapriest_get_sample_pieces() {
             'category'    => 'Denim',
             'season'      => 'SERIE CAOS',
             'materials'   => 'Mezclilla pesada con desgaste artesanal, parches cosidos a mano, cadena metálica desmontable y caída amplia.',
-            'edition'     => 'Pieza Única — Atelier LAPRIEST México',
+            'edition'     => 'Pieza Única — LAPRIEST México',
             'image'       => $media . 'vic8257.jpg',
             'hover_image' => $media . 'sasha-afterlight.jpg',
             'excerpt'     => 'Corte acampanado amplio con aplicaciones de estudio y desgaste real.',
@@ -652,7 +652,7 @@ function lapriest_get_sample_pieces() {
             'category'    => 'Abrigos',
             'season'      => 'SERIE CAOS',
             'materials'   => 'Sarga desgastada y cepillada en estudio, costuras expuestas y gráfico tipográfico integrado.',
-            'edition'     => 'Edición Corta de Atelier',
+            'edition'     => 'Edición Corta de Estudio',
             'image'       => $media . 'vic8314.jpg',
             'hover_image' => $media . 'dsc05091.jpg',
             'excerpt'     => 'Proporción cropped estructurada con acabado manual.',
@@ -691,7 +691,7 @@ function lapriest_get_sample_editorials() {
             'title'     => 'CUERPO, DENIM Y CONSTRUCCIÓN EN ESPACIO BLANCO',
             'type'      => 'Estudio',
             'date'      => 'SERIE ENTROPÍA // CIUDAD DE MÉXICO',
-            'location'  => 'Atelier México',
+            'location'  => 'Ciudad de México',
             'read_time' => 'SERIE FOTOGRÁFICA',
             'image'     => $media . 'vic8092.jpg',
             'excerpt'   => 'Siluetas amplias, desgaste artesanal y confrontación directa con el tejido dentro del estudio.',
@@ -699,9 +699,9 @@ function lapriest_get_sample_editorials() {
         array(
             'title'     => 'PIEZA ÚNICA: SIN PRODUCCIÓN EN MASA',
             'type'      => 'Manifiesto',
-            'date'      => 'LAPRIEST // ATELIER MÉXICO',
+            'date'      => 'LAPRIEST // MÉXICO',
             'location'  => 'Ciudad de México',
-            'read_time' => 'IDENTIDAD DE ATELIER',
+            'read_time' => 'IDENTIDAD DE MARCA',
             'image'     => $media . 'vic8134.jpg',
             'excerpt'   => 'Cada prenda nace numerada o irrepetible dentro del taller mediante diálogo directo.',
         ),
@@ -709,7 +709,7 @@ function lapriest_get_sample_editorials() {
             'title'     => 'DENIM INTERVENIDO: PIGMENTO, CORTE Y DESGASTE',
             'type'      => 'Proceso',
             'date'      => 'TALLER LAPRIEST // MÉXICO',
-            'location'  => 'Atelier CDMX',
+            'location'  => 'CDMX',
             'read_time' => 'INTERVENCIÓN MANUAL',
             'image'     => $media . 'dsc04804.jpg',
             'excerpt'   => 'Registro del proceso artesanal sobre mezclilla pesada, pigmento y costura expuesta.',

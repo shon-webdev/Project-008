@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. HORARIOS EN VIVO DE ATELIERS (MÉXICO Y TOKIO)
+   1. HORARIOS EN VIVO (MÉXICO Y TOKIO)
    ========================================================================== */
 function initLiveTimecodes() {
   const parisTimeEl = document.getElementById('paris-time');
@@ -34,7 +34,7 @@ function initLiveTimecodes() {
         second: '2-digit',
         hour12: false
       });
-      parisTimeEl.textContent = `ATELIER MÉXICO: ${mexicoStr} CST`;
+      parisTimeEl.textContent = `MÉXICO: ${mexicoStr} CST`;
     }
 
     // Hora de Tokio (Asia/Tokyo)
@@ -191,7 +191,7 @@ function initOfferModal() {
       submitBtn.disabled = true;
       submitText.textContent = (window.lapriest_data && window.lapriest_data.i18n) 
         ? window.lapriest_data.i18n.sending 
-        : 'TRANSMITIENDO PROPUESTA AL ATELIER...';
+        : 'TRANSMITIENDO PROPUESTA...';
 
       const formData = new FormData(form);
 
@@ -214,7 +214,7 @@ function initOfferModal() {
           }
         } catch (err) {
           console.error(err);
-          alert('Error de conexión. Puede contactar directamente al atelier vía Instagram @__lapriest__.');
+          alert('Error de conexión. Puede comunicarse directamente vía Instagram @__lapriest__.');
         } finally {
           submitBtn.disabled = false;
           submitText.textContent = originalText;

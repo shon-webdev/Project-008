@@ -11,7 +11,7 @@ get_header();
 while (have_posts()) : the_post();
     $event_id = get_the_ID();
     $event_date = get_post_meta($event_id, '_lapriest_event_date', true) ?: 'MÉXICO // ARCHIVO';
-    $event_location = get_post_meta($event_id, '_lapriest_event_location', true) ?: 'Atelier Ciudad de México';
+    $event_location = get_post_meta($event_id, '_lapriest_event_location', true) ?: 'Ciudad de México';
     $video_url = get_post_meta($event_id, '_lapriest_event_video_url', true);
     $read_time = get_post_meta($event_id, '_lapriest_reading_time', true) ?: 'SERIE FOTOGRÁFICA';
 

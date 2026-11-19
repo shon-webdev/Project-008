@@ -8,7 +8,7 @@
 
 $event_id = get_the_ID();
 $event_date = get_post_meta($event_id, '_lapriest_event_date', true) ?: 'TEMPORADA 2026';
-$event_location = get_post_meta($event_id, '_lapriest_event_location', true) ?: 'Atelier México';
+$event_location = get_post_meta($event_id, '_lapriest_event_location', true) ?: 'Ciudad de México';
 $read_time = get_post_meta($event_id, '_lapriest_reading_time', true) ?: 'SERIE FOTOGRÁFICA';
 
 $types = get_the_terms($event_id, 'editorial_type');

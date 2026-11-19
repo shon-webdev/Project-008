@@ -19,7 +19,7 @@
           <?php esc_html_e('Un laboratorio arquitectónico de alta costura que opera bajo principios de monasticismo material, geometría extrema en la silueta y protocolos de adquisición no comerciales.', 'lapriest'); ?>
         </p>
         <div class="mono-meta" style="margin-top: 1.5rem;">
-          19.432608&deg; N, 99.133209&deg; O &bull; ATELIER CIUDAD DE MÉXICO<br>
+          19.432608&deg; N, 99.133209&deg; O &bull; CIUDAD DE MÉXICO<br>
           PIEZA ÚNICA &amp; ARCHIVO
         </div>
       </div>
@@ -31,7 +31,7 @@
           <li><a href="<?php echo esc_url(home_url('/quien-soy/')); ?>"><?php esc_html_e('Quién Soy (Manifiesto)', 'lapriest'); ?></a></li>
           <li><a href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('Editorial', 'lapriest'); ?></a></li>
           <li><a href="<?php echo esc_url(home_url('/catalogo/')); ?>"><?php esc_html_e('Catálogo de Piezas', 'lapriest'); ?></a></li>
-          <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="DOSSIER CONFIDENCIAL DEL ATELIER" data-piece-code="LP-DOSSIER" data-piece-price="A CONSULTAR"><?php esc_html_e('Oferta Directa', 'lapriest'); ?></a></li>
+          <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="DOSSIER CONFIDENCIAL LAPRIEST" data-piece-code="LP-DOSSIER" data-piece-price="A CONSULTAR"><?php esc_html_e('Oferta Directa', 'lapriest'); ?></a></li>
         </ul>
       </div>
 
@@ -40,8 +40,8 @@
         <div class="footer-col-title"><?php esc_html_e('CANALES DIRECTOS', 'lapriest'); ?></div>
         <ul class="footer-links-list">
           <li><a href="https://www.instagram.com/__lapriest__/" target="_blank" rel="noopener noreferrer">Instagram (@__lapriest__)</a></li>
-          <li><a href="mailto:atelier@lapriest.com">atelier@lapriest.com</a></li>
-          <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="CITA PRIVADA EN EL ATELIER" data-piece-code="LP-CITA" data-piece-price="PRIVADO"><?php esc_html_e('Citas Privadas', 'lapriest'); ?></a></li>
+          <li><a href="mailto:contacto@lapriest.com">contacto@lapriest.com</a></li>
+          <li><a href="#offerModalOverlay" data-action="make-offer" data-piece-title="CITA PRIVADA LAPRIEST" data-piece-code="LP-CITA" data-piece-price="PRIVADO"><?php esc_html_e('Citas Privadas', 'lapriest'); ?></a></li>
           <li><a href="<?php echo esc_url(home_url('/quien-soy/')); ?>#pilares"><?php esc_html_e('Los 4 Pilares', 'lapriest'); ?></a></li>
         </ul>
       </div>
@@ -66,7 +66,7 @@
         &copy; <?php echo date('Y'); ?> LAPRIEST HAUTE BRUTALISME. <?php esc_html_e('TODOS LOS DERECHOS RESERVADOS.', 'lapriest'); ?>
       </div>
       <div>
-        <?php esc_html_e('SISTEMA DE ADQUISICIÓN DIRECTA &bull; ATELIER MÉXICO', 'lapriest'); ?>
+        <?php esc_html_e('SISTEMA DE ADQUISICIÓN DIRECTA &bull; MÉXICO', 'lapriest'); ?>
       </div>
     </div>
 

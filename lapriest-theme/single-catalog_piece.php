@@ -14,13 +14,13 @@ while (have_posts()) : the_post();
     $base_price = get_post_meta($piece_id, '_lapriest_base_price', true) ?: '$1,850 USD';
     $season = get_post_meta($piece_id, '_lapriest_season', true) ?: 'SERIE 01 // EL ECLIPSE DE LA ORTODOXIA';
     $materials = get_post_meta($piece_id, '_lapriest_materials', true) ?: '100% Lana Cruda Hervida Japonesa de Alta Densidad, Arnés Interno en Cupro, Cierres de Plata con Pátina Fría.';
-    $edition_limit = get_post_meta($piece_id, '_lapriest_edition_limit', true) ?: 'Pieza Única — Confeccionada en Atelier LAPRIEST, México';
+    $edition_limit = get_post_meta($piece_id, '_lapriest_edition_limit', true) ?: 'Pieza Única — Confeccionada en LAPRIEST, México';
     $secondary_img = get_post_meta($piece_id, '_lapriest_secondary_image', true);
     $status = get_post_meta($piece_id, '_lapriest_inquiry_status', true) ?: 'available';
 
     $status_label = 'DISPONIBLE PARA OFERTA';
     if ($status === 'reserved') $status_label = 'RESERVADA';
-    elseif ($status === 'archival') $status_label = 'ARCHIVO DE ATELIER';
+    elseif ($status === 'archival') $status_label = 'ARCHIVO DE ESTUDIO';
 
     $terms = get_the_terms($piece_id, 'piece_category');
     $cat_name = ($terms && !is_wp_error($terms)) ? $terms[0]->name : 'Abrigos';
@@ -113,13 +113,13 @@ while (have_posts()) : the_post();
 
           <div style="border-bottom:1px solid #1a1a1a; padding:0.75rem 0;">
             <strong style="color:#fff; letter-spacing:0.08em; text-transform:uppercase;"><?php esc_html_e('PROTOCOLO DE ADQUISICIÓN:', 'lapriest'); ?></strong><br>
-            <?php esc_html_e('Proponga un valor de oferta en torno al precio base. Nuestra dirección curatorial revisa las solicitudes en un plazo de 24 horas. El envío se coordina mediante mensajería asegurada o retiro privado en el atelier.', 'lapriest'); ?>
+            <?php esc_html_e('Proponga un valor de oferta en torno al precio base. Nuestra dirección curatorial revisa las solicitudes en un plazo de 24 horas. El envío se coordina mediante mensajería asegurada o entrega privada.', 'lapriest'); ?>
           </div>
         </div>
 
         <div style="margin-top:2rem;">
           <a href="<?php echo esc_url(home_url('/quien-soy/')); ?>" class="mono-meta" style="color:#666; text-decoration:underline;">
-            <?php esc_html_e('LEER EL MANIFIESTO Y FILOSOFÍA DEL ATELIER', 'lapriest'); ?> &rarr;
+            <?php esc_html_e('LEER EL MANIFIESTO Y FILOSOFÍA DE LA MARCA', 'lapriest'); ?> &rarr;
           </a>
         </div>
       </aside>

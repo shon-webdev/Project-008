@@ -23,7 +23,7 @@
     <div class="modal-piece-dossier">
       <div>
         <div class="dossier-piece-name" id="dossierPieceName">PIEZA 01: BOMBER UTILITARIA ESTRUCTURADA</div>
-        <div class="dossier-meta-code" id="dossierPieceCode">LP-MX-001 // ATELIER MÉXICO</div>
+        <div class="dossier-meta-code" id="dossierPieceCode">LP-MX-001 // MÉXICO</div>
       </div>
       <div class="dossier-baseline">
         <div style="font-size:0.5625rem; letter-spacing:0.18em; text-transform:uppercase; color:#777;">VALOR BASE</div>
@@ -89,11 +89,11 @@
 
         <!-- Botón de Transmisión -->
         <button type="submit" class="btn-submit-offer">
-          <span><?php esc_html_e('ENVIAR PROPUESTA AL ATELIER', 'lapriest'); ?> &rarr;</span>
+          <span><?php esc_html_e('ENVIAR PROPUESTA', 'lapriest'); ?> &rarr;</span>
         </button>
 
         <p class="modal-legal-note">
-          <?php esc_html_e('Cada propuesta se envía de forma directa al atelier LAPRIEST para confirmar talla, disponibilidad única o personalización a medida. No se realiza ningún cobro automático en esta etapa.', 'lapriest'); ?>
+          <?php esc_html_e('Cada propuesta se envía de forma directa a LAPRIEST para confirmar talla, disponibilidad única o personalización a medida. No se realiza ningún cobro automático en esta etapa.', 'lapriest'); ?>
         </p>
       </form>
     </div>
@@ -103,7 +103,7 @@
       <div class="feedback-status-badge">// TRANSMISIÓN CONFIRMADA</div>
       <h2 class="feedback-title"><?php esc_html_e('OFERTA REGISTRADA', 'lapriest'); ?></h2>
       <p style="font-size:0.875rem; color:#888; max-width:440px; margin:0 auto 1.5rem; line-height:1.6;">
-        <?php esc_html_e('Su propuesta ha sido ingresada en el registro privado de adquisiciones del atelier LAPRIEST. Recibirá una respuesta privada en un plazo máximo de 24 horas.', 'lapriest'); ?>
+        <?php esc_html_e('Su propuesta ha sido ingresada en el registro privado de adquisiciones de LAPRIEST. Recibirá una respuesta privada en un plazo máximo de 24 horas.', 'lapriest'); ?>
       </p>
 
       <div class="feedback-receipt-box">

@@ -52,9 +52,9 @@ get_header(); ?>
         <p><?php esc_html_e('Presiona «Hacer Oferta» para indicar tu propuesta económica, solicitar precio base o pedir ajuste a medida.', 'lapriest'); ?></p>
       </div>
       <div class="offer-guide-step">
-        <div class="step-kicker">03 // RESPUESTA DEL ATELIER</div>
+        <div class="step-kicker">03 // RESPUESTA DIRECTA</div>
         <h2 class="step-title">TRATO PERSONALIZADO</h2>
-        <p><?php esc_html_e('El equipo del atelier responde por correo o WhatsApp sin cargos automáticos ni intermediarios.', 'lapriest'); ?></p>
+        <p><?php esc_html_e('El equipo de LAPRIEST responde por correo o WhatsApp sin cargos automáticos ni intermediarios.', 'lapriest'); ?></p>
       </div>
     </div>
     
@@ -136,7 +136,7 @@ get_header(); ?>
       ?>
     </div>
 
-    <!-- Encargos a medida en el Atelier -->
+    <!-- Encargos a medida -->
     <div style="padding: 3rem 0 6rem; text-align: center;">
       <span class="mono-meta" style="color:#666;">// ENCARGOS A MEDIDA</span>
       <h3 style="font-family:var(--font-title); font-size:1.75rem; margin:0.75rem 0 1rem; font-weight:var(--font-title-weight); letter-spacing:var(--font-title-spacing); text-transform:uppercase;">
@@ -148,7 +148,7 @@ get_header(); ?>
       <button type="button" 
               class="btn-make-offer"
               data-action="make-offer"
-              data-piece-title="ENCARGO A MEDIDA EN EL ATELIER"
+              data-piece-title="ENCARGO A MEDIDA LAPRIEST"
               data-piece-code="LP-MEDIDA"
               data-piece-price="BAJO CONSULTA"
               style="padding: 1rem 2.5rem;">

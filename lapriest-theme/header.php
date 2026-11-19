@@ -49,7 +49,7 @@
           </a>
         </li>
         <li>
-          <a href="#offerModalOverlay" class="nav-link" data-action="make-offer" data-piece-title="CONSULTA GENERAL AL ATELIER" data-piece-code="LP-GEN" data-piece-price="A CONSULTAR">
+          <a href="#offerModalOverlay" class="nav-link" data-action="make-offer" data-piece-title="CONSULTA GENERAL LAPRIEST" data-piece-code="LP-GEN" data-piece-price="A CONSULTAR">
             <?php esc_html_e('OFERTA DIRECTA', 'lapriest'); ?>
           </a>
         </li>

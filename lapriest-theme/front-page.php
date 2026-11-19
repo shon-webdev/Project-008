@@ -46,7 +46,7 @@ get_header(); ?>
 
         <div class="brand-film-actions">
           <a href="<?php echo esc_url(home_url('/catalogo/')); ?>" class="btn-flat-solid"><?php esc_html_e('VER CATÁLOGO', 'lapriest'); ?></a>
-          <button type="button" class="btn-flat-muted" data-action="make-offer" data-piece-title="CONSULTA GENERAL AL ATELIER" data-piece-code="LP-GEN" data-piece-price="BAJO CONSULTA">
+          <button type="button" class="btn-flat-muted" data-action="make-offer" data-piece-title="CONSULTA GENERAL LAPRIEST" data-piece-code="LP-GEN" data-piece-price="BAJO CONSULTA">
             <?php esc_html_e('SOLICITAR OFERTA DIRECTA', 'lapriest'); ?>
           </button>
         </div>
@@ -142,7 +142,7 @@ get_header(); ?>
         PASARELA LAPRIEST
       </h2>
       <p class="runway-banner-desc">
-        <?php esc_html_e('Movimiento, caída y presencia en vivo de las piezas desarrolladas en estudio. Cada silueta se asigna mediante consulta u oferta directa con el atelier.', 'lapriest'); ?>
+        <?php esc_html_e('Movimiento, caída y presencia en vivo de las piezas desarrolladas en estudio. Cada silueta se asigna mediante consulta u oferta directa.', 'lapriest'); ?>
       </p>
       <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
         <a href="<?php echo esc_url(home_url('/catalogo/')); ?>" class="btn-flat-solid">

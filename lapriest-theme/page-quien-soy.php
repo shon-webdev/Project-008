@@ -20,7 +20,7 @@ get_header(); ?>
         &ldquo;ESTO NO ES CONSUMO, ES PURA VIDA.&rdquo;
       </h1>
       <div class="mono-meta" style="margin-top:1.25rem; color:var(--text-secondary);">
-        LAPRIEST &bull; ATELIER MÉXICO
+        LAPRIEST &bull; MÉXICO
       </div>
     </header>
 
@@ -38,21 +38,21 @@ get_header(); ?>
         </div>
         <div class="manifesto-caption">
           <span>MANIFIESTO // LAPRIEST</span>
-          <span>ATELIER MÉXICO</span>
+          <span>MÉXICO</span>
         </div>
 
         <div style="margin-top:1.75rem; padding-top:0.5rem;">
-          <div class="mono-meta" style="margin-bottom:0.75rem; color:#fff;">DOSSIER PRIVADO DE ATELIER</div>
+          <div class="mono-meta" style="margin-bottom:0.75rem; color:#fff;">DOSSIER PRIVADO</div>
           <p style="font-size:0.8125rem; color:#777; line-height:1.6; margin-bottom:1.25rem;">
             <?php esc_html_e('Curadores, coleccionistas privados y prensa especializada pueden solicitar la monografía confidencial completa, que incluye muestras físicas de textiles.', 'lapriest'); ?>
           </p>
           <button type="button" 
                   class="btn-make-offer"
                   data-action="make-offer"
-                  data-piece-title="MONOGRAFÍA CONFIDENCIAL DE ATELIER"
+                  data-piece-title="MONOGRAFÍA CONFIDENCIAL LAPRIEST"
                   data-piece-code="LP-PRENSA-MONOGRAFIA"
                   data-piece-price="PRENSA / CURADURÍA">
-            <span><?php esc_html_e('SOLICITAR DOSSIER DE ATELIER', 'lapriest'); ?> &rarr;</span>
+            <span><?php esc_html_e('SOLICITAR DOSSIER', 'lapriest'); ?> &rarr;</span>
           </button>
         </div>
       </aside>
@@ -171,42 +171,18 @@ get_header(); ?>
     </div>
 
     <!-- =========================================================================
-         SUITE DE ATELIER Y REGISTRO VISUAL DE CONFECCIÓN
-         ========================================================================= -->
-    <section style="margin-top: 5rem;">
-      <div class="section-headline-bar">
-        <div>
-          <span class="mono-meta" style="color:var(--text-muted); display:block; margin-bottom:0.5rem;">// ESPACIO DE ATELIER</span>
-          <h2 class="section-title"><?php esc_html_e('DETRÁS DEL MONOLITO', 'lapriest'); ?></h2>
-        </div>
-      </div>
-
-      <div class="atelier-gallery-strip">
-        <div class="atelier-gallery-item">
-          <img src="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/dsc04804.jpg'); ?>" alt="Intervención manual con aerosol sobre mezclilla en taller LAPRIEST" loading="lazy">
-        </div>
-        <div class="atelier-gallery-item">
-          <img src="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/img-3304.jpg'); ?>" alt="Archivo de piezas gráficas intervenidas a mano" loading="lazy">
-        </div>
-        <div class="atelier-gallery-item">
-          <img src="<?php echo esc_url(LAPRIEST_URI . '/assets/media/web/dsc05091.jpg'); ?>" alt="Retrato exterior de colección LAPRIEST en Ciudad de México" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================================
          DIRECTORIO DE CONTACTO OFICIAL Y ADQUISICIONES
          ========================================================================= -->
     <section class="atelier-contact-box">
       <div class="contact-box-grid">
         <div class="contact-meta-group">
-          <div class="c-label"><?php esc_html_e('ATELIER MÉXICO (CON CITA PREVIA)', 'lapriest'); ?></div>
+          <div class="c-label"><?php esc_html_e('ESTUDIO MÉXICO (CON CITA PREVIA)', 'lapriest'); ?></div>
           <div class="c-val">Ciudad de México, México</div>
           <div class="mono-meta" style="margin-top:0.5rem;">Atención bajo cita privada</div>
         </div>
         <div class="contact-meta-group">
           <div class="c-label"><?php esc_html_e('COMUNICACIÓN DIGITAL DIRECTA', 'lapriest'); ?></div>
-          <div class="c-val"><a href="mailto:atelier@lapriest.com" style="color:#fff;">atelier@lapriest.com</a></div>
+          <div class="c-val"><a href="mailto:contacto@lapriest.com" style="color:#fff;">contacto@lapriest.com</a></div>
           <div class="mono-meta" style="margin-top:0.5rem;">Instagram: <a href="https://www.instagram.com/__lapriest__/" target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:underline;">@__lapriest__</a></div>
         </div>
         <div class="contact-meta-group">
