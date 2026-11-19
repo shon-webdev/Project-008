@@ -72,8 +72,8 @@ get_header(); ?>
       </div>
     </div>
 
-    <!-- Cuadrícula Vertical de Piezas -->
-    <div class="pieces-grid" id="catalogPiecesGrid">
+    <!-- Cuadrícula Vertical de Piezas (2 en 2) -->
+    <div class="pieces-grid" id="catalogPiecesGrid" style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr));">
       <?php
       $args_all_pieces = array(
           'post_type'      => 'catalog_piece',

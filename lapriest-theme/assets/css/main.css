@@ -1168,20 +1168,18 @@ body.mobile-nav-open {
 }
 
 /* Product Grid (2-by-2 Presentation across Desktop, Tablet & Mobile) */
-.pieces-grid {
+.pieces-grid,
+#catalogPiecesGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   gap: 2rem;
   margin-bottom: 6rem;
 }
 
-#catalogPiecesGrid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
 @media (max-width: 1200px) {
-  .pieces-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .pieces-grid,
+  #catalogPiecesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 1.25rem;
   }
 }
@@ -1189,7 +1187,7 @@ body.mobile-nav-open {
 @media (max-width: 650px) {
   .pieces-grid,
   #catalogPiecesGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 0.75rem;
     margin-bottom: 3.5rem;
   }
