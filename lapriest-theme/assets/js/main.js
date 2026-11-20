@@ -430,7 +430,7 @@ function initMobileNav() {
   function openMenu() {
     navMenu.classList.add('open');
     toggle.classList.add('is-active');
-    toggle.textContent = '[ CERRAR ]';
+    toggle.textContent = 'CERRAR';
     toggle.setAttribute('aria-expanded', 'true');
     document.body.classList.add('mobile-nav-open');
   }
@@ -438,7 +438,7 @@ function initMobileNav() {
   function closeMenu() {
     navMenu.classList.remove('open');
     toggle.classList.remove('is-active');
-    toggle.textContent = '[ MENÚ ]';
+    toggle.textContent = 'MENÚ';
     toggle.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('mobile-nav-open');
   }

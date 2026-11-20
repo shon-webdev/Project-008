@@ -65,7 +65,7 @@
 
       <!-- Botón de Menú Móvil -->
       <button type="button" class="mobile-nav-toggle" aria-label="<?php esc_attr_e('Alternar Menú', 'lapriest'); ?>">
-        [ MENÚ ]
+        MENÚ
       </button>
     </div>
   </div>
