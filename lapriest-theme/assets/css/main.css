@@ -1192,8 +1192,25 @@ body.mobile-nav-open {
 #catalogPiecesGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 2rem;
-  margin-bottom: 6rem;
+  gap: 1.75rem;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 993px) {
+  .piece-card .piece-visual-frame {
+    aspect-ratio: 4/5;
+  }
+
+  .piece-card .piece-info-box {
+    padding: 1.15rem 1.25rem;
+  }
+
+  .piece-card .piece-title-text {
+    font-size: 1.125rem;
+  }
 }
 
 @media (max-width: 1200px) {

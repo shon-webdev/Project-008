@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
     exit; // Salir si se accede directamente
 }
 
-define('LAPRIEST_VERSION', '1.3.0');
+define('LAPRIEST_VERSION', '1.4.0');
 define('LAPRIEST_DIR', get_template_directory());
 define('LAPRIEST_URI', get_template_directory_uri());
 
